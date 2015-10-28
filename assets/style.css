@@ -674,7 +674,7 @@ h5 {
 	background: transparent;
 }
 #container {
-	width: 640px;
+	width: 100%px;
 	float: left;
 }
 .page-template-page-onecolumn-php #container {

@@ -417,37 +417,6 @@
 				<!-- #content -->
 			</div>
 			<!-- #container -->
-
-			<div id="sidebar">
-				<div id="primary" class="widget-area" role="complementary">
-					<ul class="xoxo">
-						<li id="text-6" class="widget-container widget_text">
-							<h3 class="widget-title">Football Club Video</h3>
-							<div class="textwidget">
-								<iframe src="http://player.vimeo.com/video/31649409?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" frameborder="0" height="175" width="318"></iframe>
-							</div>
-						</li>
-						<li id="facebook" class="widget-container">
-							<h3 class="widget-title">Find us on Facebook</h3>
-							<div id="fb-root"></div>
-							<script src="assets/all_002.js"></script>
-							<fb:like-box fb-iframe-plugin-query="app_id=&amp;color_scheme=light&amp;container_width=0&amp;header=false&amp;href=http%3A%2F%2Ffacebook.com%2Fthemeboy&amp;locale=en_US&amp;sdk=joey&amp;show_faces=false&amp;stream=false&amp;width=318"
-							fb-xfbml-state="rendered" class=" fb_iframe_widget" href="http://facebook.com/themeboy" width="318" colorscheme="light" show_faces="false" border_color="#fff" stream="false" header="false"><span style="vertical-align: bottom; width: 318px; height: 70px;"><iframe class="" src="http://www.facebook.com/plugins/like_box.php?app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2Fjb3BUxkAISL.js%3Fversion%3D41%23cb%3Df3f7b9821fc75d6%26domain%3Ddemo.themeboy.com%26origin%3Dhttp%253A%252F%252Fdemo.themeboy.com%252Ffcb73adecdb53e%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=0&amp;header=false&amp;href=http%3A%2F%2Ffacebook.com%2Fthemeboy&amp;locale=en_US&amp;sdk=joey&amp;show_faces=false&amp;stream=false&amp;width=318" style="border: medium none; visibility: visible; width: 318px; height: 70px;" title="fb:like_box Facebook Social Plugin" scrolling="no" allowfullscreen="true" allowtransparency="true" name="f1c19c2b23eba8c" frameborder="0" height="1000px" width="318px"></iframe></span></fb:like-box>
-						</li>
-						<li id="tb_ground-widget" class="widget-container">
-							<h3 class="widget-title">Ground Status</h3>
-							<div class="tb_ground_status_display">Grounds Open</div>
-						</li>
-						<li id="tb_twitter-2" class="widget-container twitter-widget">
-							<h3 class="widget-title">Twitter</h3>
-							<iframe title="Twitter Timeline" data-user-id="306528167" data-widget-id="345224689221771264" style="position: static; visibility: visible; display: inline-block; width: 100%; height: 436.5px; padding: 0px; border: medium none; max-width: 520px; min-width: 180px; margin-top: 0px; margin-bottom: 0px;"
-							class="twitter-timeline twitter-timeline-rendered" allowfullscreen="true" allowtransparency="true" scrolling="no" id="twitter-widget-0" frameborder="0"></iframe>
-						</li>
-					</ul>
-				</div>
-				<!-- #primary .widget-area -->
-			</div>
-			<!-- #sidebar -->
 		</div>
 		<!-- #main -->
 		
