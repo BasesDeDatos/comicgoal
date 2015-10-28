@@ -5,7 +5,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
-		<div id="footer-widgets" role="contentinfo" class="clearfix">
+		<div hidden id="footer-widgets" role="contentinfo" class="clearfix">
 			<div id="colophon">
 				<div id="footer-widget-area" role="complementary">
 					<div id="footer-logo" class="widget-area"></div>
@@ -48,12 +48,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<!-- #colophon -->
 		</div>
 		<!-- #footer-widgets -->
-
 	</div>
 	<!-- #wrapper -->
 	<footer class="clearfix">
-		<div class="left">© 2015 Football Club</div>
-		<div class="right">Designed by <a href="http://themeboy.com/" target="_blank">ThemeBoy</a></div>
+		<div class="center">©2015 Comic Goal</div>
+		<!--div class="right">Designed by <a href="http://themeboy.com/" target="_blank">ThemeBoy</a></div>
 		<ul id="social">
 			<li class="facebook"><a href="http://facebook.com/themeboy" title="Facebook" target="_blank">Facebook</a></li>
 			<li class="twitter"><a href="http://twitter.com/themeboy" title="Twitter" target="_blank">Twitter</a></li>
@@ -62,7 +61,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<li class="gplus"><a href="http://gplus.to/themeboy" title="Google+" target="_blank">Google+</a></li>
 			<li class="youtube"><a href="http://youtube.com/themeboyteam" title="YouTube" target="_blank">YouTube</a></li>
 			<li class="vimeo"><a href="http://vimeo.com/themeboy" title="Vimeo" target="_blank">Vimeo</a></li>
-		</ul>
+		</ul-->
 	</footer>
 
 	<link rel="stylesheet" id="adminbar-stylesheet-css" href="assets/adminbar.css" type="text/css" media="all">
