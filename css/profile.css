@@ -1,0 +1,143 @@
+input {
+    width: 100%;
+}
+
+.contenedor {
+    border: 1px solid #000000;
+    background: #E5F4FB;
+    margin: 10px;
+    padding: 10px;
+    clear: both;
+}
+
+.tituloPerfil {
+    border: 1px solid #88BDD7;
+    background: #88BDD7 none repeat scroll 0% 0%;
+    margin: 15px 0px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+}
+
+.columnaUno {
+    border-radius: 5px 5px 0px 5px;
+}
+
+.fotoPerfil img {
+    margin: 0 auto 15px auto;
+    position: center;
+    border-radius: 30%;
+}
+
+div label {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+}
+
+.clear {
+    clear: both;
+}
+
+.ui-accordion-content .bnr-img {
+    position: relative !important;
+    top: 0px;
+    left: 0px;
+    height: 150px;
+    width: 150px;
+}
+
+#tap {
+    margin: 0px auto;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    float: left;
+    height: 100%;
+}
+
+#tap input {
+    height: 0px;
+    visibility: hidden;
+    display: none;
+}
+
+#tap > label {
+    float: right;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px;
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 5px;
+    background: #E74C3C none repeat scroll 0% 0%;
+    margin: 5px;
+    margin-right: 0;
+}
+
+#tap input:hover + label {
+    background: #BB3D31;
+    /* Fondo de las pestañas al pasar el cursor por encima */
+    color: #000;
+    /* Color del texto de las pestañas al pasar el cursor por encima */
+
+}
+
+#tap input:checked + label {
+    background: #BB3D31 none repeat scroll 0% 0%;
+    color: #FFFFFF;
+    padding-top: 12px;
+    margin-top: 3px;
+}
+
+#tap .content {
+    background: #fff;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    z-index: 5;
+    border-radius: 5px;
+    min-height: 100%;
+    
+    margin-top: 5px;
+    
+    float: left;
+}
+
+#tap .content > div {
+    position: absolute;
+    z-index: -100;
+    opacity: 0;
+    transition: all linear 0.1s;
+    -webkit-transition: all ease-out 0.2s 0s;
+    -moz-transition: all ease-out 0.2s 0s;
+    transition: all ease-out 0.2s 0s;
+}
+
+#tap .tab-selector-1:checked ~ .content .content-1,
+#tap .tab-selector-2:checked ~ .content .content-2,
+#tap .tab-selector-3:checked ~ .content .content-3,
+#tap .tab-selector-4:checked ~ .content .content-4,
+#tap .tab-selector-5:checked ~ .content .content-5,
+#tap .tab-selector-6:checked ~ .content .content-6,
+#tap .tab-selector-7:checked ~ .content .content-7 {
+    z-index: 100;
+    opacity: 1;
+    -webkit-transition: all ease-out 0.5s 0.5s;
+    -moz-transition: all ease-out 0.5s 0.5s;
+    transition: all ease-out 0.5s 0.5s;
+    position: relative;
+}
+
+#tap .content .texto {
+    background: none;
+    color: #000000;
+    cursor: auto;
+    border-radius: 0px;
+    text-align: left;
+    height: auto;
+    line-height: normal;
+    opacity: 1;
+}
