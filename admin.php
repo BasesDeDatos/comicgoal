@@ -1,424 +1,644 @@
-	<?php require_once("header.php"); 
-	//	$arrayQuery = array(); 
-	//	$_POST["mode"] = "get_home"; 
-	//	$user_id = $_SESSION["active_user_id"];
-	//	include ("funcionesOracle.php");
+<!--
+Author: Isaac Campos, Roger Villalobos,  Jeffrey Alvarado
+Template name: admin
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+	<?php require_once("header.php");
+		/*$arrayQuery = array(); 
+		$_POST["mode"] = "get_catalogos"; 
+		include ("funcionesOracle.php");
+		if ($arrayQuery ["ID_ROL"][0] == 1 ){
+			header('Location: index.php');
+		}*/
 	?>
+	
+	<div class="row">
+		<div class="col-md-12 register-form">
+		<!-- multistep form -->
+		<form id="msform">
+			<!-- progressbar -->
+			<ul id="progressbar">
+				<li class="active">Mensaje de eventos</li>
+				<li>Eventos</li>
+				<li>Catalogos</li>
+				<li>Catalogos</li>
+				<li>Catalogos</li>
 
-		<div id="main" class="clearfix">
-			<div class="featured-rotator image-rotator">
-				<div class="main_image">
-					<ul>
-						<li style="display: none; z-index: 12;" data-slide="0">
-							<a href="http://demo.themeboy.com/footballclub/2014/05/19/lowes-radcliffe-and-peterson-called-up/"><img src="assets/blog-1-1-640x360.jpg" class="attachment-featured-image wp-post-image" alt="blog-1-1" title="Lowes, Radcliffe, and Peterson called up" height="360" width="640"></a>
-							<div style="display: block;"
-							class="desc">
-								<div style="opacity: 0; margin-bottom: -48px;" class="block">
-									<h3 class="ellipsis"><a href="http://demo.themeboy.com/footballclub/2014/05/19/lowes-radcliffe-and-peterson-called-up/">Lowes, Radcliffe, and Peterson called up</a></h3>
-									<time><a href="http://demo.themeboy.com/footballclub/2014/05/19/lowes-radcliffe-and-peterson-called-up/">May 19, 2014</a></time>
-								</div>
-							</div>
-						</li>
-						<li style="display: list-item; z-index: 11;" data-slide="1">
-							<a href="http://demo.themeboy.com/footballclub/2014/05/19/brown-impressed-by-brough/"><img src="assets/blog-6-1-640x360.jpg" class="attachment-featured-image wp-post-image" alt="blog-6-1" title="Brown impressed by Brough" height="360" width="640"></a>
-							<div style="display: block;"
-							class="desc">
-								<div style="opacity: 1; margin-bottom: 0px;" class="block">
-									<h3 class="ellipsis"><a href="http://demo.themeboy.com/footballclub/2014/05/19/brown-impressed-by-brough/">Brown impressed by Brough</a></h3>
-									<time><a href="http://demo.themeboy.com/footballclub/2014/05/19/brown-impressed-by-brough/">May 19, 2014</a></time>
-								</div>
-							</div>
-						</li>
-						<li style="display: none; z-index: 9;" data-slide="2">
-							<a href="http://demo.themeboy.com/footballclub/2014/04/19/eagles-in-the-wordpress-cup/"><img src="assets/blog-3-1-640x360.jpg" class="attachment-featured-image wp-post-image" alt="blog-3-1" title="Eagles in the WordPress Cup" height="360" width="640"></a>
-							<div style="display: block;"
-							class="desc">
-								<div style="opacity: 0; margin-bottom: -48px;" class="block">
-									<h3 class="ellipsis"><a href="http://demo.themeboy.com/footballclub/2014/04/19/eagles-in-the-wordpress-cup/">Eagles in the WordPress Cup</a></h3>
-									<time><a href="http://demo.themeboy.com/footballclub/2014/04/19/eagles-in-the-wordpress-cup/">April 19, 2014</a></time>
-								</div>
-							</div>
-						</li>
-						<li style="display: none; z-index: 10;" data-slide="3">
-							<a href="http://demo.themeboy.com/footballclub/2014/04/02/the-future-of-essendon/"><img src="assets/blog-4-1-640x360.jpg" class="attachment-featured-image wp-post-image" alt="blog-4-1" title="The future of Essendon" height="360" width="640"></a>
-							<div style="display: block;"
-							class="desc">
-								<div style="opacity: 0; margin-bottom: -48px;" class="block">
-									<h3 class="ellipsis"><a href="http://demo.themeboy.com/footballclub/2014/04/02/the-future-of-essendon/">The future of Essendon</a></h3>
-									<time><a href="http://demo.themeboy.com/footballclub/2014/04/02/the-future-of-essendon/">April 2, 2014</a></time>
-								</div>
-							</div>
-						</li>
-						<li style="display: none; z-index: 11;" data-slide="4">
-							<a href="http://demo.themeboy.com/footballclub/2014/03/22/lineup-announced/"><img src="assets/blog-5-1-640x360.jpg" class="attachment-featured-image wp-post-image" alt="blog-5-1" title="Lineup Announced" height="360" width="640"></a>
-							<div style="display: block;" class="desc">
-								<div style="opacity: 0; margin-bottom: -48px;" class="block">
-									<h3 class="ellipsis"><a href="http://demo.themeboy.com/footballclub/2014/03/22/lineup-announced/">Lineup Announced</a></h3>
-									<time><a href="http://demo.themeboy.com/footballclub/2014/03/22/lineup-announced/">March 22, 2014</a></time>
-								</div>
-							</div>
-						</li>
-					</ul>
+			</ul>
+			<!-- fieldsets -->
+			<fieldset>
+
+				<h2 class="fs-title">Mensaje de invitaciones</h2>
+				<input class="col-md-6" type="text" name="subject" id="subject" placeholder="Asunto" />
+				<input class="col-md-6" type="textarea" name="mensaje" id="mensaje" placeholder="Nuevo mensaje de invitación" />
+
+				<label class="col-md-6" for="Evento">Evento</label>
+				<select class="col-md-6 selector" name="Evento" id="Evento">
+					<option value="">Seleccione un evento</option>			
+					
+					<?php for($i = 0; $i < count($arrayQuery["EVENTO"]["NOMBRE"]); $i++){ ?>
+						<option value="<?php echo $arrayQuery["EVENTO"]["ID_CIUDAD"][$i] ?>">
+							<?php echo $arrayQuery["EVENTO"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+					
+					
+				</select>
+				
+				<input type="button" name="send" class="submit action-button" value="Enviar" onclick="enviar_mensaje()"/>
+				<input type="button" name="next" class="next action-button" value="Siguiente"/>
+			</fieldset>
+			
+			<fieldset>
+
+				<h2 class="fs-title">Eventos</h2>
+				<input class="col-md-6" type="text" name="nombre_eventos" id="nombre_eventos" placeholder="Nombre del evento" />
+				<input class="col-md-6" type="textarea" name="descripcion_eventos" id="descripcion_eventos" placeholder="Descripcion del evento" />
+
+				<label class="col-md-6" for="Pais0">País</label>
+				<select class="col-md-6 selector" name="Pais" id="Pais0" >
+					<option value="">Seleccione un país</option>
+					<?php for($i = 0; $i < count($arrayQuery["PAIS"]["NOMBRE"]); $i++){ ?>
+						<option class="<?php echo $arrayQuery["PAIS"]["ID_PAIS"][$i] ?>"
+								value="<?php echo $arrayQuery["PAIS"]["ID_PAIS"][$i] ?>">
+							<?php echo $arrayQuery["PAIS"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				
+				<label class="col-md-6" for="Estado0">Estado</label>
+				<select class="col-md-6 selector" name="Estado" id="Estado0">
+					<option value="">Seleccione un estado</option>
+					<?php for($i = 0; $i < count($arrayQuery["ESTADO"]["NOMBRE"]); $i++){ ?>
+						<option class="<?php echo $arrayQuery["ESTADO"]["ID_PAIS"][$i] ?>"
+								value="<?php echo $arrayQuery["ESTADO"]["ID_ESTADO"][$i] ?>">
+							<?php echo $arrayQuery["ESTADO"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				
+				<label class="col-md-6" for="Ciudad0">Ciudad</label>
+				<select class="col-md-6 selector" name="Ciudad" id="Ciudad0">
+					<option value="">Seleccione una ciudad</option>
+					<?php for($i = 0; $i < count($arrayQuery["CIUDAD"]["NOMBRE"]); $i++){ ?>
+						<option class="<?php echo $arrayQuery["CIUDAD"]["ID_ESTADO"][$i] ?>"
+								value="<?php echo $arrayQuery["CIUDAD"]["ID_CIUDAD"][$i] ?>">
+							<?php echo $arrayQuery["CIUDAD"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				
+				<label class="col-md-6" id = fecha_evento>Fecha del evento</label>
+				<div class="col-md-6"><input type="date" name="fecha_evento_input" id="fecha_evento_input" placeholder="fecha" /></div>
+				
+				<input type="submit" name="submit" class="submit action-button" value="Registrar evento" onclick="registrar_evento()"/>
+				<input type="button" name="previous" class="previous action-button" value="Anterior" />
+				<input type="button" name="next" class="next action-button" value="Siguiente"/>
+			</fieldset>
+			
+			<fieldset class = "catalogos">
+				
+				<h2 class="fs-title">Catalogos</h2>
+				<label class="col-md-4" for="signo_zodiacal">Signo Zodiacal</label>
+				<select class="col-md-4" name="signo_zodiacal" id="signo_zodiacal">
+					<option value="">Agregar nuevo</option>
+					<?php for($i = 0; $i < count($arrayQuery["SIGNO_ZODIACAL"]["NOMBRE"]); $i++){ ?>
+						<option value="<?php echo $arrayQuery["SIGNO_ZODIACAL"]["ID_SIGNO_ZODIACAL"][$i] ?>">
+							<?php echo $arrayQuery["SIGNO_ZODIACAL"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="signo_zodiacal_input" placeholder="Nuevo" /></div>
+					<div class="col-md-1">
+					<button name= "signo_zodiacal_button" class= "eliminar" >X</button>
+					</div>
+
+				<label class="col-md-4" for="rol">Rol</label>
+				<select class="col-md-4" name="rol" id="rol">
+					<option value="">Agregar nuevo</option>
+					<?php for($i = 0; $i < count($arrayQuery["ROL"]["NOMBRE"]); $i++){ ?>
+						<option value="<?php echo $arrayQuery["ROL"]["ID_ROL"][$i] ?>">
+							<?php echo $arrayQuery["ROL"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="rol_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "rol_button" class= "eliminar" >X</button>
+					</div>
+
+
+				<label class="col-md-4" for="pais">Pais</label>
+				<select class="col-md-4" name="pais" id="pais">
+					<option value="">Agregar nuevo</option>
+					<?php for($i = 0; $i < count($arrayQuery["PAIS"]["NOMBRE"]); $i++){ ?>
+						<option class="<?php echo $arrayQuery["PAIS"]["ID_PAIS"][$i] ?>"
+								value="<?php echo $arrayQuery["PAIS"]["ID_PAIS"][$i] ?>">
+							<?php echo $arrayQuery["PAIS"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="pais_input" placeholder="Nuevo" /></div>
+					<div class="col-md-1">
+					<button name= "pais_button" class= "eliminar" >X</button>
+					</div>
+
+				<label class="col-md-4" for="estado">Estado</label>
+				<select class="col-md-4" name="estado" id="estado">
+					<option value="">Agregar nuevo</option>
+					<?php for($i = 0; $i < count($arrayQuery["ESTADO"]["NOMBRE"]); $i++){ ?>
+						<option class="<?php echo $arrayQuery["ESTADO"]["ID_PAIS"][$i] ?>"
+								value="<?php echo $arrayQuery["ESTADO"]["ID_ESTADO"][$i] ?>">
+							<?php echo $arrayQuery["ESTADO"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="estado_input" placeholder="Nuevo" /></div>
+					<div class="col-md-1">
+					<button name= "estado_button" class= "eliminar" >X</button>
+					</div>
+
+				<label class="col-md-4" for="ciudad">Ciudad</label>
+				<select class="col-md-4" name="ciudad" id="ciudad">
+					<option value="">Agregar nuevo</option>
+					<?php for($i = 0; $i < count($arrayQuery["CIUDAD"]["NOMBRE"]); $i++){ ?>
+						<option class="<?php echo $arrayQuery["CIUDAD"]["ID_ESTADO"][$i] ?>"
+								value="<?php echo $arrayQuery["CIUDAD"]["ID_CIUDAD"][$i] ?>">
+							<?php echo $arrayQuery["CIUDAD"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="ciudad_input" placeholder="Nuevo" /></div>
+					<div class="col-md-1">
+					<button name= "ciudad_button" class= "eliminar" >X</button>
+					</div>
+
+				<label class="col-md-4" for="religion">Religion</label>
+				<select class="col-md-4" name="religion" id="religion">
+					<option value="">Agregar nuevo</option>
+					<?php for($i = 0; $i < count($arrayQuery["RELIGION"]["NOMBRE"]); $i++){ ?>
+						<option value="<?php echo $arrayQuery["RELIGION"]["ID_RELIGION"][$i] ?>">
+							<?php echo $arrayQuery["RELIGION"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="religion_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "religion_button" class= "eliminar" >X</button>
 				</div>
-				<div class="image_thumb">
-					<ul>
-						<li class="" data-permalink="http://demo.themeboy.com/footballclub/2014/05/19/lowes-radcliffe-and-peterson-called-up/" data-slide="0">
-							<a><img src="assets/blog-1-1-50x50.jpg" class="attachment-side-image wp-post-image" alt="blog-1-1" title="Lowes, Radcliffe, and Peterson called up" height="50" width="50"></a>
-							<div class="block">
-								<h3 class="ellipsis">Lowes, Radcliffe, and Peterson called up</h3>
-								<time>May 19, 2014</time>
-							</div>
-							<div class="more"><a href="http://demo.themeboy.com/footballclub/2014/05/19/lowes-radcliffe-and-peterson-called-up/">Read More</a></div>
-						</li>
-						<li class="active" data-permalink="http://demo.themeboy.com/footballclub/2014/05/19/brown-impressed-by-brough/" data-slide="1">
-							<a><img src="assets/blog-6-1-50x50.jpg" class="attachment-side-image wp-post-image" alt="blog-6-1" title="Brown impressed by Brough" height="50" width="50"></a>
-							<div class="block">
-								<h3 class="ellipsis">Brown impressed by Brough</h3>
-								<time>May 19, 2014</time>
-							</div>
-							<div class="more"><a href="http://demo.themeboy.com/footballclub/2014/05/19/brown-impressed-by-brough/">Read More</a></div>
-						</li>
-						<li class="" data-permalink="http://demo.themeboy.com/footballclub/2014/04/19/eagles-in-the-wordpress-cup/" data-slide="2">
-							<a><img src="assets/blog-3-1-50x50.jpg" class="attachment-side-image wp-post-image" alt="blog-3-1" title="Eagles in the WordPress Cup" height="50" width="50"></a>
-							<div class="block">
-								<h3 class="ellipsis">Eagles in the WordPress Cup</h3>
-								<time>April 19, 2014</time>
-							</div>
-							<div class="more"><a href="http://demo.themeboy.com/footballclub/2014/04/19/eagles-in-the-wordpress-cup/">Read More</a></div>
-						</li>
-						<li class="" data-permalink="http://demo.themeboy.com/footballclub/2014/04/02/the-future-of-essendon/" data-slide="3">
-							<a><img src="assets/blog-4-1-50x50.jpg" class="attachment-side-image wp-post-image" alt="blog-4-1" title="The future of Essendon" height="50" width="50"></a>
-							<div class="block">
-								<h3 class="ellipsis">The future of Essendon</h3>
-								<time>April 2, 2014</time>
-							</div>
-							<div class="more"><a href="http://demo.themeboy.com/footballclub/2014/04/02/the-future-of-essendon/">Read More</a></div>
-						</li>
-						<li class="" data-permalink="http://demo.themeboy.com/footballclub/2014/03/22/lineup-announced/" data-slide="4">
-							<a><img src="assets/blog-5-1-50x50.jpg" class="attachment-side-image wp-post-image" alt="blog-5-1" title="Lineup Announced" height="50" width="50"></a>
-							<div class="block">
-								<h3 class="ellipsis">Lineup Announced</h3>
-								<time>March 22, 2014</time>
-							</div>
-							<div class="more"><a href="http://demo.themeboy.com/footballclub/2014/03/22/lineup-announced/">Read More</a></div>
-						</li>
-					</ul>
+				
+				<label class="col-md-4" for="idioma">Idioma</label>
+				<select class="col-md-4" name="idioma" id="idioma">
+					<option value="">Agregar nuevo</option>
+					<?php for($i = 0; $i < count($arrayQuery["IDIOMA"]["NOMBRE"]); $i++){ ?>
+						<option value="<?php echo $arrayQuery["IDIOMA"]["ID_IDIOMA"][$i] ?>">
+							<?php echo $arrayQuery["IDIOMA"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="idioma_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "idioma_button" class= "eliminar" >X</button>
 				</div>
-			</div>
-			<script type="text/javascript">
-				(function($) {
-					$('.image-rotator').rotator({
-						'delay': 4000
+				
+				<label class="col-md-4" for="educacion">Educacion</label>
+				<select class="col-md-4" name="educacion" id="educacion">
+					<option value="">Agregar nuevo</option>
+					<?php for($i = 0; $i < count($arrayQuery["EDUCACION"]["NOMBRE"]); $i++){ ?>
+						<option value="<?php echo $arrayQuery["EDUCACION"]["ID_EDUCACION"][$i] ?>">
+							<?php echo $arrayQuery["EDUCACION"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="educacion_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "educacion_button" class= "eliminar" >X</button>
+				</div>
+				
+				<input type="button" name="previous" class="previous action-button" value="Anterior" />
+				<input type="button" name="next" class="next action-button" value="Siguiente" />
+				
+			</fieldset>
+				
+			<fieldset class = "catalogos">
+				
+				<h2 class="fs-title">Catalogos</h2>
+				
+				<label  class="col-md-4" for="hobby">Hobby</label>
+				<select class="col-md-4" name="hobby" id="hobby">
+					<option value="">Agregar nuevo</option>
+					<?php for($i = 0; $i < count($arrayQuery["HOBBY"]["NOMBRE"]); $i++){ ?>
+						<option value="<?php echo $arrayQuery["HOBBY"]["ID_HOBBY"][$i] ?>">
+							<?php echo $arrayQuery["HOBBY"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="hobby_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "hobby_button" class= "eliminar" >X</button>
+				</div>
+				
+				
+				<label class="col-md-4" for="actividadal">Actividades al aire libre</label>
+				<select class="col-md-4" name="actividadal" id="actividadal">
+					<option value="">Agregar nuevo</option>
+					<?php for($i = 0; $i < count($arrayQuery["ACTIVIDAD"]["NOMBRE"]); $i++){ ?>
+						<option value="<?php echo $arrayQuery["ACTIVIDAD"]["ID_ACTIVIDADAL"][$i] ?>">
+							<?php echo $arrayQuery["ACTIVIDAD"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="actividadal_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "actividadal_button" class= "eliminar" >X</button>
+				</div>
+				
+				
+				<label class="col-md-4" for="tipo_bebedor">Tipo de bebedor</label>
+				<select class="col-md-4" name="tipo_bebedor" id="tipo_bebedor">
+					<option value="">Agregar nuevo</option>
+					<?php for($i = 0; $i < count($arrayQuery["TIPO_BEBEDOR"]["CLASE"]); $i++){ ?>
+						<option value="<?php echo $arrayQuery["TIPO_BEBEDOR"]["ID_TIPOBEBEDOR"][$i] ?>">
+							<?php echo $arrayQuery["TIPO_BEBEDOR"]["CLASE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="tipo_bebedor_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "tipo_bebedor_button" class= "eliminar" >X</button>
+				</div>
+				
+				
+				<label class="col-md-4" for="ocupacion">Ocupación</label>
+				<select class="col-md-4" name="ocupacion" id="ocupacion">
+					<option value="">Agregar nuevo</option>
+					<?php for($i = 0; $i < count($arrayQuery["OCUPACION"]["NOMBRE"]); $i++){ ?>
+						<option value="<?php echo $arrayQuery["OCUPACION"]["ID_OCUPACION"][$i] ?>">
+							<?php echo $arrayQuery["OCUPACION"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="ocupacion_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "ocupacion_button" class= "eliminar" >X</button>
+				</div>
+				
+				
+				<label class="col-md-4" for="color_ojos">Color Ojos</label>
+				<select class="col-md-4" name="color_ojos" id="color_ojos">
+					<option value="">Agregar nuevo</option>
+					<?php for($i = 0; $i < count($arrayQuery["COLOR_OJOS"]["NOMBRE"]); $i++){ ?>
+						<option value="<?php echo $arrayQuery["COLOR_OJOS"]["ID_COLOROJOS"][$i] ?>">
+							<?php echo $arrayQuery["COLOR_OJOS"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="color_ojos_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "color_ojos_button" class= "eliminar" >X</button>
+				</div>
+				
+				
+				<label class="col-md-4" for="color_piel">Color piel</label>
+				<select class="col-md-4" name="color_piel" id="color_piel">
+					<option value="">Agregar nuevo</option>
+					<?php for($i = 0; $i < count($arrayQuery["COLOR_PIEL"]["NOMBRE"]); $i++){ ?>
+						<option value="<?php echo $arrayQuery["COLOR_PIEL"]["ID_COLOR_PIEL"][$i] ?>">
+							<?php echo $arrayQuery["COLOR_PIEL"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="color_piel_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "color_piel_button" class= "eliminar" >X</button>
+				</div>
+				
+				
+				<label class="col-md-4" for="color_pelo">Color Pelo</label>
+				<select class="col-md-4" name="color_pelo" id="color_pelo">
+					<option value="">Agregar nuevo</option>
+					<?php for($i = 0; $i < count($arrayQuery["COLOR_PELO"]["NOMBRE"]); $i++){ ?>
+						<option value="<?php echo $arrayQuery["COLOR_PELO"]["ID_COLOR_PELO"][$i] ?>">
+							<?php echo $arrayQuery["COLOR_PELO"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="color_pelo_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "color_pelo_button" class= "eliminar" >X</button>
+				</div>
+				<label class="col-md-4" for="contextura">Contextura</label>
+				<select class="col-md-4" name="contextura" id="contextura">
+					<option value="">Agregar nuevo</option>
+					<?php for($i = 0; $i < count($arrayQuery["CONTEXTURA"]["NOMBRE"]); $i++){ ?>
+						<option value="<?php echo $arrayQuery["CONTEXTURA"]["ID_CONTEXTURA"][$i] ?>">
+							<?php echo $arrayQuery["CONTEXTURA"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="contextura_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "contextura_button" class= "eliminar" >X</button>
+				</div>
+				
+				<input type="button" name="previous" class="previous action-button" value="Anterior" />
+				<input type="button" name="next" class="next action-button" value="Siguiente" />
+
+			</fieldset>
+			
+			<fieldset class = "catalogos">
+				
+				<h2 class="fs-title">Catalogos</h2>
+				
+				<label class="col-md-4" for="estado_match">Estado Match</label>
+				<select class="col-md-4" name="estado_match" id="estado_match">
+					<option value="">Agregar nuevo</option>
+					<?php for($i = 0; $i < count($arrayQuery["ESTADO_MATCH"]["NOMBRE"]); $i++){ ?>
+						<option value="<?php echo $arrayQuery["ESTADO_MATCH"]["ID_ESTADO_MATCH"][$i] ?>">
+							<?php echo $arrayQuery["ESTADO_MATCH"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="estado_match_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "estado_match_button" class= "eliminar" >X</button>
+				</div>
+				<label class="col-md-4" for="estado_civil">Estado Civil</label>
+				<select class="col-md-4" name="estado_civil" id="estado_civil">
+					<option value="">Agregar nuevo</option>
+					<option value="1">valor demo</option>
+					<?php for($i = 0; $i < count($arrayQuery["ESTADO_CIVIL"]["NOMBRE"]); $i++){ ?>
+						<option value="<?php echo $arrayQuery["ESTADO_CIVIL"]["ID_ESTADOCI"][$i] ?>">
+							<?php echo $arrayQuery["ESTADO_CIVIL"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="estado_civil_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "estado_civil_button" class= "eliminar" >X</button>
+				</div>
+				<label class="col-md-4" for="genero">Genero</label>
+				<select class="col-md-4" name="genero" id="genero">
+					<option value="">Agregar nuevo</option>
+					<?php for($i = 0; $i < count($arrayQuery["GENERO"]["NOMBRE"]); $i++){ ?>
+						<option value="<?php echo $arrayQuery["GENERO"]["ID_GENERO"][$i] ?>">
+							<?php echo $arrayQuery["GENERO"]["NOMBRE"][$i] ?>
+						</option>
+					<?php } ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="genero_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "genero_button" class= "eliminar" >X</button>
+				</div>
+				<input type="button" name="previous" class="previous action-button" value="Anterior" />
+				<!--input type="submit" name="submit" class="submit action-button" value="Aplicar" /-->
+
+			</fieldset>
+		
+		</form>
+	</div>
+	</div>		
+	
+	<?php require_once("footer.php") ?>
+
+	<script type="text/javascript">
+		//jQuery time
+		var current_fs, next_fs, previous_fs; //fieldsets
+		var left, opacity, scale; //fieldset properties which we will animate
+		var animating; //flag to prevent quick multi-click glitches
+		
+		$(".next").click(function(){
+			if(animating) return false;
+			animating = true;
+			
+			current_fs = $(this).parent();
+			next_fs = $(this).parent().next();
+			
+			//activate next step on progressbar using the index of next_fs
+			$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+			
+			//show the next fieldset
+			next_fs.show(); 
+			//hide the current fieldset with style
+			current_fs.animate({opacity: 0}, {
+				step: function(now, mx) {
+					//as the opacity of current_fs reduces to 0 - stored in "now"
+					//1. scale current_fs down to 80%
+					scale = 1 - (1 - now) * 0.2;
+					//2. bring next_fs from the right(50%)
+					left = (now * 50)+"%";
+					//3. increase opacity of next_fs to 1 as it moves in
+					opacity = 1 - now;
+					current_fs.css({'transform': 'scale('+scale+')'});
+					next_fs.css({'left': left, 'opacity': opacity});
+				}, 
+				duration: 800, 
+				complete: function(){
+					current_fs.hide();
+					animating = false;
+				}, 
+				//this comes from the custom easing plugin
+				easing: 'easeInOutBack'
+			});
+		});
+		
+		$(".previous").click(function(){
+			if(animating) return false;
+			animating = true;
+			
+			current_fs = $(this).parent();
+			previous_fs = $(this).parent().prev();
+			
+			//de-activate current step on progressbar
+			$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+			
+			//show the previous fieldset
+			previous_fs.show(); 
+			//hide the current fieldset with style
+			current_fs.animate({opacity: 0}, {
+				step: function(now, mx) {
+					//as the opacity of current_fs reduces to 0 - stored in "now"
+					//1. scale previous_fs from 80% to 100%
+					scale = 0.8 + (1 - now) * 0.2;
+					//2. take current_fs to the right(50%) - from 0%
+					left = ((1-now) * 50)+"%";
+					//3. increase opacity of previous_fs to 1 as it moves in
+					opacity = 1 - now;
+					current_fs.css({'left': left});
+					previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+				}, 
+				duration: 800, 
+				complete: function(){
+					current_fs.hide();
+					animating = false;
+				}, 
+				//this comes from the custom easing plugin
+				easing: 'easeInOutBack'
+			});
+		});
+		
+		$(".submit").click(function(){
+			return false;
+		});
+		
+		$("#Pais0").change(function(){
+			$("#Ciudad0").val("");
+			$("#Ciudad0 option:not(:first)").hide();
+			$("#Estado0").val("");
+			$("#Estado0 option:not(:first)").hide();
+			$("#Estado0 ."+$(this).val()).show();
+		});
+		
+		$("#Pais").change(function(){
+			$("#Ciudad").val("");
+			$("#Estado").val("");
+			$("#Ciudad option:not(:first)").hide();
+			$("#Estado option:not(:first)").hide();
+			$("#Estado ."+$(this).val()).show();
+		});
+		
+		$("#Estado0").change(function(){
+			$("#Ciudad0").val("");
+			$("#Ciudad0 option:not(:first)").hide();
+			$("#Ciudad0 ."+$(this).val()).show();
+		});
+		
+		$("#Estado").change(function(){
+			$("#Ciudad").val("");
+			$("#Ciudad option:not(:first)").hide();
+			$("#Ciudad ."+$(this).val()).show();
+		});
+
+		$(".catalogos select").change(function(){
+			var input = $("input[name='"+$(this).attr("name")+"_input']");
+			if ($(this).val() == ""){ input.val(""); } 
+			else { input.val( $(this).find("option:selected").text().trim());}
+		});
+		
+		
+		$(".catalogos input").change(function(){
+			var value = $(this).val();
+			var input = $(this).attr("name");
+			var nameSelect = input.substring(0, input.length-6) //se borra la palabra "_input" para obtener el select;
+			var row_id = $("select[name='"+nameSelect+"'] option:selected").val();
+			if ($("select[name='"+nameSelect+"']").val() == ""){ // ADD
+				if(nameSelect != "ciudad" && nameSelect != "estado"){
+					var data = "mode=registrar_catalogo&procedure=REGISTRAR_"+nameSelect+"&value="+value;
+					$.ajax({  
+						type: "POST",
+						data: data,
+						url: "funcionesOracle.php",
+						success: function(data){
+							$("#debug").html(data);
+						},
 					});
-				})(jQuery);
-			</script>
-			<div id="container">
-				<div id="content" role="main">
-					<ul class="home-widgets content-left">
-						<div class="sp-widget-align-none">
-							<li id="sportspress-event-blocks-2" class="widget-container widget_sp_event_blocks">
-								<h3 class="widget-title">Fixtures</h3>
-								<div class="sp-template sp-template-event-blocks">
-									<div class="sp-table-wrapper">
-										<table class="sp-event-blocks sp-data-table sp-paginated-table" data-sp-rows="10">
-											<thead>
-												<tr>
-													<th></th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr class="sp-row sp-post alternate">
-													<td>
-														<img src="assets/foxes-113x128.png" class="team-logo logo-odd wp-post-image" alt="foxes" height="128" width="113"> <img src="assets/eagles-105x128.png"
-														class="team-logo logo-even wp-post-image" alt="eagles" height="128" width="105">
-														<time class="sp-event-date" datetime="2015-11-20 16:30:00">November 20, 2015</time>
-														<h5 class="sp-event-time">4:30 pm</h5>
-														<h4 class="sp-event-title">
-																	<a href="http://demo.themeboy.com/footballclub/event/571/">Fitzroy vs Essendon</a>
-															</h4>
-
-													</td>
-												</tr>
-												<tr class="sp-row sp-post">
-													<td>
-														<img src="assets/bulls-98x128.png" class="team-logo logo-odd wp-post-image" alt="bulls" height="128" width="98"> <img src="assets/eagles-105x128.png"
-														class="team-logo logo-even wp-post-image" alt="eagles" height="128" width="105">
-														<time class="sp-event-date" datetime="2015-11-24 11:30:00">November 24, 2015</time>
-														<h5 class="sp-event-time">11:30 am</h5>
-														<h4 class="sp-event-title">
-																	<a href="http://demo.themeboy.com/footballclub/event/551/">Brighton vs Essendon</a>
-															</h4>
-
-													</td>
-												</tr>
-												<tr class="sp-row sp-post alternate">
-													<td>
-														<img src="assets/budgies-113x128.png" class="team-logo logo-odd wp-post-image" alt="budgies" height="128" width="113"> <img src="assets/eagles-105x128.png"
-														class="team-logo logo-even wp-post-image" alt="eagles" height="128" width="105">
-														<time class="sp-event-date" datetime="2015-11-29 14:00:00">November 29, 2015</time>
-														<h5 class="sp-event-time">2:00 pm</h5>
-														<h4 class="sp-event-title">
-																	<a href="http://demo.themeboy.com/footballclub/event/558/">Bundoora vs Essendon</a>
-															</h4>
-
-													</td>
-												</tr>
-												<tr class="sp-row sp-post">
-													<td>
-														<img src="assets/eagles-105x128.png" class="team-logo logo-odd wp-post-image" alt="eagles" height="128" width="105"> <img src="assets/sharks-128x106.png"
-														class="team-logo logo-even wp-post-image" alt="sharks" height="106" width="128">
-														<time class="sp-event-date" datetime="2015-12-01 12:30:00">December 1, 2015</time>
-														<h5 class="sp-event-time">12:30 pm</h5>
-														<h4 class="sp-event-title">
-																	<a href="http://demo.themeboy.com/footballclub/event/564/">Essendon vs Southbank</a>
-															</h4>
-
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</li>
-						</div>
-					</ul>
-					<ul class="home-widgets content-right">
-						<div class="sp-widget-align-none">
-							<li id="sportspress-event-blocks-3" class="widget-container widget_sp_event_blocks">
-								<h3 class="widget-title">Results</h3>
-								<div class="sp-template sp-template-event-blocks">
-									<div class="sp-table-wrapper">
-										<table class="sp-event-blocks sp-data-table sp-paginated-table" data-sp-rows="10">
-											<thead>
-												<tr>
-													<th></th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr class="sp-row sp-post alternate">
-													<td>
-														<img src="assets/eagles-105x128.png" class="team-logo logo-odd wp-post-image" alt="eagles" height="128" width="105"> <img src="assets/budgies-113x128.png"
-														class="team-logo logo-even wp-post-image" alt="budgies" height="128" width="113">
-														<time class="sp-event-date" datetime="2013-01-20 14:00:00">January 20, 2013</time>
-														<h5 class="sp-event-results">4 - 2</h5>
-														<h4 class="sp-event-title">
-																	<a href="http://demo.themeboy.com/footballclub/event/426/">Essendon vs Bundoora</a>
-															</h4>
-
-													</td>
-												</tr>
-												<tr class="sp-row sp-post">
-													<td>
-														<img src="assets/budgies-113x128.png" class="team-logo logo-odd wp-post-image" alt="budgies" height="128" width="113"> <img src="assets/eagles-105x128.png"
-														class="team-logo logo-even wp-post-image" alt="eagles" height="128" width="105">
-														<time class="sp-event-date" datetime="2013-01-21 14:00:00">January 21, 2013</time>
-														<h5 class="sp-event-results">2 - 2</h5>
-														<h4 class="sp-event-title">
-																	<a href="http://demo.themeboy.com/footballclub/event/472/">Bundoora vs Essendon</a>
-															</h4>
-
-													</td>
-												</tr>
-												<tr class="sp-row sp-post alternate">
-													<td>
-														<img src="assets/eagles-105x128.png" class="team-logo logo-odd wp-post-image" alt="eagles" height="128" width="105"> <img src="assets/rams-128x128.png"
-														class="team-logo logo-even wp-post-image" alt="rams" height="128" width="128">
-														<time class="sp-event-date" datetime="2013-01-22 14:00:00">January 22, 2013</time>
-														<h5 class="sp-event-results">4 - 2</h5>
-														<h4 class="sp-event-title">
-																	<a href="http://demo.themeboy.com/footballclub/event/463/">Essendon vs Richmond</a>
-															</h4>
-
-													</td>
-												</tr>
-												<tr class="sp-row sp-post">
-													<td>
-														<img src="assets/sharks-128x106.png" class="team-logo logo-odd wp-post-image" alt="sharks" height="106" width="128"> <img src="assets/eagles-105x128.png"
-														class="team-logo logo-even wp-post-image" alt="eagles" height="128" width="105">
-														<time class="sp-event-date" datetime="2013-02-16 12:30:00">February 16, 2013</time>
-														<h5 class="sp-event-results">2 - 3</h5>
-														<h4 class="sp-event-title">
-																	<a href="http://demo.themeboy.com/footballclub/event/462/">Southbank vs Essendon</a>
-															</h4>
-
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</li>
-						</div>
-					</ul>
-					<div class="clear"></div>
-					<ul class="home-widgets">
-						<div class="sp-widget-align-none">
-							<li id="sportspress-league-table-2" class="widget-container widget_league_table widget_sp_league_table">
-								<h3 class="widget-title">League Table</h3>
-								<section>
-									<div class="sp-template sp-template-league-table">
-										<h4 class="sp-table-caption">Season Standings</h4>
-										<div class="sp-table-wrapper">
-											<div class="dataTables_wrapper no-footer" id="DataTables_Table_0_wrapper">
-												<div class="sp-scrollable-table-wrapper">
-													<table role="grid" id="DataTables_Table_0" class="sp-league-table sp-data-table sp-sortable-table sp-scrollable-table sp-paginated-table dataTable no-footer" data-sp-rows="10">
-														<thead>
-															<tr role="row">
-																<th aria-label="Pos" colspan="1" rowspan="1" aria-controls="DataTables_Table_0" tabindex="0" class="data-rank sorting">Pos</th>
-																<th aria-label="Team" colspan="1" rowspan="1" aria-controls="DataTables_Table_0" tabindex="0" class="data-name sorting">Team</th>
-																<th aria-label="P" colspan="1" rowspan="1" aria-controls="DataTables_Table_0" tabindex="0" class="data-p sorting">P</th>
-																<th aria-label="W" colspan="1" rowspan="1" aria-controls="DataTables_Table_0" tabindex="0" class="data-w sorting">W</th>
-																<th aria-label="D" colspan="1" rowspan="1" aria-controls="DataTables_Table_0" tabindex="0" class="data-d sorting">D</th>
-																<th aria-label="L" colspan="1" rowspan="1" aria-controls="DataTables_Table_0" tabindex="0" class="data-l sorting">L</th>
-																<th aria-label="F" colspan="1" rowspan="1" aria-controls="DataTables_Table_0" tabindex="0" class="data-f sorting">F</th>
-																<th aria-label="A" colspan="1" rowspan="1" aria-controls="DataTables_Table_0" tabindex="0" class="data-a sorting">A</th>
-																<th aria-label="GD" colspan="1" rowspan="1" aria-controls="DataTables_Table_0" tabindex="0" class="data-gd sorting">GD</th>
-																<th aria-label="Pts" colspan="1" rowspan="1" aria-controls="DataTables_Table_0" tabindex="0" class="data-pts sorting">Pts</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr role="row" class="highlighted odd">
-																<td class="data-rank sp-highlight">1</td>
-																<td class="data-name has-logo sp-highlight"><span class="team-logo"><img src="assets/eagles-105x128.png" class="attachment-sportspress-fit-icon wp-post-image" alt="eagles" height="128" width="105"></span>Essendon</td>
-																<td class="data-p sp-highlight">38</td>
-																<td class="data-w sp-highlight">27</td>
-																<td class="data-d sp-highlight">5</td>
-																<td class="data-l sp-highlight">6</td>
-																<td class="data-f sp-highlight">102</td>
-																<td class="data-a sp-highlight">37</td>
-																<td class="data-gd sp-highlight">65</td>
-																<td class="data-pts sp-highlight">86</td>
-															</tr>
-															<tr role="row" class="even">
-																<td class="data-rank">2</td>
-																<td class="data-name has-logo"><span class="team-logo"><img src="assets/rams-128x128.png" class="attachment-sportspress-fit-icon wp-post-image" alt="rams" height="128" width="128"></span>Richmond</td>
-																<td class="data-p">38</td>
-																<td class="data-w">26</td>
-																<td class="data-d">6</td>
-																<td class="data-l">6</td>
-																<td class="data-f">101</td>
-																<td class="data-a">50</td>
-																<td class="data-gd">51</td>
-																<td class="data-pts">84</td>
-															</tr>
-															<tr role="row" class="odd">
-																<td class="data-rank">3</td>
-																<td class="data-name has-logo"><span class="team-logo"><img src="assets/crocodiles-128x123.png" class="attachment-sportspress-fit-icon wp-post-image" alt="crocodiles" height="123" width="128"></span>Caulfield</td>
-																<td
-																class="data-p">38</td>
-																	<td class="data-w">25</td>
-																	<td class="data-d">7</td>
-																	<td class="data-l">6</td>
-																	<td class="data-f">71</td>
-																	<td class="data-a">27</td>
-																	<td class="data-gd">44</td>
-																	<td class="data-pts">82</td>
-															</tr>
-															<tr role="row" class="even">
-																<td class="data-rank">4</td>
-																<td class="data-name has-logo"><span class="team-logo"><img src="assets/flamingos-118x128.png" class="attachment-sportspress-fit-icon wp-post-image" alt="flamingos" height="128" width="118"></span>Flemington</td>
-																<td
-																class="data-p">38</td>
-																	<td class="data-w">24</td>
-																	<td class="data-d">7</td>
-																	<td class="data-l">7</td>
-																	<td class="data-f">68</td>
-																	<td class="data-a">41</td>
-																	<td class="data-gd">27</td>
-																	<td class="data-pts">79</td>
-															</tr>
-															<tr role="row" class="odd">
-																<td class="data-rank">5</td>
-																<td class="data-name has-logo"><span class="team-logo"><img src="assets/seahorses-108x128.png" class="attachment-sportspress-fit-icon wp-post-image" alt="seahorses" height="128" width="108"></span>Sandringham</td>
-																<td
-																class="data-p">38</td>
-																	<td class="data-w">21</td>
-																	<td class="data-d">9</td>
-																	<td class="data-l">8</td>
-																	<td class="data-f">61</td>
-																	<td class="data-a">39</td>
-																	<td class="data-gd">22</td>
-																	<td class="data-pts">72</td>
-															</tr>
-															<tr role="row" class="even">
-																<td class="data-rank">6</td>
-																<td class="data-name has-logo"><span class="team-logo"><img src="assets/foxes-113x128.png" class="attachment-sportspress-fit-icon wp-post-image" alt="foxes" height="128" width="113"></span>Fitzroy</td>
-																<td class="data-p">38</td>
-																<td class="data-w">21</td>
-																<td class="data-d">6</td>
-																<td class="data-l">11</td>
-																<td class="data-f">55</td>
-																<td class="data-a">43</td>
-																<td class="data-gd">4</td>
-																<td class="data-pts">69</td>
-															</tr>
-															<tr role="row" class="odd">
-																<td class="data-rank">7</td>
-																<td class="data-name has-logo"><span class="team-logo"><img src="assets/dragons-111x128.png" class="attachment-sportspress-fit-icon wp-post-image" alt="dragons" height="128" width="111"></span>Doncaster</td>
-																<td
-																class="data-p">38</td>
-																	<td class="data-w">19</td>
-																	<td class="data-d">7</td>
-																	<td class="data-l">12</td>
-																	<td class="data-f">64</td>
-																	<td class="data-a">46</td>
-																	<td class="data-gd">21</td>
-																	<td class="data-pts">64</td>
-															</tr>
-															<tr role="row" class="even">
-																<td class="data-rank">8</td>
-																<td class="data-name has-logo"><span class="team-logo"><img src="assets/lizards-116x128.png" class="attachment-sportspress-fit-icon wp-post-image" alt="lizards" height="128" width="116"></span>Lysterfield</td>
-																<td
-																class="data-p">38</td>
-																	<td class="data-w">15</td>
-																	<td class="data-d">11</td>
-																	<td class="data-l">12</td>
-																	<td class="data-f">54</td>
-																	<td class="data-a">52</td>
-																	<td class="data-gd">8</td>
-																	<td class="data-pts">56</td>
-															</tr>
-															<tr role="row" class="odd">
-																<td class="data-rank">9</td>
-																<td class="data-name has-logo"><span class="team-logo"><img src="assets/kangaroos-123x128.png" class="attachment-sportspress-fit-icon wp-post-image" alt="kangaroos" height="128" width="123"></span>Roos</td>
-																<td
-																class="data-p">38</td>
-																	<td class="data-w">13</td>
-																	<td class="data-d">11</td>
-																	<td class="data-l">14</td>
-																	<td class="data-f">45</td>
-																	<td class="data-a">59</td>
-																	<td class="data-gd">-7</td>
-																	<td class="data-pts">50</td>
-															</tr>
-															<tr role="row" class="even">
-																<td class="data-rank">10</td>
-																<td class="data-name has-logo"><span class="team-logo"><img src="assets/bluebirds-128x123.png" class="attachment-sportspress-fit-icon wp-post-image" alt="bluebirds" height="123" width="128"></span>Bentleigh</td>
-																<td
-																class="data-p">38</td>
-																	<td class="data-w">15</td>
-																	<td class="data-d">4</td>
-																	<td class="data-l">19</td>
-																	<td class="data-f">43</td>
-																	<td class="data-a">48</td>
-																	<td class="data-gd">-16</td>
-																	<td class="data-pts">49</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
-											</div>
-										</div><a class="sp-league-table-link sp-view-all-link" href="http://demo.themeboy.com/footballclub/table/primary-league/">View full table</a></div>
-								</section>
-							</li>
-						</div>
-					</ul>
-				</div>
-				<!-- #content -->
-			</div>
-			<!-- #container -->
-		</div>
-		<!-- #main -->
+				}
+				else if (nameSelect == "ciudad"){
+					var estado = $("#estado").val()
+					var data = "mode=registrar_ciudad&procedure=REGISTRAR_"+nameSelect+"&value="+value+ "&id_estado="+estado;
+					$.ajax({  
+						type: "POST",
+						data: data,
+						url: "funcionesOracle.php",
+						success: function(data){
+							$("#debug").html(data);
+						},
+					});
+				}else if (nameSelect == "estado"){
+					var pais = $("#pais").val()
+					var data = "mode=registrar_estado&procedure=REGISTRAR_"+nameSelect+"&value="+value+ "&id_pais="+pais;
+					$.ajax({  
+						type: "POST",
+						data: data,
+						url: "funcionesOracle.php",
+						success: function(data){
+							$("#debug").html(data);
+						},
+					});
+					
+				}
+				
+				var id = $("select[name='"+nameSelect+"'] option").length;
+				$("select[name='"+nameSelect+"']").append("<option value='"+id+"'>"+value+"</option>");
+				$("select[name='"+nameSelect+"'] option").last().attr("selected", "selected");
+				
+			}
+			else{ //EDIT
+				var data = "mode=editar_catalogo&procedure=EDITAR_"+nameSelect+"&value="+value+ "&row_id="+row_id;
+				$.ajax({  
+					type: "POST",
+					url: "funcionesOracle.php",
+					data: data,
+					success: function(data){
+						$("#debug").html(data);
+					}
+				});
+				$("select[name='"+nameSelect+"'] option:selected").html(value);
+			}
+		});
 		
 		
-	<?php require_once("footer.php");?>
+		$("#ciudad").change(function(){
+			
+			var input = $("input[name='"+$(this).attr("name")+"_input']");
+			if ($(this).val() == ""){ input.val(""); } 
+			else { input.val( $(this).find("option:selected").text().trim());}
+		})
+		
+		
+		
+		
+		$(".eliminar").click(function(){
+			var input = $(this).attr("name");
+			var nameSelect = input.substring(0, input.length-7) //se borra la palabra "_bootton" ;
+			var row_id = $("select[name='"+nameSelect+"'] option:selected").val();
+			var data = "mode=borrar_catalogo&procedure=BORRAR_"+nameSelect+ "&row_id="+row_id;
+				$.ajax({  
+					type: "POST",
+					url: "funcionesOracle.php",
+					data: data,
+					success: function(data){
+						$("#debug").html(data);
+					}
+				});
+				$("select[name='"+nameSelect+"'] option:selected").remove();
+		})
+		
+		
+		
+		function registrar_evento(){
+//			alert($("#Ciudad0").val());
+			var nombre_eventos = $("#nombre_eventos").val();
+			var descripcion_eventos = $("#descripcion_eventos").val();
+			var fecha_eventos = $("#fecha_evento_input").val();
+			var ciudad_eventos = $("#Ciudad0").val();
+
+			var data = "mode=registrar_evento&nombre_eventos="+nombre_eventos+"&descripcion_eventos="+descripcion_eventos+"&fecha_eventos="+fecha_eventos+"&ciudad_eventos="+ciudad_eventos;
+			$.ajax({  
+				    type: "POST",
+				    url: "funcionesOracle.php",
+				    data: data,
+				    success: function(data){
+				    	$("#debug").html(data);
+				    }
+			});
+		}
+		
+		function enviar_mensaje(){
+//			alert($("#Ciudad0").val());
+			var subject = $("#subject").val();
+			var mensaje = $("#mensaje").val();
+			var ciudad = $("#Evento").val();
+
+			var data = "mode=enviar_mail&subject="+subject+"&mensaje="+mensaje+"&ciudad="+ciudad;
+			$.ajax({  
+				    type: "POST",
+				    url: "funcionesOracle.php",
+				    data: data,
+				    success: function(data){
+				    	$("#debug").html(data);
+				    }
+			});
+		}
+		
+	</script>
