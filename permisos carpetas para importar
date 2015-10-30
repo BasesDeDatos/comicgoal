@@ -1,0 +1,6 @@
+ sudo chmod 0755 /usr/share/phpmyadmin/assets
+ sudo chmod 0755 /etc/phpmyadmin/assets
+ sudo chmod 0755 /var/lib/phpmyadmin/assets
+ sudo chmod 0755 /usr/share/php/php-gettext/assets
+ sudo chmod 0755 /usr/share/javascript/assets
+ sudo chmod 0755 /etc/phpmyadmin/config.inc.php
