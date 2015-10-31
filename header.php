@@ -7,8 +7,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="es">
 <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
 	
-	<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+	<title>Comic Goal</title>
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+	<link rel="icon" href="img/logo.png" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!--link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all"-->
 	<!--link href="css/style.css" type="text/css" rel="stylesheet" media="all"-->
 	<link href="css/profile.css" type="text/css" rel="stylesheet" media="all">
 	<!-- Custom Theme files -->
@@ -22,17 +31,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<link rel="stylesheet" href="css/graph.css">
 	<link href="css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />	
 	<link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery-1.11.1.min.js"></script>
 	
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<meta charset="UTF-8">
-	
-	<title>Comic Goal</title>
-	<!--[if IE]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-	<link rel="icon" href="img/logo.png" type="image/x-icon">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<script src="assets/widgets_002.js" id="twitter-wjs"></script>
 	<script src="assets/all.js" id="facebook-jssdk"></script>
 	<script src="assets/ga.js" async="" type="text/javascript"></script>
@@ -44,7 +44,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			"baseUrl": "http:\/\/s.w.org\/images\/core\/emoji\/72x72\/",
 			"ext": ".png",
 			"source": {
-				"concatemoji": "http:\/\/demo.themeboy.com\/footballclub\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.5"
+				"concatemoji": "assets\/wp-emoji-release.js?ver=4.2.5"
 			}
 		};
 		! function(a, b, c) {
@@ -92,7 +92,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<link rel="stylesheet" id="jquery-fancybox-css" href="assets/jquery.css" type="text/css" media="all">
 	<link rel="stylesheet" id="responsive-stylesheet-css" href="assets/responsive.css" type="text/css" media="all">
 	<style type="text/css"></style>
-	<script type="text/javascript" src="assets/jquery_008.js"></script>
 	<script type="text/javascript" src="assets/jquery-migrate.js"></script>
 	<script type="text/javascript" src="assets/html5shiv.js"></script>
 	<script type="text/javascript" src="assets/widgets.js"></script>

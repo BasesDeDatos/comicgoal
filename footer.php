@@ -63,72 +63,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<li class="vimeo"><a href="http://vimeo.com/themeboy" title="Vimeo" target="_blank">Vimeo</a></li>
 		</ul-->
 	</footer>
-
-	<link rel="stylesheet" id="adminbar-stylesheet-css" href="assets/adminbar.css" type="text/css" media="all">
-	<script type="text/javascript" src="assets/comment-reply.js"></script>
-	<script type="text/javascript" src="assets/jquery_007.js"></script>
-	<script type="text/javascript" src="assets/jquery_004.js"></script>
-	<script type="text/javascript">
-		/* <![CDATA[ */
-		var localized_strings = {
-			"days": "days",
-			"hrs": "hrs",
-			"mins": "mins",
-			"secs": "secs",
-			"previous": "Previous",
-			"next": "Next"
-		};
-		/* ]]> */
-	</script>
-	<script type="text/javascript" src="assets/sportspress.js"></script>
-	<script>
-		(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = "//connect.facebook.net/en_CA/all.js#xfbml=1";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script>
-	<script>
-		! function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (!d.getElementById(id)) {
-				js = d.createElement(s);
-				js.id = id;
-				js.src = "//platform.twitter.com/widgets.js";
-				fjs.parentNode.insertBefore(js, fjs);
-			}
-		}(document, "script", "twitter-wjs");
-	</script>
-	<script type="text/javascript">
-		(function($) {
-			// drop nav
-			$('#drop-nav').change(function() {
-				window.location = $(this).val();
-			});
-			// fancybox all image links
-			$('a').each(function() {
-				var self = this;
-				var file = $(self).attr('href');
-				if (file) {
-					var extension = file.substr((file.lastIndexOf('.') + 1));
-					switch (extension) {
-						case 'jpg':
-						case 'png':
-						case 'gif':
-							$(self).fancybox({
-								'overlayColor': '#fff'
-							});
-					}
-				}
-			});
-		})(jQuery);
-	</script>
 	
-	
-	<script src="js/jquery-1.11.1.min.js"></script>
 	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -370,6 +305,70 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		});
 		</script>
 
+<link rel="stylesheet" id="adminbar-stylesheet-css" href="assets/adminbar.css" type="text/css" media="all">
+	<script type="text/javascript" src="assets/comment-reply.js"></script>
+	<script type="text/javascript" src="assets/jquery_007.js"></script>
+	<script type="text/javascript" src="assets/jquery_004.js"></script>
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		var localized_strings = {
+			"days": "days",
+			"hrs": "hrs",
+			"mins": "mins",
+			"secs": "secs",
+			"previous": "Previous",
+			"next": "Next"
+		};
+		/* ]]> */
+	</script>
+	<script type="text/javascript" src="assets/sportspress.js"></script>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "//connect.facebook.net/en_CA/all.js#xfbml=1";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	<script>
+		! function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (!d.getElementById(id)) {
+				js = d.createElement(s);
+				js.id = id;
+				js.src = "//platform.twitter.com/widgets.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}
+		}(document, "script", "twitter-wjs");
+	</script>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+
+			// drop nav
+			$('#drop-nav').change(function() {
+				window.location = $(this).val();
+			});
+			// fancybox all image links
+			$('a').each(function() {
+				var self = this;
+				var file = $(self).attr('href');
+				if (file) {
+					var extension = file.substr((file.lastIndexOf('.') + 1));
+					switch (extension) {
+						case 'jpg':
+						case 'png':
+						case 'gif':
+							$(self).fancybox({
+								'overlayColor': '#fff'
+							});
+					}
+				}
+			});
+		})
+	</script>
+	
 
 
 	<div id="fancybox-tmp"></div>

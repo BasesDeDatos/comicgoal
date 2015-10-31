@@ -123,11 +123,9 @@ textarea {
 	background: transparent;
 	border: none;
 	float: left;
-	width: 100%;
 }
 #header #logo img {
-	margin: 10px auto;
-	display: block;
+	margin-top: -24px;
 }
 #header #maintitle {
 	float: left;
@@ -573,7 +571,7 @@ h5 {
 	margin: 0;
 	padding: 10px 0 11px 10px;
 	width: 344px;
-	height: 72px;
+	height: 50px;
 	float: left;
 	border-bottom: 1px solid #ccc;
 	border-color: rgba(128,128,128,0.4);
@@ -674,7 +672,7 @@ h5 {
 	background: transparent;
 }
 #container {
-	width: 100%px;
+	width: 640px;
 	float: left;
 }
 .page-template-page-onecolumn-php #container {
@@ -1213,7 +1211,6 @@ ul.xoxo {
 	background-repeat: no-repeat;
 	background-position: center center;
 	min-height: 140px;
-	background-image: url("img/logo.png") !important;
 }
 #footer-widgets #fourth {
 	border-right: none;
