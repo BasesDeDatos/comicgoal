@@ -68,12 +68,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<option value="<?php echo $row["ID_continente"] ?>"><?php echo $row["nombre"]?></option>
 					<?php } $mysqli->next_result(); ?>
 				</select>
-				<div class="col-md-3"><input class="col-md-6" type="text" name="pais_input" placeholder="Nuevo" /></div>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="continente_input" placeholder="Nuevo" /></div>
 				<div class="col-md-1">
 					<button name= "continente_button" class= "eliminar" >X</button>
 				</div>
 				
-				<label class="col-md-4" for="Premio">premio</label>
+				<label class="col-md-4" for="premio">Premio</label>
 				<select class="col-md-4" name="premio" id="premio">
 					<option value="" selected>Agregar nuevo</option>
 					<?php $query = 'call get_premio(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
@@ -86,6 +86,85 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col-md-3"><input class="col-md-6" type="text" name="premio_input" placeholder="Nuevo" /></div>
 				<div class="col-md-1">
 					<button name= "premio_button" class= "eliminar" >X</button>
+				</div>
+				
+				<label class="col-md-4" for="estadio">Estadio</label>
+				<select class="col-md-4" name="estadio" id="estadio">
+					<option value="" selected>Agregar nuevo</option>
+					<?php $query = 'call get_estadio(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
+						$result = $mysqli->query($query);
+						// Imprimir los resultados en HTML
+						while ($row = $result->fetch_assoc()) { ?> 
+							<option value="<?php echo $row["ID_estadio"] ?>"><?php echo $row["nombre"]?></option>
+					<?php } $mysqli->next_result(); ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="estadio_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "estadio_button" class= "eliminar" >X</button>
+				</div>
+				
+				
+				<label class="col-md-4" for="evento">Evento</label>
+				<select class="col-md-4" name="evento" id="evento">
+					<option value="" selected>Agregar nuevo</option>
+					<?php $query = 'call get_evento(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
+						$result = $mysqli->query($query);
+						// Imprimir los resultados en HTML
+						while ($row = $result->fetch_assoc()) { ?> 
+							<option value="<?php echo $row["ID_evento"] ?>"><?php echo $row["nombre"]?></option>
+					<?php } $mysqli->next_result(); ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="evento_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "evento_button" class= "eliminar" >X</button>
+				</div>
+				
+				
+				<label class="col-md-4" for="grupo">Grupo</label>
+				<select class="col-md-4" name="grupo" id="grupo">
+					<option value="" selected>Agregar nuevo</option>
+					<?php $query = 'call get_grupo(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
+						$result = $mysqli->query($query);
+						// Imprimir los resultados en HTML
+						while ($row = $result->fetch_assoc()) { ?> 
+							<option value="<?php echo $row["ID_grupo"] ?>"><?php echo $row["nombre"]?></option>
+					<?php } $mysqli->next_result(); ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="grupo_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "grupo_button" class= "eliminar" >X</button>
+				</div>
+				
+				
+				<label class="col-md-4" for="posicion">Posicion</label>
+				<select class="col-md-4" name="posicion" id="posicion">
+					<option value="" selected>Agregar nuevo</option>
+					<?php $query = 'call get_posicion(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
+						$result = $mysqli->query($query);
+						// Imprimir los resultados en HTML
+						while ($row = $result->fetch_assoc()) { ?> 
+							<option value="<?php echo $row["ID_posicion"] ?>"><?php echo $row["nombre"]?></option>
+					<?php } $mysqli->next_result(); ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="posicion_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "posicion_button" class= "eliminar" >X</button>
+				</div>
+				
+				
+				<label class="col-md-4" for="tipo_estadistica">Estadistica</label>
+				<select class="col-md-4" name="tipo_estadistica" id="tipo_estadistica">
+					<option value="" selected>Agregar nuevo</option>
+					<?php $query = 'call get_tipo_estadistica(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
+						$result = $mysqli->query($query);
+						// Imprimir los resultados en HTML
+						while ($row = $result->fetch_assoc()) { ?> 
+							<option value="<?php echo $row["ID_tipo_estadistica"] ?>"><?php echo $row["nombre"]?></option>
+					<?php } $mysqli->next_result(); ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="tipo_estadistica_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "tipo_estadistica_button" class= "eliminar" >X</button>
 				</div>
 				<input type="button" name="previous" class="previous action-button" value="Anterior" />
 				<!--input type="submit" name="submit" class="submit action-button" value="Aplicar" /-->
