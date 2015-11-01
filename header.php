@@ -18,7 +18,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<link rel="icon" href="img/logo.png" type="image/x-icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!--link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all"-->
-	<!--link href="css/style.css" type="text/css" rel="stylesheet" media="all"-->
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
 	<link href="css/profile.css" type="text/css" rel="stylesheet" media="all">
 	<!-- Custom Theme files -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">

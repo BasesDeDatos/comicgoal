@@ -12,7 +12,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 	// Realizar una consulta MySQL
-	$query = 'call get_pais(2)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
+	$query = 'call get_pais(1)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
 	$result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
 	
 	// Imprimir los resultados en HTML
@@ -29,6 +29,29 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	echo "</table>\n";
 	var_dump($array_datos);
 	
+	
+	$result->close();
+    $conexion->next_result();
+    
+	// Realizar una consulta MySQL
+	$query = 'call get_pais(1)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
+	$result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+	
+	// Imprimir los resultados en HTML
+	echo "<table>\n";
+	$array_datos = array();
+	while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+	    echo "\t<tr>\n";
+	    foreach ($row as $col_name => $col_value) {
+	        echo "\t\t<td>$col_value</td>\n";
+	        $array_datos[$col_name][] = $col_value;
+	    }
+	    echo "\t</tr>\n";
+	}
+	echo "</table>\n";
+	var_dump($array_datos);
+	
+
 	include_once("desconexionMySQL.php");
 
 	
