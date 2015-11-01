@@ -4,6 +4,8 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+	<?php include_once("desconexionMySQL.php"); ?>
+
 
 		<div hidden id="footer-widgets" role="contentinfo" class="clearfix">
 			<div id="colophon">
@@ -393,10 +395,3 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </body>
 
 </html>
-<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
-
-Page Caching using disk: enhanced
-Database Caching 15/247 queries in 0.593 seconds using disk
-Object Caching 4366/5063 objects using disk
-
- Served from: demo.themeboy.com @ 2015-10-25 13:24:52 by W3 Total Cache -->
