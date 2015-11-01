@@ -6,8 +6,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
 <?php
-	$conexion = mysqli_connect("localhost", "caco26i", "c9");
-	// mysql_select_db("c9", $conexion) OR DIE (
-	// 	"Error: No se pudo establecer conexión con la base de datos, intentelo más tarde"
-	// );
+	$mysqli = mysqli_connect("localhost", "caco26i", "",  "c9");
+	if ($mysqli->connect_errno) {
+    printf("Falló la conexión: %s\n", $mysqli->connect_error);
+    exit();
+}
 ?>

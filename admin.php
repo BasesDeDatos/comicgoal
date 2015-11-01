@@ -32,45 +32,45 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<select class="col-md-4" name="confederacion" id="confederacion">
 					<option value="" selected>Agregar nuevo</option>
 					<?php $query = 'call get_confederacion(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
-						$result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
-						$array_datos = array(); 
-						while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) { ?> 
-							<option value="<?php echo $row["ID_confederacion"]?>"><?php echo $row["nombre"]?></option>
-					<?php } mysql_free_result(); ?>
+						while ($row = $result->fetch_assoc()) { ?> 
+							<option value="<?php echo $row["ID_Confederacion"] ?>"><?php echo $row["nombre"]?></option>
+					<?php } include("conexionMySQL.php") ?>
 				</select>
 				<div class="col-md-3"><input class="col-md-6" type="text" name="confederacion_input" placeholder="Nuevo" /></div>
 				<div class="col-md-1">
 					<button name= "confederacion_button" class= "eliminar" >X</button>
 				</div>
 				
-				<label class="col-md-4" for="confederacion">confederacion</label>
-				<select class="col-md-4" name="confederacion" id="confederacion">
+				<label class="col-md-4" for="pais">pais</label>
+				<select class="col-md-4" name="pais" id="pais">
 					<option value="">Agregar nuevo</option>
-					<?php $queryt = 'call get_confederacion(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
-						$resulta = mysql_query($queryt) or die('Consulta fallida: ' . mysql_error());
+					<?php $query = 'call get_pais(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
+						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
-						while ($row = mysql_fetch_array($resulta, MYSQL_ASSOC)) { ?> 
-							<option value="<?php echo $row["ID_confederacion"]?>"><?php echo $row["nombre"]?></option>
-					<?php }  mysql_free_result($queryt)?>
+						while ($row = $result->fetch_assoc()) { ?> 
+							<option value="<?php echo $row["ID_pais"] ?>"><?php echo $row["nombre"]?></option>
+					<?php } $mysqli->next_result(); ?>
 				</select>
-				<div class="col-md-3"><input class="col-md-6" type="text" name="confederacion_input" placeholder="Nuevo" /></div>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="pais_input" placeholder="Nuevo" /></div>
 				<div class="col-md-1">
-					<button name= "confederacion_button" class= "eliminar" >X</button>
+					<button name= "pais_button" class= "eliminar" >X</button>
 				</div>
 				
-				<label class="col-md-4" for="genero">Genero</label>
-				<select class="col-md-4" name="genero" id="genero">
-					<option value="">Agregar nuevo</option>
-					<?php for($i = 0; $i < count($arrayQuery["GENERO"]["NOMBRE"]); $i++){ ?>
-						<option value="<?php echo $arrayQuery["GENERO"]["ID_GENERO"][$i] ?>">
-							<?php echo $arrayQuery["GENERO"]["NOMBRE"][$i] ?>
-						</option>
-					<?php } ?>
+				<label class="col-md-4" for="premio">premio</label>
+				<select class="col-md-4" name="premio" id="premio">
+					<option value="" selected>Agregar nuevo</option>
+					<?php $query = 'call get_premio(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
+						$result = $mysqli->query($query);
+						// Imprimir los resultados en HTML
+						while ($row = $result->fetch_assoc()) { ?> 
+							<option value="<?php echo $row["ID_premio"] ?>"><?php echo $row["nombre"]?></option>
+					<?php } $mysqli->next_result(); ?>
 				</select>
-				<div class="col-md-3"><input class="col-md-6" type="text" name="genero_input" placeholder="Nuevo" /></div>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="premio_input" placeholder="Nuevo" /></div>
 				<div class="col-md-1">
-					<button name= "genero_button" class= "eliminar" >X</button>
+					<button name= "premio_button" class= "eliminar" >X</button>
 				</div>
 				<input type="button" name="previous" class="previous action-button" value="Anterior" />
 				<!--input type="submit" name="submit" class="submit action-button" value="Aplicar" /-->
