@@ -43,7 +43,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<button name= "confederacion_button" class= "eliminar" >X</button>
 				</div>
 				
-				<label class="col-md-4" for="pais">pais</label>
+				<label class="col-md-4" for="pais">Pais</label>
 				<select class="col-md-4" name="pais" id="pais">
 					<option value="">Agregar nuevo</option>
 					<?php $query = 'call get_pais(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
@@ -58,7 +58,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<button name= "pais_button" class= "eliminar" >X</button>
 				</div>
 				
-				<label class="col-md-4" for="premio">premio</label>
+				<label class="col-md-4" for="continente">Continente</label>
+				<select class="col-md-4" name="continente" id="continente">
+					<option value="">Agregar nuevo</option>
+					<?php $query = 'call get_continente(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
+						$result = $mysqli->query($query);
+						// Imprimir los resultados en HTML
+						while ($row = $result->fetch_assoc()) { ?> 
+							<option value="<?php echo $row["ID_continente"] ?>"><?php echo $row["nombre"]?></option>
+					<?php } $mysqli->next_result(); ?>
+				</select>
+				<div class="col-md-3"><input class="col-md-6" type="text" name="pais_input" placeholder="Nuevo" /></div>
+				<div class="col-md-1">
+					<button name= "continente_button" class= "eliminar" >X</button>
+				</div>
+				
+				<label class="col-md-4" for="Premio">premio</label>
 				<select class="col-md-4" name="premio" id="premio">
 					<option value="" selected>Agregar nuevo</option>
 					<?php $query = 'call get_premio(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
