@@ -173,7 +173,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col-md-1">
 					<button name= "tipo_estadistica_button" class= "eliminar" >X</button>
 				</div>
-				<input type="button" name="next" class="next action-button" value="Siguiente" />
+				<input type="button" name="next" class="next action-button" value="Siguiente"/>
 				<!--input type="submit" name="submit" class="submit action-button" value="Aplicar" /-->
 			</fieldset>
 			
