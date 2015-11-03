@@ -230,7 +230,7 @@ span.menu {
   padding: 1.3em 0 .9em;
   border: none;
   margin: 0;
-  background-color: #E64608;
+  background-color: #CA0005;
   -webkit-appearance: none;
   outline: none;
   position: absolute;
@@ -297,21 +297,21 @@ span.menu {
 	-ms-transition: 0.5s all ease;
 }
 .jobs ul li a:hover{
-  background: url(../images/3a.png)#e64608 no-repeat 20px 14px;
+  background: url(../images/3a.png)#CA0005 no-repeat 20px 14px;
   color: #fff;
 }
 .jobs ul li a.cmny{
   background: url(../images/4.png)no-repeat 20px 14px;
 }
 .jobs ul li a.cmny:hover{
-  background: url(../images/4a.png)#e64608 no-repeat 20px 14px;
+  background: url(../images/4a.png)#CA0005 no-repeat 20px 14px;
   color: #fff;
 }
 .jobs ul li a.usr{
   background: url(../images/5.png) no-repeat 20px 14px;
 }
 .jobs ul li a.usr:hover{
-  background: url(../images/5a.png)#e64608 no-repeat 20px 14px;
+  background: url(../images/5a.png)#CA0005 no-repeat 20px 14px;
   color: #fff;
 }
 /*--temperature--*/
@@ -384,7 +384,7 @@ span.menu {
 
 .bnr-text h1 {
   font-size: 2.3em;
-  color: #e64608;
+  color: #CA0005;
 }
 
 
@@ -684,7 +684,7 @@ background: url('../images/into.png') no-repeat 0px 0px;
 }
 
 .login-form input[type="submit"], .submit {
-  background: #E64608;
+  background: #CA0005;
   width: 51%;
   font-size: 1.2em;
   margin: 2em 4.5em 0;
@@ -692,7 +692,7 @@ background: url('../images/into.png') no-repeat 0px 0px;
   padding: 12px 0px;
   border: none;
   transition: 0.5s all;
-  border: 1px solid #E64608;
+  border: 1px solid #CA0005;
   -webkit-transition: 0.5s all;
   -moz-transition: 0.5s all;
   -o-transition: 0.5s all;
@@ -868,7 +868,7 @@ span.menu3 lable {
 	background-color:#151515;
 }
 .top-nav2 ul li a:hover span {
-	background-color: #e64608;
+	background-color: #CA0005;
 }
 
 .top-nav3 {
@@ -1461,7 +1461,7 @@ ul.dropdown-menu3 {
 button#dropdownMenu3{
 
   font-size: 1.2em;
-  background-color: #e64608;
+  background-color: #CA0005;
   color: #fff;
   border: none;
   width: 100%;
@@ -1575,7 +1575,7 @@ canvas#bar {
 }
 .footer p a:hover{
 	font-size:1em;
-	color:#E64608;
+	color:#CA0005;
 }
 /*---- responsive-design -----*/
 
@@ -2065,7 +2065,7 @@ ul.nav.nav-sidebar {
     border: none;
 }
 .top-nav ul li a:hover, .top-nav ul li a.active {
-  color: #E64608;
+  color: #CA0005;
 }
 .search {
   width: 43%;
@@ -2658,7 +2658,7 @@ canvas#bar {
 /*buttons*/
 #msform .action-button {
 	width: 100px;
-	background: #E64608;
+	background: #CA0005;
 	font-weight: bold;
 	color: white;
 	border: 0 none;
@@ -2692,7 +2692,7 @@ canvas#bar {
 }
 #progressbar li {
 	list-style-type: none;
-	color: white;
+	color: black;
 	text-transform: uppercase;
 	font-size: 9px;
   width: 25%;
@@ -2729,7 +2729,7 @@ canvas#bar {
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before,  #progressbar li.active:after{
-	background: #E64608;
+	background: #CA0005;
 	color: white;
 }
 

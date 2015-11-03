@@ -114,10 +114,10 @@
 			</script>
 			<div id="container">
 				<div id="content" role="main">
-					<ul class="home-widgets content-left">
-						<div class="sp-widget-align-none">
+					<ul class="home-widgets">
+						<div class="sp-widget-align-left">
 							<li id="sportspress-event-blocks-2" class="widget-container widget_sp_event_blocks">
-								<h3 class="widget-title">Fixtures</h3>
+								<h3 class="widget-title">Proximos partidos</h3>
 								<div class="sp-template sp-template-event-blocks">
 									<div class="sp-table-wrapper">
 										<table class="sp-event-blocks sp-data-table sp-paginated-table" data-sp-rows="10">
@@ -182,10 +182,10 @@
 							</li>
 						</div>
 					</ul>
-					<ul class="home-widgets content-right">
-						<div class="sp-widget-align-none">
+					<ul class="home-widgets">
+						<div class="sp-widget-align-right">
 							<li id="sportspress-event-blocks-3" class="widget-container widget_sp_event_blocks">
-								<h3 class="widget-title">Results</h3>
+								<h3 class="widget-title">Ultimos resultados</h3>
 								<div class="sp-template sp-template-event-blocks">
 									<div class="sp-table-wrapper">
 										<table class="sp-event-blocks sp-data-table sp-paginated-table" data-sp-rows="10">
@@ -251,7 +251,7 @@
 						</div>
 					</ul>
 					<div class="clear"></div>
-					<ul class="home-widgets">
+					<!--ul class="home-widgets">
 						<div class="sp-widget-align-none">
 							<li id="sportspress-league-table-2" class="widget-container widget_league_table widget_sp_league_table">
 								<h3 class="widget-title">League Table</h3>
@@ -412,7 +412,7 @@
 								</section>
 							</li>
 						</div>
-					</ul>
+					</ul-->
 				</div>
 				<!-- #content -->
 			</div>

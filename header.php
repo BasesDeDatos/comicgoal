@@ -776,9 +776,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<nav id="menu" class="clearfix">
 			<div class="menu-header">
 				<ul id="menu-main-menu" class="menu">
-					<li id="menu-item-396" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item menu-item-396"><a href="assets/">Home</a></li>
-					<li id="menu-item-597" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-597"><a href="campaign.php">Campaña actual</a></li>
-					<li id="menu-item-597" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-597"><a href="tournaments.php">Otros torneos</a></li>
+					<li id="menu-item-396" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item menu-item-396"><a href="assets/">Inicio</a></li>
+					<li id="menu-item-597" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-597"><a href="tournaments.php">Equipos</a></li>
+					<li id="menu-item-597" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-597"><a href="tournaments.php">Torneos</a></li>
 					<!--li id="menu-item-705" class="menu-item menu-item-type-post_type menu-item-object-sp_list menu-item-has-children menu-item-705"><a href="assets/list/first-team/">First Team</a>
 						<ul class="sub-menu">
 							<li id="menu-item-691" class="menu-item menu-item-type-post_type menu-item-object-sp_list menu-item-691"><a href="assets/list/team-roster/">Team Roster</a></li>
