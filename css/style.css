@@ -2607,11 +2607,14 @@ canvas#bar {
 }
 
 .register-form{
-  height: 600px;
 }
 
-.scroll-container { 
-  border:2px solid #ccc; width:600px; height: 300px; overflow-y: scroll; 
+.scroll-container {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 80%; 
+  height: 600px; 
+  overflow-y: scroll; 
 }
 /*form styles*/
 #msform {
@@ -2634,6 +2637,11 @@ canvas#bar {
 	/*stacking fieldsets above each other*/
 	position: absolute;
 }
+
+#msform .current {
+  position: relative !important;
+}
+
 /*Hide all except first fieldset*/
 #msform fieldset:not(:first-of-type) {
 	display: none;
@@ -2653,6 +2661,11 @@ canvas#bar {
   font-family: Sans-serif;
   color: #2C3E50;
   font-size: 13px;
+}
+
+input[type='checkbox'] {
+    height: 17px !important;
+    margin-bottom: 0 !important;
 }
 
 /*buttons*/

@@ -26,7 +26,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<li>Integrantes</li>
 				<li>Equipo por evento</li>
 				<li>Alineacion</li>
-				<li>Estadisticas</li>
+				<li>Estadísticas</li>
 				<li>Premios</li>
 
 			</ul>
@@ -35,7 +35,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<fieldset class = "catalogos">
 				<h2 class="fs-title">Catalogos</h2>
 				
-				<label class="col-md-4" for="confederacion">Confederacion</label>
+				<label class="col-md-4" for="confederacion">Confederación</label>
 				<select class="col-md-4" name="confederacion" id="confederacion">
 					<option value="" selected>Agregar nuevo</option>
 					<?php $query = 'call get_confederacion(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
@@ -143,7 +143,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				
 				
-				<label class="col-md-4" for="posicion">Posicion</label>
+				<label class="col-md-4" for="posicion">Posición</label>
 				<select class="col-md-4" name="posicion" id="posicion">
 					<option value="" selected>Agregar nuevo</option>
 					<?php $query = 'call get_posicion(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
@@ -159,7 +159,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				
 				
-				<label class="col-md-4" for="tipo_estadistica">Estadistica</label>
+				<label class="col-md-4" for="tipo_estadistica">Estadística</label>
 				<select class="col-md-4" name="tipo_estadistica" id="tipo_estadistica">
 					<option value="" selected>Agregar nuevo</option>
 					<?php $query = 'call get_tipo_estadistica(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
@@ -187,7 +187,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
 						while ($row = $result->fetch_assoc()) { ?> 
-							<option value="<?php echo $row["ID_partido"] ?>"><?php echo $row["ID_partido"]?></option>
+							<option value="<?php echo $row["ID_partido"] ?>"><?php echo $row["ID_equipo_local"]." vs ".$row["ID_equipo_visita"]?></option>
 					<?php } $mysqli->next_result(); ?>
 				</select>
 				
@@ -220,7 +220,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
 						while ($row = $result->fetch_assoc()) { ?> 
-							<option value="<?php echo $row["ID_equipo"] ?>"><?php echo $row["ID_equipo"]?></option>
+							<option value="<?php echo $row["ID_equipo"] ?>"><?php echo $row["nombre"]?></option>
 					<?php } $mysqli->next_result(); ?>
 				</select>
 				
@@ -257,11 +257,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
 						while ($row = $result->fetch_assoc()) { ?> 
-							<option value="<?php echo $row["ID_equipo"] ?>"><?php echo $row["ID_equipo"]?></option>
+							<option value="<?php echo $row["ID_equipo"] ?>"><?php echo $row["nombre"]?></option>
 					<?php } $mysqli->next_result(); ?>
 				</select>
 				
-				<label class="col-md-6" for="confederacionequipo">Confederacion</label>
+				<label class="col-md-6" for="confederacionequipo">Confederación</label>
 				<select class="col-md-6" name="confederacionequipo" id="confederacionequipo">
 					<option value="" selected>Agregar nuevo</option>
 					<?php $query = 'call get_confederacion(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
@@ -283,7 +283,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<?php } $mysqli->next_result(); ?>
 				</select>
 				
-				<label class="col-md-6" for="paisequipo">Pais</label>
+				<label class="col-md-6" for="paisequipo">País</label>
 				<select class="col-md-6" name="paisequipo" id="paisequipo">
 					<option value="" selected>Agregar nuevo</option>
 					<?php $query = 'call get_pais(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
@@ -320,7 +320,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</option>
 					<?php } ?>
 				</select>
-				
 				<label class="col-md-6" for="fecha_nac">Fecha: </label>
 				<div class="col-md-6"><input type="date" name="fecha_nac" placeholder="fecha" /></div>
 				
@@ -342,11 +341,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
 						while ($row = $result->fetch_assoc()) { ?> 
-							<option value="<?php echo $row["ID_equipo"] ?>"><?php echo $row["ID_equipo"]?></option>
+							<option value="<?php echo $row["ID_equipo"] ?>"><?php echo $row["nombre"]?></option>
 					<?php } $mysqli->next_result(); ?>
 				</select>
 				
-				<label class="col-md-6" for="posicionintegrante">Posicion</label>
+				<label class="col-md-6" for="posicionintegrante">Posición</label>
 				<select class="col-md-6" name="posicionintegrante" id="posicionintegrante">
 					<option value="" selected>Agregar nuevo</option>
 					<?php $query = 'call get_posicion(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
@@ -455,7 +454,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</fieldset>
 			
 			<fieldset>
-				<h2 class="fs-title">Estadisticas</h2>
+				<h2 class="fs-title">Estadísticas</h2>
 				
 				<label class="col-md-6" for="partidoestadistica">Partido</label>
 				<select class="col-md-6" name="partidoestadistica" id="partidoestadistica">
@@ -528,6 +527,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			//show the next fieldset
 			next_fs.show(); 
 			//hide the current fieldset with style
+			setTimeout(function(){ next_fs.addClass("current") }, 800)
+
 			current_fs.animate({opacity: 0}, {
 				step: function(now, mx) {
 					//as the opacity of current_fs reduces to 0 - stored in "now"
@@ -542,7 +543,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				}, 
 				duration: 800, 
 				complete: function(){
-					current_fs.hide();
+					current_fs.hide().removeClass("current");
 					animating = false;
 				}, 
 				//this comes from the custom easing plugin
@@ -561,7 +562,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
 			
 			//show the previous fieldset
-			previous_fs.show(); 
+			previous_fs.show();
+			
+			setTimeout(function(){ previous_fs.addClass("current"); }, 800)
 			//hide the current fieldset with style
 			current_fs.animate({opacity: 0}, {
 				step: function(now, mx) {
@@ -577,7 +580,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				}, 
 				duration: 800, 
 				complete: function(){
-					current_fs.hide();
+					current_fs.hide().removeClass("current");
 					animating = false;
 				}, 
 				//this comes from the custom easing plugin
