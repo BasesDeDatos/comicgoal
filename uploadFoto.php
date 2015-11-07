@@ -5,7 +5,7 @@
     // An example for PHP Server code is mentioned below.
     // ...
     $p1 = $p2 = [];
-    $ruta = "./profile_pics/"; //ruta carpeta donde queremos copiar las imágenes
+    $ruta = "./img/"; //ruta carpeta donde queremos copiar las imágenes
     if (empty($_FILES['archivo']['name'])) {
         echo '{}';
         return;

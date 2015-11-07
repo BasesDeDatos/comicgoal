@@ -667,7 +667,12 @@ background: url('../images/into.png') no-repeat 0px 0px;
 
 .login-form form{
 	margin-bottom:24px;
+	text-align: center;
 }
+.login-form form .submit{
+	display: inline-block;
+}
+
 
 .login-form form input[type="text"] {
   background: url(../images/msg.png) no-repeat 15px 13px;
@@ -684,7 +689,7 @@ background: url('../images/into.png') no-repeat 0px 0px;
 }
 
 .login-form input[type="submit"], .submit {
-  background: #CA0005;
+  background: #15842E;
   width: 51%;
   font-size: 1.2em;
   margin: 2em 4.5em 0;
@@ -692,7 +697,7 @@ background: url('../images/into.png') no-repeat 0px 0px;
   padding: 12px 0px;
   border: none;
   transition: 0.5s all;
-  border: 1px solid #CA0005;
+  border: 1px solid #15842E;
   -webkit-transition: 0.5s all;
   -moz-transition: 0.5s all;
   -o-transition: 0.5s all;
@@ -701,7 +706,7 @@ background: url('../images/into.png') no-repeat 0px 0px;
 }
 
 .login-form input[type="submit"]:hover, .submit:hover {
-  color: rgb(230, 70, 8);
+  color: #15842E;
   background-color: #fff;
 }
 

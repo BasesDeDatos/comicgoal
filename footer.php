@@ -53,7 +53,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 	<!-- #wrapper -->
 	<footer class="clearfix">
-		<div class="center">©2015 Comic Goal</div>
+		<div class="center">©<?php echo date("Y") ?> Comic Goal</div>
 		<!--div class="right">Designed by <a href="http://themeboy.com/" target="_blank">ThemeBoy</a></div>
 		<ul id="social">
 			<li class="facebook"><a href="http://facebook.com/themeboy" title="Facebook" target="_blank">Facebook</a></li>
@@ -324,27 +324,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		/* ]]> */
 	</script>
 	<script type="text/javascript" src="assets/sportspress.js"></script>
-	<script>
-		(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = "//connect.facebook.net/en_CA/all.js#xfbml=1";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script>
-	<script>
-		! function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (!d.getElementById(id)) {
-				js = d.createElement(s);
-				js.id = id;
-				js.src = "//platform.twitter.com/widgets.js";
-				fjs.parentNode.insertBefore(js, fjs);
-			}
-		}(document, "script", "twitter-wjs");
-	</script>
+	
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
 

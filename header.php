@@ -25,6 +25,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!-- //Custom Theme files -->
 	
+	<link rel="stylesheet" href="css/fileinput.min.css" type="text/css" />
 	<link rel="stylesheet" href="css/clndr.css" type="text/css" />
 	<link href="css/jquery.nouislider.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/fd-slider.css">	

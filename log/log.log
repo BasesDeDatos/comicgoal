@@ -298,3 +298,331 @@ ID:27
 06/Nov/15  13:45:25
 
 --------------------------------------------------------------
+06/Nov/15  19:51:46
+registrar_catalogo	registrar_continente	Pangea
+select registrar_continente('Pangea')
+ID:28
+--------------------------------------------------------------
+06/Nov/15  19:51:52
+editar_catalogo	editar_continente	Pange	28
+call editar_continente('Pange', 28)
+--------------------------------------------------------------
+06/Nov/15  19:51:55
+borrar_catalogo	borrar_continente	28
+call borrar_continente(28)
+--------------------------------------------------------------
+06/Nov/15  19:57:41
+registrar_catalogo	registrar_estadio	Castellao
+select registrar_estadio('Castellao')
+ID:56
+--------------------------------------------------------------
+06/Nov/15  19:57:49
+editar_catalogo	editar_estadio	Castello	56
+call editar_estadio('Castello', 56)
+--------------------------------------------------------------
+06/Nov/15  20:00:54
+borrar_catalogo	borrar_estadio	56
+call borrar_estadio(56)
+--------------------------------------------------------------
+06/Nov/15  20:05:13
+registrar_catalogo	registrar_estadio	Fortaleza
+select registrar_estadio('Fortaleza')
+ID:57
+--------------------------------------------------------------
+06/Nov/15  20:05:17
+editar_catalogo	editar_estadio	Fortalez	57
+call editar_estadio('Fortalez', 57)
+--------------------------------------------------------------
+06/Nov/15  20:05:20
+borrar_catalogo	borrar_estadio	57
+call borrar_estadio(57)
+--------------------------------------------------------------
+06/Nov/15  20:07:19
+registrar_catalogo	registrar_estadio	Estadio Olímpico de Londres
+select registrar_estadio('Estadio Ol&iacute;mpico de Londres')
+ID:58
+--------------------------------------------------------------
+06/Nov/15  20:07:27
+editar_catalogo	editar_estadio	Estadio Olímpico de Londre	58
+call editar_estadio('Estadio Ol&iacute;mpico de Londre', 58)
+--------------------------------------------------------------
+06/Nov/15  20:07:52
+borrar_catalogo	borrar_estadio	58
+call borrar_estadio(58)
+--------------------------------------------------------------
+06/Nov/15  20:08:28
+registrar_catalogo	registrar_estadio	Estadio Olímpico de Londres
+select registrar_estadio('Estadio Ol&iacute;mpico de Londres')
+ID:59
+--------------------------------------------------------------
+06/Nov/15  20:11:36
+borrar_catalogo	borrar_estadio	32
+call borrar_estadio(32)
+--------------------------------------------------------------
+06/Nov/15  20:15:53
+borrar_catalogo	borrar_premio	4
+call borrar_premio(4)
+--------------------------------------------------------------
+06/Nov/15  20:16:04
+registrar_catalogo	registrar_premio	
+select registrar_premio('')
+ID:9
+--------------------------------------------------------------
+06/Nov/15  20:17:47
+registrar_catalogo	registrar_premio	Copa América
+select registrar_premio('Copa Am&eacute;rica')
+ID:10
+--------------------------------------------------------------
+06/Nov/15  20:17:59
+editar_catalogo	editar_premio		10
+call editar_premio('', 10)
+--------------------------------------------------------------
+06/Nov/15  20:19:16
+registrar_catalogo	registrar_premio	Copa América
+select registrar_premio('Copa Am&eacute;rica')
+ID:11
+--------------------------------------------------------------
+06/Nov/15  20:26:57
+registrar_catalogo	registrar_estadio	Omnilife
+select registrar_estadio('Omnilife')
+ID:60
+--------------------------------------------------------------
+06/Nov/15  20:30:27
+registrar_catalogo	registrar_continente	Pangea
+select registrar_continente('Pangea')
+ID:29
+--------------------------------------------------------------
+06/Nov/15  20:30:35
+registrar_catalogo	registrar_confederacion	kkokok
+select registrar_confederacion('kkokok')
+Error: Incorrect number of arguments for FUNCTION c9.registrar_confederacion; expected 2, got 1
+--------------------------------------------------------------
+06/Nov/15  20:30:43
+registrar_catalogo	registrar_premio	mlmll
+select registrar_premio('mlmll')
+ID:12
+--------------------------------------------------------------
+06/Nov/15  20:30:54
+borrar_catalogo	borrar_continente	29
+call borrar_continente(29)
+--------------------------------------------------------------
+06/Nov/15  20:30:58
+borrar_catalogo	borrar_premio	12
+call borrar_premio(12)
+--------------------------------------------------------------
+06/Nov/15  20:32:11
+registrar_catalogo	registrar_premio	jojojoj
+select registrar_premio('jojojoj')
+ID:13
+--------------------------------------------------------------
+06/Nov/15  20:32:29
+borrar_catalogo	borrar_premio	13
+call borrar_premio(13)
+--------------------------------------------------------------
+06/Nov/15  21:12:54
+registrar_partido	3	11	1	undefined	undefined	undefined
+select (STR_TO_DATE('undefined', '%d/%m/%Y'), 
+												 STR_TO_DATE('undefined', '%h:%i %p'), 
+												 1, 
+												 undefined, 
+												 11, 
+												 3)
+Error: Unknown column 'undefined' in 'field list'
+--------------------------------------------------------------
+06/Nov/15  21:18:32
+registrar_partido	2	2	1	undefined	undefined	undefined
+select (STR_TO_DATE('undefined', '%d/%m/%Y'), 
+												 STR_TO_DATE('undefined', '%h:%i %p'), 
+												 1, 
+												 undefined, 
+												 2, 
+												 2)
+Error: Unknown column 'undefined' in 'field list'
+--------------------------------------------------------------
+06/Nov/15  21:23:18
+registrar_partido	2	10	1	2	2015-11-20	03:03
+select (STR_TO_DATE('2015-11-20', '%d/%m/%Y'), 
+												 STR_TO_DATE('03:03', '%h:%i %p'), 
+												 1, 
+												 2, 
+												 10, 
+												 2)
+Error: Operand should contain 1 column(s)
+--------------------------------------------------------------
+06/Nov/15  21:24:28
+registrar_partido	2	10	1	2	2015-11-20	03:03
+select (STR_TO_DATE('2015-11-20', '%d-%m-%Y'), 
+												 STR_TO_DATE('03:03', '%h:%i %p'), 
+												 1, 
+												 2, 
+												 10, 
+												 2)
+Error: Operand should contain 1 column(s)
+--------------------------------------------------------------
+06/Nov/15  21:25:07
+registrar_partido	2	10	1	2	2015-11-20	03:03
+select (STR_TO_DATE('2015-11-20', '%d-%m-%Y'), 
+												 STR_TO_DATE('03:03', '%h:%i'), 
+												 1, 
+												 2, 
+												 10, 
+												 2)
+Error: Operand should contain 1 column(s)
+--------------------------------------------------------------
+06/Nov/15  21:25:46
+registrar_partido	2	10	1	2	2015-11-20	03:03
+select (STR_TO_DATE('2015-11-20', '%Y-%m-%d'), 
+												 STR_TO_DATE('03:03', '%h:%i'), 
+												 1, 
+												 2, 
+												 10, 
+												 2)
+Error: Operand should contain 1 column(s)
+--------------------------------------------------------------
+06/Nov/15  21:30:17
+registrar_partido	2	10	1	2	2015-11-20	03:03
+select registrar_partido(STR_TO_DATE('2015-11-20', '%Y-%m-%d'), 
+										   STR_TO_DATE('03:03', '%h:%i'), 
+										   1, 
+										   2, 
+										   10, 
+										   2)
+--------------------------------------------------------------
+06/Nov/15  21:50:50
+registrar_equipo			2	102
+select registrar_equipo(, 
+										   , 
+										   2, 
+										   102)
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 
+										   , 
+										   2, 
+										   102)' at line 1
+--------------------------------------------------------------
+06/Nov/15  21:51:46
+registrar_equipo			2	102
+select registrar_equipo(, 
+										   , 
+										   2, 
+										   102)
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 
+										   , 
+										   2, 
+										   102)' at line 1
+--------------------------------------------------------------
+06/Nov/15  21:57:36
+registrar_equipo			2	102
+select registrar_equipo(, 
+										   , 
+										   2, 
+										   102)
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 
+										   , 
+										   2, 
+										   102)' at line 1
+--------------------------------------------------------------
+06/Nov/15  21:59:01
+registrar_equipo			2	18
+select registrar_equipo('', 
+										   , 
+										   2, 
+										   18)
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 
+										   2, 
+										   18)' at line 2
+--------------------------------------------------------------
+06/Nov/15  22:03:35
+registrar_equipo		3	2	18
+select registrar_equipo('', 
+										   3, 
+										   2, 
+										   18)
+--------------------------------------------------------------
+06/Nov/15  22:33:56
+registrar_integrante	Roger	Villalobos	Rodriguez	4		2015-11-13nacionalidad=6	5	15
+select registrar_integrante(STR_TO_DATE('2015-11-13nacionalidad=6', '%Y-%m-%d'), 
+										   	  '', 
+										      15, 
+										      
+										      5
+										      'Roger'
+										      4
+										      'Villalobos'
+										      'Rodriguez')
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '4
+										      'Villalobos'
+										      'Rodriguez')' at line 7
+--------------------------------------------------------------
+06/Nov/15  22:35:05
+registrar_integrante	Roger	Villalobos	Rodriguez	4		2015-11-13nacionalidad=6	5	15
+select registrar_integrante(STR_TO_DATE('2015-11-13nacionalidad=6', '%Y-%m-%d'), 
+										   	  '', 
+										      15, 
+										      ,
+										      5,
+										      'Roger',
+										      4,
+										      'Villalobos',
+										      'Rodriguez')
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+										      5,
+										      'Roger',
+										      4,
+										      ' at line 4
+--------------------------------------------------------------
+06/Nov/15  22:46:50
+registrar_integrante	Roger	Villalobos	Rodriguez	16	band-made-torontomario-slayer_1265017.jpg	2015-11-26nacionalidad=1	5	15
+select registrar_integrante(STR_TO_DATE('2015-11-26nacionalidad=1', '%Y-%m-%d'), 
+										   	  'band-made-torontomario-slayer_1265017.jpg', 
+										      15, 
+										      ,
+										      5,
+										      'Roger',
+										      16,
+										      'Villalobos',
+										      'Rodriguez')
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+										      5,
+										      'Roger',
+										      16,
+										     ' at line 4
+--------------------------------------------------------------
+06/Nov/15  22:51:10
+registrar_integrante	sdsds	sdsds	sdsd	17	covfffghghber.jpg	2015-11-05nacionalidad=17	2	15
+select registrar_integrante(STR_TO_DATE('2015-11-05nacionalidad=17', '%Y-%m-%d'), 
+										   	  'covfffghghber.jpg', 
+										      15, 
+										      ,
+										      2,
+										      'sdsds',
+										      17,
+										      'sdsds',
+										      'sdsd')
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+										      2,
+										      'sdsds',
+										      17,
+										     ' at line 4
+--------------------------------------------------------------
+06/Nov/15  22:53:56
+registrar_integrante	Roger	Villalobos	Rodriguez	2	crack the skye1.jpg	2015-11-03	1	5	15
+select registrar_integrante(STR_TO_DATE('2015-11-03', '%Y-%m-%d'), 
+										   	  'crack the skye1.jpg', 
+										      15, 
+										      1,
+										      5,
+										      'Roger',
+										      2,
+										      'Villalobos',
+										      'Rodriguez')
+--------------------------------------------------------------
+07/Nov/15  00:14:03
+
+--------------------------------------------------------------
+07/Nov/15  00:45:07
+registrar_estadisticaXpartido	1	1	11	19
+select registrar_estadisticaXpartido(1, 
+										  				1, 
+										  				11, 
+										  				19)
+--------------------------------------------------------------
