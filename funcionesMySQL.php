@@ -1,72 +1,82 @@
-
-<!--
-Author: Isaac Campos, Roger Villalobos,  Jeffrey Alvarado
-Author URL: 
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-
 <?php
-//	header('Content-Type: text/html; charset=ISO-8859-1');
-	include_once("conexionMySQL.php");
 
-
-	// Realizar una consulta MySQL
-	$query = 'call get_pais(1)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
-	$result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+	require("conexionMySQL.php");
+		
+	$fp = fopen("./log/log.log", "a");
 	
-	// Imprimir los resultados en HTML
-	echo "<table>\n";
-	$array_datos = array();
-	while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
-	    echo "\t<tr>\n";
-	    foreach ($row as $col_name => $col_value) {
-	        echo "\t\t<td>$col_value</td>\n";
-	        $array_datos[$col_name][] = $col_value;
+	date_default_timezone_set("America/Costa_Rica");
+	fwrite($fp, PHP_EOL);
+	fwrite($fp, DATE("d/M/y  H:i:s") . PHP_EOL);
+
+	
+	fwrite($fp, implode("\t", $_POST) . PHP_EOL);
+
+	
+	if (!empty($_POST) && $_POST["mode"] == "registrar_catalogo"){
+	    $mysqli->next_result();
+ 		$query = "select ".$_POST["procedure"]."('".htmlentities($_POST['value'], ENT_QUOTES, "UTF-8")."')";
+ 		fwrite($fp, $query . PHP_EOL);
+ 		
+		$result = $mysqli->query($query);
+		
+		if (!$result) {
+			$error = $mysqli->error;
+	        fwrite($fp, "Error: " . $error . PHP_EOL);
+	        $response["success"] = false;
+	        $response["error"] = $error;
+	    } else {
+	    	$row = $result->fetch_row();
+	    	fwrite($fp, "ID:" . $row[0] . PHP_EOL);
+	    	$response["success"] = true;
+	    	$response["ID"] = $row[0];
 	    }
-	    echo "\t</tr>\n";
+	    
+		header('Content-type: application/json; charset=utf-8');
+		echo json_encode($response, JSON_FORCE_OBJECT);
 	}
-	echo "</table>\n";
-	var_dump($array_datos);
 	
-	
-	$result->close();
-    $conexion->next_result();
-    
-	// Realizar una consulta MySQL
-	$query = 'call get_pais(1)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
-	$result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
-	
-	// Imprimir los resultados en HTML
-	echo "<table>\n";
-	$array_datos = array();
-	while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
-	    echo "\t<tr>\n";
-	    foreach ($row as $col_name => $col_value) {
-	        echo "\t\t<td>$col_value</td>\n";
-	        $array_datos[$col_name][] = $col_value;
+	if (!empty($_POST) && $_POST["mode"] == "editar_catalogo"){
+		$mysqli->next_result();
+ 		$query = "call ".$_POST["procedure"]."('".htmlentities($_POST['value'], ENT_QUOTES, "UTF-8")."', {$_POST['row_id']})";
+ 		fwrite($fp, $query . PHP_EOL);
+		
+		$result = $mysqli->query($query);
+		
+		if (!$result) {
+			$error = $mysqli->error;
+	        fwrite($fp, "Error: " . $error . PHP_EOL);
+	        $response["success"] = false;
+	        $response["error"] = $error;
+	    } else {
+	    	$response["success"] = true;
 	    }
-	    echo "\t</tr>\n";
-	}
-	echo "</table>\n";
-	var_dump($array_datos);
-	
-
-	include_once("desconexionMySQL.php");
-
-	
-	if (!empty($_POST) && $_POST["mode"] == "loggin"){
-		session_start();
-		$Email = $_POST["Email"];
-		$Clave = $_POST["Clave"];
-		$valueFunction = queryFunction($conexion, "begin :value := get_userID('{$Clave}','{$Email}'); end;");
-		$_SESSION["active_user_id"] = $valueFunction;
-		if ($valueFunction != -1 ){?>
-			<script>window.location="index.php";</script>	
-		<?php }
-		else{?>
-			<script>alert("Email o contraseña incorrecta");</script>
-		<?php }
+	    
+		header('Content-type: application/json; charset=utf-8');
+		echo json_encode($response, JSON_FORCE_OBJECT);
 	}
 	
+	if (!empty($_POST) && $_POST["mode"] == "borrar_catalogo"){
+		$mysqli->next_result();
+		$query = "call ".$_POST["procedure"]."({$_POST['row_id']})";
+ 		fwrite($fp, $query . PHP_EOL);
+		
+		$result = $mysqli->query($query);
+		
+		if (!$result) {
+			$error = $mysqli->error;
+	        fwrite($fp, "Error: " . $error . PHP_EOL);
+	        $response["success"] = false;
+	        $response["error"] = $error;
+	    } else {
+	    	$response["success"] = true;
+	    }
+	    
+		header('Content-type: application/json; charset=utf-8');
+		echo json_encode($response, JSON_FORCE_OBJECT);
+	}
+	
+	fwrite($fp, "--------------------------------------------------------------");
+	fclose($fp);
+	
+	require("desconexionMySQL.php");
 ?>

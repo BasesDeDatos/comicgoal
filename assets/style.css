@@ -112,26 +112,34 @@ textarea {
 	background: #fff;
 	box-shadow: 0 0 12px rgba(0,0,0,0.2);
 }
+
 #header {
 	position: relative;
-	background: #f0f0f0 repeat-y top center;
+	background: #edf7ff no-repeat bottom center;
 	min-height: 140px;
 	padding-left: 16px;
+	background-image: url(../img/cesped.png) !important;
 }
+
 #header #logo {
 	padding: 6px 12px;
 	background: transparent;
 	border: none;
 	float: left;
+	width: 100%;
 }
+
 #header #logo img {
-	margin-top: auto;
+	margin: auto;
+	display: block;
 }
+
 #header #maintitle {
 	float: left;
 	padding-top: 32px;
 	padding-bottom: 16px;
 }
+
 #header #maintitle h1 {
 	background: none;
 	border: none;

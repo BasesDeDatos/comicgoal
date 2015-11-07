@@ -2609,12 +2609,12 @@ canvas#bar {
 .register-form{
 }
 
-.scroll-container {
+.scroll-container{
   margin-bottom: 10px;
   margin-top: 10px;
-  width: 80%; 
-  height: 600px; 
-  overflow-y: scroll; 
+  width: 80%;
+  height: 600px;
+  overflow-y: scroll;
 }
 /*form styles*/
 #msform {
@@ -2711,7 +2711,16 @@ input[type='checkbox'] {
   width: 25%;
 	float: left;
 	position: relative;
+	cursor: pointer;
+	margin: 5px 0;
+  padding-top: 5px;
 }
+
+#progressbar li:hover {
+	border-radius: 3px;
+	background: #eee;
+}
+
 #progressbar li:before {
 	content: counter(step);
 	counter-increment: step;
@@ -2720,7 +2729,7 @@ input[type='checkbox'] {
 	display: block;
 	font-size: 10px;
 	color: #333;
-	background: white;
+	background: #e7e7e7;
 	border-radius: 3px;
 	margin: 0 auto 5px auto;
 }
@@ -2742,7 +2751,7 @@ input[type='checkbox'] {
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before,  #progressbar li.active:after{
-	background: #CA0005;
+	background: #15842E;
 	color: white;
 }
 

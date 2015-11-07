@@ -1,0 +1,300 @@
+06/Nov/15 
+06/Nov/15  04
+
+--------------------------------------------------------------06/Nov/15 
+06/Nov/15  04
+registrar_catalogoregistrar_estadioV
+06/Nov/15 
+06/Nov/15  04:27:42
+
+--------------------------------------------------------------06/Nov/15 
+06/Nov/15  04:27:45
+
+--------------------------------------------------------------06/Nov/15 
+06/Nov/15  04:27:46
+
+--------------------------------------------------------------06/Nov/15 
+06/Nov/15  04:27:47
+
+--------------------------------------------------------------06/Nov/15 
+06/Nov/15  04:27:47
+
+--------------------------------------------------------------06/Nov/15 
+06/Nov/15  04:28:13
+registrar_catalogoregistrar_estadioVelodromo
+06/Nov/15 
+06/Nov/15  04:32:02
+
+--------------------------------------------------------------06/Nov/15  04:33:34
+registrar_catalogo	registrar_estadio	Velodromo
+06/Nov/15  04:35:55
+registrar_catalogo	registrar_estadio	Velodromo
+ENTRO AL IF06/Nov/15  04:37:01
+registrar_catalogo	registrar_estadio	Velodromo
+ENTRO AL IFregistrar_estadio('Velodromo')
+05/Nov/15  22:41:31
+registrar_catalogo	registrar_estadio	Omnilife
+ENTRO AL IFset @a = registrar_estadio('Omnilife')
+05/Nov/15  22:44:59
+registrar_catalogo	registrar_estadio	Mestalla
+ENTRO AL IFselect registrar_estadio('Mestalla')
+05/Nov/15  22:46:37
+registrar_catalogo	registrar_estadio	Riazor
+ENTRO AL IFselect registrar_estadio('Riazor')
+05/Nov/15  22:50:49
+registrar_catalogo	registrar_estadio	Solna
+ENTRO AL IFselect registrar_estadio('Solna')
+05/Nov/15  22:52:09
+registrar_catalogo	registrar_estadio	prueba
+ENTRO AL IFselect registrar_estadio('prueba')
+05/Nov/15  22:54:18
+registrar_catalogo	registrar_estadio	prueba
+ENTRO AL IFselect registrar_estadio('prueba')
+05/Nov/15  22:55:38
+editar_catalogo	EDITAR_estadio		37
+05/Nov/15  23:14:39
+registrar_catalogo	registrar_estadio	prueba4
+ENTRO AL IFselect registrar_estadio('prueba4')
+--------------------------------------------------------------ID:Array
+05/Nov/15  23:16:29
+editar_catalogo	EDITAR_estadio	prueba5	36
+05/Nov/15  23:17:38
+registrar_catalogo	registrar_estadio	prueba7
+ENTRO AL IFselect registrar_estadio('prueba7')
+--------------------------------------------------------------ID:39
+05/Nov/15  23:18:30
+registrar_catalogo	registrar_estadio	prueba8
+ENTRO AL IFselect registrar_estadio('prueba8')
+ID:40
+--------------------------------------------------------------05/Nov/15  23:21:17
+registrar_catalogo	registrar_estadio	prueba1
+select registrar_estadio('prueba1')
+ID:41
+--------------------------------------------------------------05/Nov/15  23:23:34
+registrar_catalogo	registrar_estadio	prueba2
+select registrar_estadio('prueba2')
+ID:42
+--------------------------------------------------------------05/Nov/15  23:24:47
+registrar_catalogo	registrar_estadio	prueba3
+select registrar_estadio('prueba3')
+ID:43
+--------------------------------------------------------------05/Nov/15  23:27:47
+editar_catalogo	EDITAR_estadio	prueba4	38
+--------------------------------------------------------------05/Nov/15  23:28:09
+editar_catalogo	EDITAR_estadio	prueba5	38
+--------------------------------------------------------------05/Nov/15  23:28:34
+registrar_catalogo	registrar_estadio	prueba3
+select registrar_estadio('prueba3')
+ID:44
+--------------------------------------------------------------05/Nov/15  23:29:52
+registrar_catalogo	registrar_estadio	prueba4
+select registrar_estadio('prueba4')
+ID:45
+--------------------------------------------------------------05/Nov/15  23:34:18
+registrar_catalogo	registrar_estadio	prueba5
+select registrar_estadio('prueba5')
+ID:46
+--------------------------------------------------------------05/Nov/15  23:35:15
+registrar_catalogo	registrar_estadio	prueba6
+select registrar_estadio('prueba6')
+ID:47
+--------------------------------------------------------------05/Nov/15  23:36:05
+registrar_catalogo	registrar_estadio	prueba6
+select registrar_estadio('prueba6')
+ID:48
+--------------------------------------------------------------05/Nov/15  23:38:15
+editar_catalogo	EDITAR_estadio	prueba7	39
+--------------------------------------------------------------05/Nov/15  23:38:22
+registrar_catalogo	registrar_estadio	prueba7
+select registrar_estadio('prueba7')
+ID:49
+--------------------------------------------------------------05/Nov/15  23:39:20
+registrar_catalogo	registrar_estadio	oto
+select registrar_estadio('oto')
+ID:50
+--------------------------------------------------------------05/Nov/15  23:39:59
+registrar_catalogo	registrar_estadio	prueba9
+select registrar_estadio('prueba9')
+ID:51
+--------------------------------------------------------------05/Nov/15  23:41:08
+registrar_catalogo	registrar_estadio	prueba10
+select registrar_estadio('prueba10')
+ID:52
+--------------------------------------------------------------05/Nov/15  23:42:28
+registrar_catalogo	registrar_estadio	prueba11
+select registrar_estadio('prueba11')
+ID:53
+--------------------------------------------------------------
+05/Nov/15  23:44:30
+registrar_catalogo	registrar_premio	El osacar
+select registrar_premio('El osacar')
+ID:8
+--------------------------------------------------------------
+05/Nov/15  23:45:30
+registrar_catalogo	registrar_continente	Narnia
+select registrar_continente('Narnia')
+ID:6
+--------------------------------------------------------------
+05/Nov/15  23:46:14
+editar_catalogo	EDITAR_continente		6
+--------------------------------------------------------------
+05/Nov/15  23:48:04
+registrar_catalogo	registrar_estadio	prueba 15
+select registrar_estadio('prueba 15')
+ID:54
+--------------------------------------------------------------
+06/Nov/15  00:00:33
+registrar_catalogo	registrar_continente	Pangea
+select registrar_continente('Pangea')
+ID:7
+--------------------------------------------------------------
+06/Nov/15  00:02:31
+registrar_catalogo	registrar_continente	Eurasia
+select registrar_continente('Eurasia')
+ID:8
+--------------------------------------------------------------
+06/Nov/15  00:04:32
+registrar_catalogo	registrar_continente	Europa
+select registrar_continente('Europa')
+
+06/Nov/15  00:11:39
+registrar_catalogo	registrar_continente	Europa
+select registrar_continente('Europa')
+Error: Duplicate entry 'Europa' for key 'nombre'
+ID:
+--------------------------------------------------------------
+06/Nov/15  00:13:20
+registrar_catalogo	registrar_continente	Europa
+select registrar_continente('Europa')
+Error: Duplicate entry 'Europa' for key 'nombre'
+--------------------------------------------------------------
+06/Nov/15  00:15:42
+registrar_catalogo	registrar_continente	Europa
+select registrar_continente('Europa')
+Error: Duplicate entry 'Europa' for key 'nombre'
+--------------------------------------------------------------
+06/Nov/15  00:19:08
+registrar_catalogo	registrar_continente	Europa
+select registrar_continente('Europa')
+Error: Duplicate entry 'Europa' for key 'nombre'
+--------------------------------------------------------------
+06/Nov/15  00:20:48
+
+--------------------------------------------------------------
+06/Nov/15  00:20:52
+
+--------------------------------------------------------------
+06/Nov/15  00:25:42
+registrar_catalogo	registrar_continente	Europa
+select registrar_continente('Europa')
+Error: Duplicate entry 'Europa' for key 'nombre'
+--------------------------------------------------------------
+06/Nov/15  00:26:03
+registrar_catalogo	registrar_continente	Europasia
+select registrar_continente('Europasia')
+ID:15
+--------------------------------------------------------------
+06/Nov/15  00:26:30
+registrar_catalogo	registrar_continente	Europa
+select registrar_continente('Europa')
+Error: Duplicate entry 'Europa' for key 'nombre'
+--------------------------------------------------------------
+06/Nov/15  00:26:35
+registrar_catalogo	registrar_continente	Europasia
+select registrar_continente('Europasia')
+Error: Duplicate entry 'Europasia' for key 'nombre'
+--------------------------------------------------------------
+06/Nov/15  00:28:27
+registrar_catalogo	registrar_continente	Europa
+select registrar_continente('Europa')
+Error: Duplicate entry 'Europa' for key 'nombre'
+--------------------------------------------------------------
+06/Nov/15  00:28:37
+registrar_catalogo	registrar_continente	plcpkpck
+select registrar_continente('plcpkpck')
+ID:19
+--------------------------------------------------------------
+06/Nov/15  00:32:22
+registrar_catalogo	registrar_continente	Europa
+select registrar_continente('Europa')
+Error: Duplicate entry 'Europa' for key 'nombre'
+--------------------------------------------------------------
+06/Nov/15  00:32:30
+registrar_catalogo	registrar_continente	Europ
+select registrar_continente('Europ')
+ID:21
+--------------------------------------------------------------
+06/Nov/15  00:34:44
+registrar_catalogo	registrar_continente	Europa
+select registrar_continente('Europa')
+Error: Duplicate entry 'Europa' for key 'nombre'
+--------------------------------------------------------------
+06/Nov/15  00:35:20
+registrar_catalogo	registrar_continente	Euro
+select registrar_continente('Euro')
+ID:23
+--------------------------------------------------------------
+06/Nov/15  00:37:24
+registrar_catalogo	registrar_continente	Europa
+select registrar_continente('Europa')
+Error: Duplicate entry 'Europa' for key 'nombre'
+--------------------------------------------------------------
+06/Nov/15  00:37:34
+registrar_catalogo	registrar_continente	Eu
+select registrar_continente('Eu')
+ID:25
+--------------------------------------------------------------
+06/Nov/15  00:37:44
+editar_catalogo	editar_continente	Euroi	25
+call editar_continente('Euroi')
+Error: Incorrect number of arguments for PROCEDURE c9.editar_continente; expected 2, got 1
+--------------------------------------------------------------
+06/Nov/15  00:44:20
+editar_catalogo	editar_continente	Afric	4
+call editar_continente('4', 'Afric')
+--------------------------------------------------------------
+06/Nov/15  00:46:02
+editar_catalogo	editar_continente	Afric	4
+call editar_continente(4, 'Afric')
+--------------------------------------------------------------
+06/Nov/15  00:53:31
+editar_catalogo	editar_continente	Africa	4
+call editar_continente('Africa', 4)
+--------------------------------------------------------------
+06/Nov/15  01:04:22
+borrar_catalogo	borrar_estadio	34
+holicall borrar_estadio(34)
+--------------------------------------------------------------
+06/Nov/15  01:06:21
+borrar_catalogo	borrar_estadio	35
+call borrar_estadio(35)
+--------------------------------------------------------------
+06/Nov/15  01:07:20
+borrar_catalogo	borrar_estadio	33
+call borrar_estadio(33)
+--------------------------------------------------------------
+06/Nov/15  01:08:16
+registrar_catalogo	registrar_estadio	
+select registrar_estadio('')
+ID:55
+--------------------------------------------------------------
+06/Nov/15  01:08:38
+registrar_catalogo	registrar_continente	américa
+select registrar_continente('américa')
+ID:26
+--------------------------------------------------------------
+06/Nov/15  01:09:14
+borrar_catalogo	borrar_continente	26
+call borrar_continente(26)
+--------------------------------------------------------------
+06/Nov/15  01:11:47
+registrar_catalogo	registrar_continente	América
+select registrar_continente('Am&eacute;rica')
+ID:27
+--------------------------------------------------------------
+06/Nov/15  13:44:56
+
+--------------------------------------------------------------
+06/Nov/15  13:45:25
+
+--------------------------------------------------------------
