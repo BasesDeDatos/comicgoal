@@ -27,6 +27,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<li>Equipo por evento</li>
 				<li>Alineacion</li>
 				<li>Estadísticas</li>
+				<li>Usuarios</li>
 				<li>Premios</li>
 
 			</ul>
@@ -174,7 +175,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<button name= "tipo_estadistica_button" class= "eliminar" >X</button>
 				</div>
 				
-				<input type="button" name="next" class="next action-button" value="Siguiente" />
 			</fieldset>
 			
 			<fieldset>
@@ -245,8 +245,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<input type="submit" name="submit" class="submit action-button" value="Aplicar" onclick="registrar_partido()"/>
 				</div>
 				
-				<input type="button" name="previous" class="previous action-button" value="Anterior" />
-				<input type="button" name="next" class="next action-button" value="Siguiente" />
 			</fieldset>
 			
 			<fieldset>
@@ -305,12 +303,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<input type="submit" name="submit" class="submit action-button" value="Aplicar" onclick="registrar_equipo()"/>
 				</div>
 				
-				<input type="button" name="previous" class="previous action-button" value="Anterior" />
-				<input type="button" name="next" class="next action-button" value="Siguiente" />
 			</fieldset>
 			
 			<fieldset>
 				<h2 class="fs-title">Integrantes</h2>
+				
+				<label class="col-md-6" for="editarintegrante">Elija un integrante</label>
+				<select class="col-md-6" name="editarintegrante" id="editarintegrante">
+					<option value="" selected>Agregar nuevo</option>
+					<?php $query = 'call get_integrante(null)';
+						$result = $mysqli->query($query);
+						// Imprimir los resultados en HTML
+						while ($row = $result->fetch_assoc()) { ?> 
+							<option value="<?php echo $row["ID_equipo"] ?>"><?php echo $row["nombre"]?></option>
+					<?php } $mysqli->next_result(); ?>
+				</select>
 				
 				<div class="col-md-12" style="margin-bottom: 15px;">
 					<input type="file" name="archivo" id="input-foto-integrante" accept="image/*"/>
@@ -370,8 +377,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<input type="submit" name="submit" class="submit action-button" value="Aplicar" onclick="registrar_integrante()"/>
 				</div>
 				
-				<input type="button" name="previous" class="previous action-button" value="Anterior" />
-				<input type="button" name="next" class="next action-button" value="Siguiente" />
 			</fieldset>
 			
 			<fieldset>
@@ -391,7 +396,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col-md-12 scroll-container">
 					<?php $query = 'call get_equipo(null)';
 						$result = $mysqli->query($query);
-						// Imprimir los resultados en HTML
 						while ($row = $result->fetch_assoc()) { ?> 
 							<div class="col-md-1">
 								<input type="checkbox" name = equipos[] id="<?php echo $row["nombre"] ?>" />
@@ -408,8 +412,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<input type="submit" name="submit" class="submit action-button" value="Aplicar" onclick="registrar_equipoXevento()"/>
 				</div>
 				
-				<input type="button" name="previous" class="previous action-button" value="Anterior" />
-				<input type="button" name="next" class="next action-button" value="Siguiente" />
 			</fieldset>
 			
 			<fieldset>
@@ -434,10 +436,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
 						while ($row = $result->fetch_assoc()) { ?> 
-							<div class="col-md-6">
+							<div class="col-md-2">
 								<input type="checkbox" id="<?php $row["ID_integrante"] ?>" />
 							</div>						
-							<div class="col-md-6">
+							<div class="col-md-10">
 								<label for="<?php echo $row["ID_integrante"] ?>">
 									<?php echo $row["nombre"]." ".$row["primer_apellido"]." ".$row["segundo_apellido"] ?>
 								</label>
@@ -450,10 +452,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
 						while ($row = $result->fetch_assoc()) { ?> 
-							<div class="col-md-6">
+							<div class="col-md-2">
 								<input type="checkbox" id="<?php echo $row["ID_integrante"] ?>" />
 							</div>						
-							<div class="col-md-6">
+							<div class="col-md-10">
 								<label for="<?php echo $row["ID_integrante"] ?>">
 									<?php echo $row["nombre"]." ".$row["primer_apellido"]." ".$row["segundo_apellido"] ?>
 								</label>
@@ -463,8 +465,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<div class = "col-md-12"><input type="submit" name="submit" class="submit action-button" value="Aplicar" /></div>
 				
-				<input type="button" name="previous" class="previous action-button" value="Anterior" />
-				<input type="button" name="next" class="next action-button" value="Siguiente" />
 			</fieldset>
 			
 			<fieldset>
@@ -517,14 +517,69 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<input type="submit" name="submit" class="submit action-button" value="Aplicar" onclick="registrar_estadisticaXpartido()"/>
 				</div>
 				
-				<input type="button" name="previous" class="previous action-button" value="Anterior" />
-				<input type="button" name="next" class="next action-button" value="Siguiente" />
+			</fieldset>
+			
+			<fieldset>
+				<h2 class="fs-title">Usuarios</h2>
+				
+				<label class="col-md-6" for="usuario">Usuarios</label>
+				<select class="col-md-6" name="usuario" id="usuario">
+					<option value="" selected>Elija un usuario</option>
+					<?php $query = 'call get_usuario(null)';
+						$result = $mysqli->query($query);
+						// Imprimir los resultados en HTML
+						while ($row = $result->fetch_assoc()) { ?> 
+							<option value="<?php echo $row["ID_usuario"] ?>"><?php echo $row["email"]?></option>
+					<?php } $mysqli->next_result(); ?>
+				</select>
+				
+				<div class="col-md-6"><input type="text" name="email" id="email" placeholder="E-Mail" /></div>
+				
+				<div class = "col-md-6">
+					<div class="col-md-12"><input type="password" name="password1" id="password1" placeholder="Contrasena" /></div>
+					<div class="col-md-12"><input type="password" name="password2" id="password2" placeholder="Repita la contrasena" /></div>
+				</div>
+				
+				<div class = "col-md-12">
+					<input type="submit" name="submit" class="submit action-button" value="Aplicar" onclick="registrar_usuario()"/>
+				</div>
+				
 			</fieldset>
 			
 			<fieldset>
 				<h2 class="fs-title">Premios</h2>
 				
-				<input type="button" name="previous" class="previous action-button" value="Anterior" />
+				<label class="col-md-6" for="premioXequipo">Equipo</label>
+				<select class="col-md-6" name="premioXequipo" id="premioXequipo">
+					<option value="" selected>Elija un equipo</option>
+					<?php $query = 'call get_equipo(null)';
+						$result = $mysqli->query($query);
+						// Imprimir los resultados en HTML
+						while ($row = $result->fetch_assoc()) { ?> 
+							<option value="<?php echo $row["ID_equipo"] ?>"><?php echo $row["nombre"]?></option>
+					<?php } $mysqli->next_result(); ?>
+				</select>
+				
+				<label class="col-md-6" for="premionuevo">Premio</label>
+				
+				<div class="col-md-6">
+					<select class="col-md-6" name="premionuevo" id="premionuevo">
+						<option value="" selected>Elija un premio</option>
+						<?php $query = 'call get_premio(null)';
+							$result = $mysqli->query($query);
+							// Imprimir los resultados en HTML
+							while ($row = $result->fetch_assoc()) { ?> 
+								<option value="<?php echo $row["ID_premio"] ?>"><?php echo $row["nombre"]?></option>
+						<?php } $mysqli->next_result(); ?>
+					</select>
+					
+					<div class="col-md-6"><input type="text" name="cantidadpremio" id="cantidadpremio" placeholder="Cantidad" /></div>
+				</div>
+				
+				<div class = "col-md-12">
+					<input type="submit" name="submit" class="submit action-button" value="Aplicar" onclick="registrar_premioXequipo()"/>
+				</div>
+				
 			</fieldset>
 		
 		</div>
@@ -929,8 +984,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			var estadistica = $("#estadisticanueva").val();
 			var minuto = $("#minuto").val();
 			
-			alert(integrante + " " + partido + " " + estadistica + " " + minuto)
-			
 			var data = "mode=registrar_estadisticaXpartido&integrante="+integrante+"&partido="+partido+"&estadistica="+estadistica+"&minuto="+minuto;
 					  
 			$.ajax({  
@@ -945,6 +998,56 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					alert("Ha ocurrido un error al insertar la estadistica");
 				}
 			});
+		};
+		
+		function registrar_usuario(){
+			var email = $("#email").val();
+			var password1 = $("#password1").val();
+			var password2 = $("#password2").val();
+			
+			if (password1 == password2){
+				
+				var data = "mode=registrar_usuario&email="+email+"&password="+password1;
+						  
+				$.ajax({  
+				    type: "POST",
+				    data: data,
+				    url: "funcionesMySQL.php",
+				    dataType: "json",
+				    success: function(data){
+						alert("Se insertó con exito el usuario");
+					},
+					error: function (data){
+						alert("Ha ocurrido un error al insertar el usuario");
+					}
+				});
+			}
+			
+			else {
+				alert("Las contrasenas no coinciden");
+			}
+		};
+		
+		function registrar_premioXequipo(){
+			var equipo = $("#premioXequipo").val();
+			var premio = $("#premionuevo").val();
+			var cantidad = $("#cantidadpremio").val();
+			
+			var data = "mode=registrar_premioXequipo&equipo="+equipo+"&premio="+premio+"&cantidad="+cantidad;
+					  
+			$.ajax({  
+			    type: "POST",
+			    data: data,
+			    url: "funcionesMySQL.php",
+			    dataType: "json",
+			    success: function(data){
+					alert("Se insertó con exito el premio");
+				},
+				error: function (data){
+					alert("Ha ocurrido un error al insertar el premio");
+				}
+			});
+			
 		};
 		
 	</script>

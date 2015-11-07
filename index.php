@@ -10,32 +10,32 @@
 				<div class="main_image">
 					<ul>
 						<li style="display: none; z-index: 12;" data-slide="0">
-							<a href="http://demo.themeboy.com/footballclub/2014/05/19/lowes-radcliffe-and-peterson-called-up/"><img src="assets/blog-1-1-640x360.jpg" class="attachment-featured-image wp-post-image" alt="blog-1-1" title="Lowes, Radcliffe, and Peterson called up" height="360" width="640"></a>
+							<a href="http://demo.themeboy.com/footballclub/2014/05/19/lowes-radcliffe-and-peterson-called-up/"><img src="assets/blog-1-1-640x360.jpg" class="attachment-featured-image wp-post-image" alt="blog-1-1" title="Lowes, Radcliffe, y Peterson" height="360" width="640"></a>
 							<div style="display: block;"
 							class="desc">
 								<div style="opacity: 0; margin-bottom: -48px;" class="block">
-									<h3 class="ellipsis"><a href="http://demo.themeboy.com/footballclub/2014/05/19/lowes-radcliffe-and-peterson-called-up/">Lowes, Radcliffe, and Peterson called up</a></h3>
-									<time><a href="http://demo.themeboy.com/footballclub/2014/05/19/lowes-radcliffe-and-peterson-called-up/">May 19, 2014</a></time>
+									<h3 class="ellipsis"><a href="http://demo.themeboy.com/footballclub/2014/05/19/lowes-radcliffe-and-peterson-called-up/">Lowes, Radcliffe, y Peterson</a></h3>
+									<time><a href="http://demo.themeboy.com/footballclub/2014/05/19/lowes-radcliffe-and-peterson-called-up/">Mayo 19, 2014</a></time>
 								</div>
 							</div>
 						</li>
 						<li style="display: list-item; z-index: 11;" data-slide="1">
-							<a href="http://demo.themeboy.com/footballclub/2014/05/19/brown-impressed-by-brough/"><img src="assets/blog-6-1-640x360.jpg" class="attachment-featured-image wp-post-image" alt="blog-6-1" title="Brown impressed by Brough" height="360" width="640"></a>
+							<a href="http://demo.themeboy.com/footballclub/2014/05/19/brown-impressed-by-brough/"><img src="assets/blog-6-1-640x360.jpg" class="attachment-featured-image wp-post-image" alt="blog-6-1" title="Brown impresionado por Borough" height="360" width="640"></a>
 							<div style="display: block;"
 							class="desc">
 								<div style="opacity: 1; margin-bottom: 0px;" class="block">
-									<h3 class="ellipsis"><a href="http://demo.themeboy.com/footballclub/2014/05/19/brown-impressed-by-brough/">Brown impressed by Brough</a></h3>
-									<time><a href="http://demo.themeboy.com/footballclub/2014/05/19/brown-impressed-by-brough/">May 19, 2014</a></time>
+									<h3 class="ellipsis"><a href="http://demo.themeboy.com/footballclub/2014/05/19/brown-impressed-by-brough/">Brown impresionado por Borough</a></h3>
+									<time><a href="http://demo.themeboy.com/footballclub/2014/05/19/brown-impressed-by-brough/">Mayo 19, 2014</a></time>
 								</div>
 							</div>
 						</li>
 						<li style="display: none; z-index: 9;" data-slide="2">
-							<a href="http://demo.themeboy.com/footballclub/2014/04/19/eagles-in-the-wordpress-cup/"><img src="assets/blog-3-1-640x360.jpg" class="attachment-featured-image wp-post-image" alt="blog-3-1" title="Eagles in the WordPress Cup" height="360" width="640"></a>
+							<a href="http://demo.themeboy.com/footballclub/2014/04/19/eagles-in-the-wordpress-cup/"><img src="assets/blog-3-1-640x360.jpg" class="attachment-featured-image wp-post-image" alt="blog-3-1" title="Costa Rica en 'el grupo de la muerte'" height="360" width="640"></a>
 							<div style="display: block;"
 							class="desc">
 								<div style="opacity: 0; margin-bottom: -48px;" class="block">
-									<h3 class="ellipsis"><a href="http://demo.themeboy.com/footballclub/2014/04/19/eagles-in-the-wordpress-cup/">Eagles in the WordPress Cup</a></h3>
-									<time><a href="http://demo.themeboy.com/footballclub/2014/04/19/eagles-in-the-wordpress-cup/">April 19, 2014</a></time>
+									<h3 class="ellipsis"><a href="http://demo.themeboy.com/footballclub/2014/04/19/eagles-in-the-wordpress-cup/">Costa Rica en "el grupo de la muerte"</a></h3>
+									<time><a href="http://demo.themeboy.com/footballclub/2014/04/19/eagles-in-the-wordpress-cup/">Abril 19, 2014</a></time>
 								</div>
 							</div>
 						</li>
@@ -44,8 +44,8 @@
 							<div style="display: block;"
 							class="desc">
 								<div style="opacity: 0; margin-bottom: -48px;" class="block">
-									<h3 class="ellipsis"><a href="http://demo.themeboy.com/footballclub/2014/04/02/the-future-of-essendon/">The future of Essendon</a></h3>
-									<time><a href="http://demo.themeboy.com/footballclub/2014/04/02/the-future-of-essendon/">April 2, 2014</a></time>
+									<h3 class="ellipsis"><a href="http://demo.themeboy.com/footballclub/2014/04/02/the-future-of-essendon/">El futuro de Essendon</a></h3>
+									<time><a href="http://demo.themeboy.com/footballclub/2014/04/02/the-future-of-essendon/">Abril 2, 2014</a></time>
 								</div>
 							</div>
 						</li>
@@ -53,8 +53,8 @@
 							<a href="http://demo.themeboy.com/footballclub/2014/03/22/lineup-announced/"><img src="assets/blog-5-1-640x360.jpg" class="attachment-featured-image wp-post-image" alt="blog-5-1" title="Lineup Announced" height="360" width="640"></a>
 							<div style="display: block;" class="desc">
 								<div style="opacity: 0; margin-bottom: -48px;" class="block">
-									<h3 class="ellipsis"><a href="http://demo.themeboy.com/footballclub/2014/03/22/lineup-announced/">Lineup Announced</a></h3>
-									<time><a href="http://demo.themeboy.com/footballclub/2014/03/22/lineup-announced/">March 22, 2014</a></time>
+									<h3 class="ellipsis"><a href="http://demo.themeboy.com/footballclub/2014/03/22/lineup-announced/">Alineacion anunciada</a></h3>
+									<time><a href="http://demo.themeboy.com/footballclub/2014/03/22/lineup-announced/">Marzo 22, 2014</a></time>
 								</div>
 							</div>
 						</li>
@@ -65,40 +65,40 @@
 						<li class="" data-permalink="http://demo.themeboy.com/footballclub/2014/05/19/lowes-radcliffe-and-peterson-called-up/" data-slide="0">
 							<a><img src="assets/blog-1-1-50x50.jpg" class="attachment-side-image wp-post-image" alt="blog-1-1" title="Lowes, Radcliffe, and Peterson called up" height="50" width="50"></a>
 							<div class="block">
-								<h3 class="ellipsis">Lowes, Radcliffe, and Peterson called up</h3>
-								<time>May 19, 2014</time>
+								<h3 class="ellipsis">Lowes, Radcliffe, y Peterson</h3>
+								<time>Mayo 19, 2014</time>
 							</div>
 							<div class="more"><a href="http://demo.themeboy.com/footballclub/2014/05/19/lowes-radcliffe-and-peterson-called-up/">Read More</a></div>
 						</li>
 						<li class="active" data-permalink="http://demo.themeboy.com/footballclub/2014/05/19/brown-impressed-by-brough/" data-slide="1">
 							<a><img src="assets/blog-6-1-50x50.jpg" class="attachment-side-image wp-post-image" alt="blog-6-1" title="Brown impressed by Brough" height="50" width="50"></a>
 							<div class="block">
-								<h3 class="ellipsis">Brown impressed by Brough</h3>
-								<time>May 19, 2014</time>
+								<h3 class="ellipsis">Brown impresionado por Borough</h3>
+								<time>Mayo 19, 2014</time>
 							</div>
 							<div class="more"><a href="http://demo.themeboy.com/footballclub/2014/05/19/brown-impressed-by-brough/">Read More</a></div>
 						</li>
 						<li class="" data-permalink="http://demo.themeboy.com/footballclub/2014/04/19/eagles-in-the-wordpress-cup/" data-slide="2">
 							<a><img src="assets/blog-3-1-50x50.jpg" class="attachment-side-image wp-post-image" alt="blog-3-1" title="Eagles in the WordPress Cup" height="50" width="50"></a>
 							<div class="block">
-								<h3 class="ellipsis">Eagles in the WordPress Cup</h3>
-								<time>April 19, 2014</time>
+								<h3 class="ellipsis">Costa Rica en el grupo de la muerte</h3>
+								<time>Abril 19, 2014</time>
 							</div>
 							<div class="more"><a href="http://demo.themeboy.com/footballclub/2014/04/19/eagles-in-the-wordpress-cup/">Read More</a></div>
 						</li>
 						<li class="" data-permalink="http://demo.themeboy.com/footballclub/2014/04/02/the-future-of-essendon/" data-slide="3">
 							<a><img src="assets/blog-4-1-50x50.jpg" class="attachment-side-image wp-post-image" alt="blog-4-1" title="The future of Essendon" height="50" width="50"></a>
 							<div class="block">
-								<h3 class="ellipsis">The future of Essendon</h3>
-								<time>April 2, 2014</time>
+								<h3 class="ellipsis">El futuro de Essendon</h3>
+								<time>Abril 2, 2014</time>
 							</div>
 							<div class="more"><a href="http://demo.themeboy.com/footballclub/2014/04/02/the-future-of-essendon/">Read More</a></div>
 						</li>
 						<li class="" data-permalink="http://demo.themeboy.com/footballclub/2014/03/22/lineup-announced/" data-slide="4">
 							<a><img src="assets/blog-5-1-50x50.jpg" class="attachment-side-image wp-post-image" alt="blog-5-1" title="Lineup Announced" height="50" width="50"></a>
 							<div class="block">
-								<h3 class="ellipsis">Lineup Announced</h3>
-								<time>March 22, 2014</time>
+								<h3 class="ellipsis">Alineación anunciada</h3>
+								<time>Marzo 22, 2014</time>
 							</div>
 							<div class="more"><a href="http://demo.themeboy.com/footballclub/2014/03/22/lineup-announced/">Read More</a></div>
 						</li>

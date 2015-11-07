@@ -626,3 +626,22 @@ select registrar_estadisticaXpartido(1,
 										  				11, 
 										  				19)
 --------------------------------------------------------------
+07/Nov/15  14:16:08
+registrar_usuario	caco26i@gmail.com	123456
+select registrar_usuario('caco26i@gmail.com', 
+										   '123456')
+--------------------------------------------------------------
+07/Nov/15  14:16:46
+registrar_usuario	rogervr@gmail.com	123456
+select registrar_usuario('rogervr@gmail.com', 
+										   '123456')
+--------------------------------------------------------------
+07/Nov/15  14:46:52
+registrar_premioXequipo	15	1	4
+select registrar_premioXequipo(15, 
+										   		 1
+										   		 4
+										   		 )
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '4
+										   		 )' at line 3
+--------------------------------------------------------------

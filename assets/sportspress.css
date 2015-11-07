@@ -320,10 +320,12 @@
 		width: 48.3871%;
 		float: left;
 		clear: left;
+		margin-left: 10px;
 	}
 	.sp-widget-align-right {
 		width: 48.3871%;
 		float: right;
 		clear: right;
+		margin-right: 10px;
 	}
 }
