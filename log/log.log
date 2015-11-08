@@ -645,3 +645,458 @@ select registrar_premioXequipo(15,
 Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '4
 										   		 )' at line 3
 --------------------------------------------------------------
+07/Nov/15  15:30:37
+registrar_usuario	jijijojadjas	123456
+select registrar_usuario('jijijojadjas', 
+										   'e10adc3949ba59abbe56e057f20f883e')
+--------------------------------------------------------------
+07/Nov/15  16:05:50
+registrar_integranteXpartido	2	on	on
+--------------------------------------------------------------
+07/Nov/15  16:08:50
+registrar_integranteXpartido	1		
+--------------------------------------------------------------
+07/Nov/15  16:08:50
+registrar_integranteXpartido	1		
+--------------------------------------------------------------
+07/Nov/15  16:17:19
+registrar_integranteXpartido			
+--------------------------------------------------------------
+07/Nov/15  16:22:09
+registrar_integranteXpartido			
+--------------------------------------------------------------
+07/Nov/15  16:26:38
+registrar_integranteXpartido			
+--------------------------------------------------------------
+07/Nov/15  16:26:55
+registrar_integranteXpartido	1		
+--------------------------------------------------------------
+07/Nov/15  16:34:34
+registrar_integranteXpartido	2	[object NodeList]	[object NodeList]
+--------------------------------------------------------------
+07/Nov/15  16:42:57
+registrar_integranteXpartido		[object NodeList]	[object NodeList]
+--------------------------------------------------------------
+07/Nov/15  16:44:38
+registrar_integranteXpartido		[object NodeList]	[object NodeList]
+--------------------------------------------------------------
+07/Nov/15  16:45:59
+registrar_integranteXpartido			
+--------------------------------------------------------------
+07/Nov/15  16:56:14
+registrar_integranteXpartido			
+--------------------------------------------------------------
+07/Nov/15  16:59:21
+registrar_integranteXpartido	1		
+--------------------------------------------------------------
+07/Nov/15  16:59:37
+registrar_integranteXpartido	1		
+--------------------------------------------------------------
+07/Nov/15  17:00:22
+registrar_integranteXpartido	1		
+--------------------------------------------------------------
+07/Nov/15  17:02:09
+registrar_integranteXpartido	1	integrantes_local[]=	integrantes_visita[]=
+--------------------------------------------------------------
+07/Nov/15  17:03:34
+registrar_integranteXpartido	1	[object Object]	[object Object]
+--------------------------------------------------------------
+07/Nov/15  17:09:08
+registrar_integranteXpartido	1	[object Object]	[object Object]
+--------------------------------------------------------------
+07/Nov/15  17:09:09
+registrar_integranteXpartido	1	[object Object]	[object Object]
+--------------------------------------------------------------
+07/Nov/15  17:10:28
+registrar_integranteXpartido		integrantes_local[]=2	integrantes_visita[]=1
+--------------------------------------------------------------
+07/Nov/15  17:11:29
+registrar_integranteXpartido		integrantes_local[]=2	integrantes_visita[]=1
+--------------------------------------------------------------
+07/Nov/15  17:11:35
+registrar_integranteXpartido		Array	integrantes_visita[]=1
+--------------------------------------------------------------
+07/Nov/15  17:13:05
+registrar_integranteXpartido		Array	Array
+select registrar_integranteXpartido(1, 
+												   			  ))
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '))' at line 2
+select registrar_integranteXpartido(1, 
+												   			  ))
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '))' at line 2
+--------------------------------------------------------------
+07/Nov/15  17:14:27
+registrar_integranteXpartido		Array	Array
+select registrar_integranteXpartido(1, 
+												   			  ))
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '))' at line 2
+select registrar_integranteXpartido(1, 
+												   			  ))
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '))' at line 2
+--------------------------------------------------------------
+07/Nov/15  17:14:47
+registrar_integranteXpartido	1	Array	Array
+select registrar_integranteXpartido(1, 
+												   			  1))
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 2
+select registrar_integranteXpartido(1, 
+												   			  1))
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 2
+--------------------------------------------------------------
+07/Nov/15  17:15:28
+registrar_integranteXpartido	1	Array	Array
+select registrar_integranteXpartido(1, 
+												   			  1)
+select registrar_integranteXpartido(1, 
+												   			  1)
+--------------------------------------------------------------
+07/Nov/15  17:18:41
+registrar_integranteXpartido	1	Array	Array
+select registrar_integranteXpartido(1, 
+												   			  1)
+select registrar_integranteXpartido(1, 
+												   			  1)
+--------------------------------------------------------------
+07/Nov/15  17:18:41
+registrar_integranteXpartido	1	Array	Array
+select registrar_integranteXpartido(1, 
+												   			  1)
+select registrar_integranteXpartido(1, 
+												   			  1)
+--------------------------------------------------------------
+07/Nov/15  17:23:36
+registrar_integranteXpartido	1	Array	Array
+select registrar_integranteXpartido(1, 
+												   			  1)
+select registrar_integranteXpartido(1, 
+												   			  1)
+--------------------------------------------------------------
+07/Nov/15  17:26:32
+registrar_integranteXpartido		Array	Array
+select registrar_integranteXpartido(1, 
+												   			  )
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 2
+select registrar_integranteXpartido(1, 
+												   			  )
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 2
+--------------------------------------------------------------
+07/Nov/15  17:26:32
+registrar_integranteXpartido		Array	Array
+select registrar_integranteXpartido(1, 
+												   			  )
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 2
+select registrar_integranteXpartido(1, 
+												   			  )
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 2
+--------------------------------------------------------------
+07/Nov/15  17:28:05
+registrar_integranteXpartido		Array	Array
+select registrar_integranteXpartido(1, 
+												   			  )
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 2
+select registrar_integranteXpartido(1, 
+												   			  )
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 2
+--------------------------------------------------------------
+07/Nov/15  17:28:32
+registrar_integranteXpartido		Array	Array
+select registrar_integranteXpartido(1, 
+												   			  )
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 2
+select registrar_integranteXpartido(1, 
+												   			  )
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 2
+--------------------------------------------------------------
+07/Nov/15  17:28:51
+registrar_integranteXpartido	1	Array	Array
+select registrar_integranteXpartido(1, 
+												   			  1)
+select registrar_integranteXpartido(1, 
+												   			  1)
+--------------------------------------------------------------
+07/Nov/15  17:34:45
+registrar_integranteXpartido	1	Array	Array
+select registrar_integranteXpartido(1, 
+												   			  1)
+select registrar_integranteXpartido(1, 
+												   			  1)
+--------------------------------------------------------------
+07/Nov/15  20:39:55
+registrar_integrante	Roger	Villalobos	Rodriguez	15		1995-11-07	53	3	2
+select registrar_integrante(STR_TO_DATE('1995-11-07', '%Y-%m-%d'), 
+										   	  '', 
+										      2, 
+										      53,
+										      3,
+										      'Roger',
+										      15,
+										      'Villalobos',
+										      'Rodriguez')
+--------------------------------------------------------------
+07/Nov/15  20:40:35
+registrar_integrante	Roger	Villalobos	Rodriguez	15		1995-11-07	53	3	2
+select registrar_integrante(STR_TO_DATE('1995-11-07', '%Y-%m-%d'), 
+										   	  '', 
+										      2, 
+										      53,
+										      3,
+										      'Roger',
+										      15,
+										      'Villalobos',
+										      'Rodriguez')
+Error: Duplicate entry '15' for key 'num_camiseta'
+--------------------------------------------------------------
+07/Nov/15  20:41:03
+registrar_integrante	Isaac	Campos	Rodriguez	6		1996-11-07	53	4	2
+select registrar_integrante(STR_TO_DATE('1996-11-07', '%Y-%m-%d'), 
+										   	  '', 
+										      2, 
+										      53,
+										      4,
+										      'Isaac',
+										      6,
+										      'Campos',
+										      'Rodriguez')
+--------------------------------------------------------------
+07/Nov/15  20:43:26
+registrar_integrante	Roger	Villalobos		14		1995-01-01	53	3	2
+select registrar_integrante(STR_TO_DATE('1995-01-01', '%Y-%m-%d'), 
+										   	  '', 
+										      2, 
+										      53,
+										      3,
+										      'Roger',
+										      14,
+										      'Villalobos',
+										      '')
+--------------------------------------------------------------
+07/Nov/15  20:50:12
+registrar_integrante	Isaac	Campos		10		1996-11-07	53	3	2
+select registrar_integrante(STR_TO_DATE('1996-11-07', '%Y-%m-%d'), 
+										   	  player_default.jpg, 
+										      2, 
+										      53,
+										      3,
+										      'Isaac',
+										      10,
+										      'Campos',
+										      '')
+Error: Unknown table 'player_default' in field list
+--------------------------------------------------------------
+07/Nov/15  20:50:53
+registrar_integrante	Isaac	Campos		10		1996-11-07	53	3	2
+select registrar_integrante(STR_TO_DATE('1996-11-07', '%Y-%m-%d'), 
+										   	  'player_default.jpg', 
+										      2, 
+										      53,
+										      3,
+										      'Isaac',
+										      10,
+										      'Campos',
+										      '')
+--------------------------------------------------------------
+07/Nov/15  20:52:30
+registrar_integrante	Roger	Villalobos	Rodriguez	18	crack the skye1.jpg	1995-11-07	53	4	2
+select registrar_integrante(STR_TO_DATE('1995-11-07', '%Y-%m-%d'), 
+										   	  'crack the skye1.jpg', 
+										      2, 
+										      53,
+										      4,
+										      'Roger',
+										      18,
+										      'Villalobos',
+										      'Rodriguez')
+--------------------------------------------------------------
+07/Nov/15  22:09:27
+registrar_partido	2	16	1	2	2014-09-10	13:00
+select registrar_partido(STR_TO_DATE('2014-09-10', '%Y-%m-%d'), 
+										   STR_TO_DATE('13:00', '%h:%i'), 
+										   1, 
+										   2, 
+										   16, 
+										   2)
+--------------------------------------------------------------
+07/Nov/15  22:10:34
+registrar_partido	2	23	2	1	2014-10-15	15:00
+select registrar_partido(STR_TO_DATE('2014-10-15', '%Y-%m-%d'), 
+										   STR_TO_DATE('15:00', '%h:%i'), 
+										   2, 
+										   1, 
+										   23, 
+										   2)
+--------------------------------------------------------------
+07/Nov/15  22:17:36
+registrar_partido	3	2	15	1	2016-11-02	11:57
+select registrar_partido(STR_TO_DATE('2016-11-02', '%Y-%m-%d'), 
+										   STR_TO_DATE('11:57', '%h:%i'), 
+										   15, 
+										   1, 
+										   2, 
+										   3)
+--------------------------------------------------------------
+07/Nov/15  22:19:42
+registrar_partido	3	14	15	10	2018-03-20	14:10
+select registrar_partido(STR_TO_DATE('2018-03-20', '%Y-%m-%d'), 
+										   STR_TO_DATE('14:10', '%h:%i'), 
+										   15, 
+										   10, 
+										   14, 
+										   3)
+--------------------------------------------------------------
+07/Nov/15  22:20:39
+registrar_partido	3	13	10	4	2018-04-22	15:15
+select registrar_partido(STR_TO_DATE('2018-04-22', '%Y-%m-%d'), 
+										   STR_TO_DATE('15:15', '%h:%i'), 
+										   10, 
+										   4, 
+										   13, 
+										   3)
+--------------------------------------------------------------
+07/Nov/15  23:16:30
+registrar_equipo		3	2	194
+select registrar_equipo('team_default.jpg', 
+										   3, 
+										   2, 
+										   194)
+--------------------------------------------------------------
+07/Nov/15  23:59:55
+registrar_equipo	930763_640px.jpg	2	3	11
+select registrar_equipo('930763_640px.jpg', 
+										   2, 
+										   3, 
+										   11)
+--------------------------------------------------------------
+08/Nov/15  00:03:17
+registrar_equipo	UugXzPazR1Oz.jpg	1	2	108
+select registrar_equipo('UugXzPazR1Oz.jpg', 
+										   1, 
+										   2, 
+										   108)
+--------------------------------------------------------------
+08/Nov/15  00:03:44
+borrar_catalogo	borrar_continente	30
+call borrar_continente(30)
+--------------------------------------------------------------
+08/Nov/15  00:03:57
+editar_catalogo	editar_continente	Antartida	31
+call editar_continente('Antartida', 31)
+--------------------------------------------------------------
+08/Nov/15  00:18:19
+registrar_equipo	AsociacionUruguayadeFutbol.png	2	3	238
+select registrar_equipo('AsociacionUruguayadeFutbol.png', 
+										   2, 
+										   3, 
+										   238)
+--------------------------------------------------------------
+08/Nov/15  00:20:59
+registrar_equipo	AsociacionUruguayadeFutbol.png	3	2	154
+select registrar_equipo('AsociacionUruguayadeFutbol.png', 
+										   3, 
+										   2, 
+										   154)
+--------------------------------------------------------------
+08/Nov/15  00:23:14
+registrar_premioXequipo	25	1	2
+select registrar_premioXequipo(25, 
+										   		 1
+										   		 2
+										   		 )
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2
+										   		 )' at line 3
+--------------------------------------------------------------
+08/Nov/15  00:23:21
+registrar_premioXequipo	23	1	2
+select registrar_premioXequipo(23, 
+										   		 1
+										   		 2
+										   		 )
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2
+										   		 )' at line 3
+--------------------------------------------------------------
+08/Nov/15  00:25:18
+registrar_premioXequipo	23	1	2
+select registrar_premioXequipo(23, 
+										   		 1,
+										   		 2
+										   		 )
+--------------------------------------------------------------
+08/Nov/15  00:25:25
+registrar_premioXequipo	25	1	2
+select registrar_premioXequipo(25, 
+										   		 1,
+										   		 2
+										   		 )
+--------------------------------------------------------------
+08/Nov/15  00:25:26
+registrar_premioXequipo	25	1	2
+select registrar_premioXequipo(25, 
+										   		 1,
+										   		 2
+										   		 )
+--------------------------------------------------------------
+08/Nov/15  00:29:30
+registrar_integrante	Luis	Suárez		9	hqdefault.jpg	1987-01-24	238	4	25
+select registrar_integrante(STR_TO_DATE('1987-01-24', '%Y-%m-%d'), 
+										   	  'hqdefault.jpg', 
+										      25, 
+										      238,
+										      4,
+										      'Luis',
+										      9,
+										      'Suárez',
+										      '')
+Error: Duplicate entry '9' for key 'num_camiseta'
+--------------------------------------------------------------
+08/Nov/15  00:32:53
+registrar_integrante	Luis	Suárez		9	hqdefault.jpg	1987-01-24	238	4	25
+select registrar_integrante(STR_TO_DATE('1987-01-24', '%Y-%m-%d'), 
+										   	  'hqdefault.jpg', 
+										      25, 
+										      238,
+										      4,
+										      'Luis',
+										      9,
+										      'Suárez',
+										      '')
+--------------------------------------------------------------
+08/Nov/15  00:33:13
+registrar_integrante	Luis	Suárez		9	hqdefault.jpg	1987-01-24	238	4	25
+select registrar_integrante(STR_TO_DATE('1987-01-24', '%Y-%m-%d'), 
+										   	  'hqdefault.jpg', 
+										      25, 
+										      238,
+										      4,
+										      'Luis',
+										      9,
+										      'Suárez',
+										      '')
+Error: Duplicate entry '9-25' for key 'num_camiseta'
+--------------------------------------------------------------
+08/Nov/15  01:00:33
+registrar_estadisticaXpartido	1	1	4	17
+select registrar_estadisticaXpartido(1, 
+										  				1, 
+										  				4, 
+										  				17)
+--------------------------------------------------------------
+08/Nov/15  01:00:55
+registrar_estadisticaXpartido	2	1	4	16
+select registrar_estadisticaXpartido(2, 
+										  				1, 
+										  				4, 
+										  				16)
+--------------------------------------------------------------
+08/Nov/15  01:01:15
+registrar_estadisticaXpartido	2	1	4	34
+select registrar_estadisticaXpartido(2, 
+										  				1, 
+										  				4, 
+										  				34)
+--------------------------------------------------------------
+08/Nov/15  01:01:33
+registrar_estadisticaXpartido	8	1	4	27
+select registrar_estadisticaXpartido(8, 
+										  				1, 
+										  				4, 
+										  				27)
+--------------------------------------------------------------

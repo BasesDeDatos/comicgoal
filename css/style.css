@@ -230,7 +230,7 @@ span.menu {
   padding: 1.3em 0 .9em;
   border: none;
   margin: 0;
-  background-color: #CA0005;
+  background-color: #006600;
   -webkit-appearance: none;
   outline: none;
   position: absolute;
@@ -297,21 +297,21 @@ span.menu {
 	-ms-transition: 0.5s all ease;
 }
 .jobs ul li a:hover{
-  background: url(../images/3a.png)#CA0005 no-repeat 20px 14px;
+  background: url(../images/3a.png)#006600 no-repeat 20px 14px;
   color: #fff;
 }
 .jobs ul li a.cmny{
   background: url(../images/4.png)no-repeat 20px 14px;
 }
 .jobs ul li a.cmny:hover{
-  background: url(../images/4a.png)#CA0005 no-repeat 20px 14px;
+  background: url(../images/4a.png)#006600 no-repeat 20px 14px;
   color: #fff;
 }
 .jobs ul li a.usr{
   background: url(../images/5.png) no-repeat 20px 14px;
 }
 .jobs ul li a.usr:hover{
-  background: url(../images/5a.png)#CA0005 no-repeat 20px 14px;
+  background: url(../images/5a.png)#006600 no-repeat 20px 14px;
   color: #fff;
 }
 /*--temperature--*/
@@ -361,30 +361,30 @@ span.menu {
   display: inline-block;
   position: absolute;
   top: 2%;
-  left: 16%;
+  left: 50%;
+  margin-left: -100px;
   border: 12px solid rgba(255, 255, 255, 0.53);
   border-radius: 50%;
   -ms-border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
-  
+  text-align: center;
   overflow: hidden;
 }
 
 
 .bnr-img img {
-  width: auto;
+   margin: 0 auto;
+  display: inline-block;
   max-height: 100%;
-  margin: 0 auto;
-  display: block;
-  width: 100%;
+  width: auto;
 }
 
 
 .bnr-text h1 {
   font-size: 2.3em;
-  color: #CA0005;
+  color: #006600;
 }
 
 
@@ -760,6 +760,11 @@ background: url('../images/into.png') no-repeat 0px 0px;
 	color: #4fc5f7;
   background-color: #F0F0F0;
 }
+
+.acordion{
+  padding-bottom: 30px !important;
+}
+
 /*--charts--*/
 
 .pie-chrt {
@@ -873,7 +878,7 @@ span.menu3 lable {
 	background-color:#151515;
 }
 .top-nav2 ul li a:hover span {
-	background-color: #CA0005;
+	background-color: #006600;
 }
 
 .top-nav3 {
@@ -1466,7 +1471,7 @@ ul.dropdown-menu3 {
 button#dropdownMenu3{
 
   font-size: 1.2em;
-  background-color: #CA0005;
+  background-color: #006600;
   color: #fff;
   border: none;
   width: 100%;
@@ -1580,7 +1585,7 @@ canvas#bar {
 }
 .footer p a:hover{
 	font-size:1em;
-	color:#CA0005;
+	color:#006600;
 }
 /*---- responsive-design -----*/
 
@@ -2070,7 +2075,7 @@ ul.nav.nav-sidebar {
     border: none;
 }
 .top-nav ul li a:hover, .top-nav ul li a.active {
-  color: #CA0005;
+  color: #006600;
 }
 .search {
   width: 43%;

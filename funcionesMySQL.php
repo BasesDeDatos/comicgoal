@@ -132,7 +132,11 @@
 	
 	if (!empty($_POST) && $_POST["mode"] == "registrar_equipo"){
 		$mysqli->next_result();
-		$query = "select registrar_equipo('{$_POST['escudo']}', 
+		$escudo = $_POST['escudo'];
+		if ($escudo == ''){
+			$escudo = "team_default.jpg";
+		}
+		$query = "select registrar_equipo('$escudo', 
 										   {$_POST['confederacion']}, 
 										   {$_POST['continente']}, 
 										   {$_POST['pais']})";
@@ -155,8 +159,12 @@
 	
 	if (!empty($_POST) && $_POST["mode"] == "registrar_integrante"){
 		$mysqli->next_result();
+		$foto = $_POST['foto'];
+		if ($foto == ''){
+			$foto = "player_default.jpg";
+		}
 		$query = "select registrar_integrante(STR_TO_DATE('{$_POST['fecha_nac']}', '%Y-%m-%d'), 
-										   	  '{$_POST['foto']}', 
+										   	  '$foto', 
 										      {$_POST['equipo']}, 
 										      {$_POST['nacionalidad']},
 										      {$_POST['posicion']},
@@ -205,6 +213,33 @@
 		}
 	}
 	
+	if (!empty($_POST) && $_POST["mode"] == "registrar_integranteXpartido"){
+		
+		$integrantes = array_merge ($_POST['integrantes_local'], $_POST['integrantes_visita']);
+		
+		if (!empty($integrantes)){
+			for ($i = 0; $i < count($integrantes); $i++){
+				$mysqli->next_result();
+				$query = "select registrar_integranteXpartido({$integrantes[$i]}, 
+												   			  {$_POST['partido']})";
+				fwrite($fp, $query . PHP_EOL);
+				$result = $mysqli->query($query);
+			
+				if (!$result) {
+					$error = $mysqli->error;
+			        fwrite($fp, "Error: " . $error . PHP_EOL);
+			        $response["success"] = false;
+			        $response["error"] = $error;
+			    } else {
+			    	$response["success"] = true;
+			    }
+			    
+				header('Content-type: application/json; charset=utf-8');
+				echo json_encode($response, JSON_FORCE_OBJECT);
+			}
+		}
+	}
+	
 	if (!empty($_POST) && $_POST["mode"] == "registrar_estadisticaXpartido"){
 		$mysqli->next_result();
 		$query = "select registrar_estadisticaXpartido({$_POST['integrante']}, 
@@ -230,8 +265,9 @@
 	
 	if (!empty($_POST) && $_POST["mode"] == "registrar_usuario"){
 		$mysqli->next_result();
+		$password = md5($_POST['password']);
 		$query = "select registrar_usuario('{$_POST['email']}', 
-										   '{$_POST['password']}')";
+										   '$password')";
  		fwrite($fp, $query . PHP_EOL);
 		
 		$result = $mysqli->query($query);
@@ -252,7 +288,7 @@
 	if (!empty($_POST) && $_POST["mode"] == "registrar_premioXequipo"){
 		$mysqli->next_result();
 		$query = "select registrar_premioXequipo({$_POST['equipo']}, 
-										   		 {$_POST['premio']}
+										   		 {$_POST['premio']},
 										   		 {$_POST['cantidad']}
 										   		 )";
  		fwrite($fp, $query . PHP_EOL);

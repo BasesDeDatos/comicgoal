@@ -10,22 +10,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="row">
 				<div class="col-md-4 col-md-push-4 login-form" >
 					<div class="login-pad">
-						<h3>Ingreso</h3>
+						<h3>Ingrese</h3>
 						<form id="form_data">
-							<input name="Email" id="Email" type="text" value="Correo Electrónico" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Correo Electrónico';}" required="">
-							<input name="Clave" id="Clave" type="password" value="contrasena" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'contrasena';}" required="">							
+							<input name="email" id="email" type="text" value="Correo Electrónico" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Correo Electrónico';}" required="">
+							<input name="clave" id="clave" type="password" value="contrasena" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'contrasena';}" required="">							
 							<input name="mode" type="hidden" value="loggin">
 							<input class="submit" type="button" value="ENTRAR" onclick="logging();">
 						</form>
 					</div>
-					<!--<div class="new-here">					-->
-					<!--	<div class="new-grids">	-->
-					<!--		<a href="#">FACEBOOK</a>-->
-					<!--	</div>-->
-					<!--	<div class="new-grids twit-grid">	-->
-					<!--		<a href="#">TWITTER</a>-->
-					<!--	</div>-->
-					<!--</div>-->
 				</div>
 			</div>
 	<?php require_once("footer.php") ?>
@@ -35,7 +27,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			if ($("#Email").val() == "Correo Electrónico" ) $("#Email").click().val("Correo Electrónico Requerido*");
 			else if ($("#Clave").val() != "contrasena" ){
 				var data = $("#form_data").serialize();
-				$.post("funcionesOracle.php", data, function(data){
+				$.post("funcionesMySQL.php", data, function(data){
 					$("body").append("<div id='debug'></div>");
 					$("#debug").html(data);
 				});

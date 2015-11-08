@@ -31,6 +31,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<link href="css/jquery.nouislider.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/fd-slider.css">	
 	<link rel="stylesheet" href="css/graph.css">
+	<link rel="stylesheet" href="css/animate.css">
 	<link href="css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />	
 	<link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
 	<script src="js/jquery-1.11.1.min.js"></script>
@@ -577,12 +578,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 	<div id="wrapper">
 		<header id="header">
-			<a id="logo" href="index.php"><img src="img/logo.png" alt="Comic Goal"></a>
-			<!--hgroup id="maintitle">
-				<h1><a href="assets">Football Club</a></h1>
-				<h2><a href="assets">Official SportsPress Theme</a></h2>
-			</hgroup-->
-			<div class="clear"></div>
+			<?php
+			function is_home(){
+				return $_SERVER[REQUEST_URI] == "/BasesDeDatos1/comicgoal/index.php";
+			} ?>
+			<div class="cesped 
+				<?php if ( is_home() ) { echo "wow fadeInRightBig"; }?>"
+				data-wow-duration="1s" data-wow-delay="1s"
+			></div>
+
+			<a id="logo" href="index.php">
+				<img src="img/logo.png" 
+					alt="Comic Goal" 
+					<?php if ( is_home() ) { ?>
+						class="wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="2s"
+					<?php } ?>
+				></a>
 		</header>
 		<nav id="menu" class="clearfix">
 			<div class="menu-header">
@@ -590,84 +601,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<li id="menu-item-396" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-597"><a href="index.php">Inicio</a></li>
 					<li id="menu-item-597" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-597"><a href="team_dash.php">Equipos</a></li>
 					<li id="menu-item-597" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-597"><a href="tournaments.php">Torneos</a></li>
-					<!--li id="menu-item-705" class="menu-item menu-item-type-post_type menu-item-object-sp_list menu-item-has-children menu-item-705"><a href="assets/list/first-team/">First Team</a>
-						<ul class="sub-menu">
-							<li id="menu-item-691" class="menu-item menu-item-type-post_type menu-item-object-sp_list menu-item-691"><a href="assets/list/team-roster/">Team Roster</a></li>
-							<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-sp_staff menu-item-398"><a href="assets/staff/bobby-brown/">Staff</a></li>
-							<li id="menu-item-645" class="menu-item menu-item-type-post_type menu-item-object-sp_table menu-item-has-children menu-item-645"><a href="assets/table/primary-league/">Standings</a>
-								<ul class="sub-menu">
-									<li id="menu-item-665" class="menu-item menu-item-type-post_type menu-item-object-sp_table menu-item-665"><a href="assets/table/2013-season-results/">2013 Season Results</a></li>
-									<li id="menu-item-667" class="menu-item menu-item-type-post_type menu-item-object-sp_table menu-item-667"><a href="assets/table/2012-season-results/">2012 Season Results</a></li>
-									<li id="menu-item-669" class="menu-item menu-item-type-post_type menu-item-object-sp_table menu-item-669"><a href="assets/table/2011-season-results/">2011 Season Results</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li id="menu-item-706" class="menu-item menu-item-type-post_type menu-item-object-sp_list menu-item-has-children menu-item-706"><a href="assets/list/reserve-team-gallery/">Reserve Team</a>
-						<ul class="sub-menu">
-							<li id="menu-item-643" class="menu-item menu-item-type-post_type menu-item-object-sp_list menu-item-643"><a href="assets/list/team-roster/">Reserve Team Roster</a></li>
-							<li id="menu-item-644" class="menu-item menu-item-type-post_type menu-item-object-sp_staff menu-item-644"><a href="assets/staff/bill-belichick/">Reserve Staff</a></li>
-							<li id="menu-item-661" class="menu-item menu-item-type-post_type menu-item-object-sp_table menu-item-has-children menu-item-661"><a href="assets/table/secondary-league-table/">Reserve Standings</a>
-								<ul class="sub-menu">
-									<li id="menu-item-673" class="menu-item menu-item-type-post_type menu-item-object-sp_table menu-item-673"><a href="assets/table/2013-season-results-2/">2013 Season Results</a></li>
-									<li id="menu-item-674" class="menu-item menu-item-type-post_type menu-item-object-sp_table menu-item-674"><a href="assets/table/2012-season-results-2/">2012 Season Results</a></li>
-									<li id="menu-item-675" class="menu-item menu-item-type-post_type menu-item-object-sp_table menu-item-675"><a href="assets/table/2011-season-results-2/">2011 Season Results</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li-->
+					<?php if ($arrayQuery ["ID_ROL"][0] == 1 ){?>
+						<li id="menu-item-597" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-597"><a href="admin.php">Administrador</a></li>
+					<?php }	?>
 				</ul>
 			</div>
-			<!--select id="drop-nav">
-				<option selected="selected" value="">Select a page...</option> id="menu-item-396"&gt;
-				<option value="assets/">Home</option>
-				id="menu-item-597"&gt;
-				<option value="assets/category/blog/">News</option>
-				id="menu-item-705"&gt;
-				<option value="assets/list/first-team/">First Team</option> id="menu-item-691"&gt;
-				<option value="assets/list/team-roster/">&nbsp;&nbsp;&nbsp;&nbsp;Team Roster</option>
-				id="menu-item-398"&gt;
-				<option value="assets/staff/bobby-brown/">&nbsp;&nbsp;&nbsp;&nbsp;Staff</option>
-				id="menu-item-645"&gt;
-				<option value="assets/table/primary-league/">&nbsp;&nbsp;&nbsp;&nbsp;Standings</option> id="menu-item-665"&gt;
-				<option value="assets/table/2013-season-results/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2013 Season Results</option>
-				id="menu-item-667"&gt;
-				<option value="assets/table/2012-season-results/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2012 Season Results</option>
-				id="menu-item-669"&gt;
-				<option value="assets/table/2011-season-results/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2011 Season Results</option>
-
-
-				id="menu-item-706"&gt;
-				<option value="assets/list/reserve-team-gallery/">Reserve Team</option> id="menu-item-643"&gt;
-				<option value="assets/list/team-roster/">&nbsp;&nbsp;&nbsp;&nbsp;Reserve Team Roster</option>
-				id="menu-item-644"&gt;
-				<option value="assets/staff/bill-belichick/">&nbsp;&nbsp;&nbsp;&nbsp;Reserve Staff</option>
-				id="menu-item-661"&gt;
-				<option value="assets/table/secondary-league-table/">&nbsp;&nbsp;&nbsp;&nbsp;Reserve Standings</option> id="menu-item-673"&gt;
-				<option value="assets/table/2013-season-results-2/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2013 Season Results</option>
-				id="menu-item-674"&gt;
-				<option value="assets/table/2012-season-results-2/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2012 Season Results</option>
-				id="menu-item-675"&gt;
-				<option value="assets/table/2011-season-results-2/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2011 Season Results</option>
-
-
-				id="menu-item-647"&gt;
-				<option target="_blank" value="https://www.themeboy.com/footballclub/">About this Theme</option>
-				id="menu-item-648"&gt;
-				<option target="_blank" value="https://app.sellwire.net/p/paypal/RQ">Purchase Theme</option>
-			</select>
-			<form role="search" method="get" id="searchform" action="assets/">
-				<ul>
-					<li class="query">
-						<select name="s" id="s">
-							<option value="">Seleccione un torneo</option>	
-						</select>
-					</li>
-					<li>
-						<input id="searchsubmit" value="Ir" type="submit">
-					</li>
-				</ul>
-			</form-->
 		</nav>
 		
 		<?php include_once("conexionMySQL.php"); ?>

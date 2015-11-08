@@ -20,8 +20,8 @@ body {
 	font-weight: 300;
 	background-image: url('../img/background.jpg');
 	background-repeat: no-repeat;
-	background-position: top center;
-	background-attachment: scroll;
+	background-position: center center;
+	background-attachment: fixed;
 }
 
 p {
@@ -78,6 +78,28 @@ textarea {
 	background-color: rgba(0,0,0,0.02);
 }
 
+.max-50{
+	border: none;
+	max-width: 50px;
+	margin: 5px;
+}
+
+.team-item{
+	height: 50px;
+}
+
+.team-item img{
+-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.team-item:hover img{
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
 /* LINK BUTTON */
 
 .link-button {	
@@ -122,6 +144,16 @@ textarea {
 	position: relative;
 	background: #edf7ff no-repeat bottom center;
 	min-height: 140px;
+	overflow: hidden;
+}
+
+#header .cesped{
+	position: absolute;
+	top: 0;
+	bottom: 0; 
+	left: 0; 
+	right: 0;
+	background: transparent no-repeat bottom center;
 	background-image: url(../img/cesped.png) !important;
 }
 
@@ -130,6 +162,12 @@ textarea {
 	background: transparent;
 	border: none;
 	width: 100%;
+	z-index: 1;
+	position: relative;
+}
+
+.sp-widget-align-left, .sp-widget-align-right {
+    overflow: hidden;
 }
 
 #header #logo img {
@@ -530,7 +568,7 @@ h5 {
 	left: 50%;
 	display: none;
 	margin-left: -320px;
-	box-shadow: 0 0 12px rgba(0,0,0,0.2);
+	box-shadow: 0 0 30px rgb(0, 0, 0);
 }
 .image-rotator .main_image h3 {
 	margin-bottom: 0;

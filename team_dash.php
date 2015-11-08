@@ -13,16 +13,19 @@
 				<ul class="col-md-12 scroll-container">
 					<?php $query = 'call get_equipo(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
 						$result = $mysqli->query($query);
-						// Imprimir los resultados en HTML
 						while ($row = $result->fetch_assoc()) { ?> 
-							<div class="col-md-12">
-								<a href="team.php"><?php echo $row["nombre"] ?></a>
+							<div class="col-md-4">
+								<a href="team.php?equipo=<?php echo $row["ID_equipo"] ?>">
+									<h2 class="team-item">
+										<img class="max-50" src="img/country-flags-hi/<?php echo strtolower($row["iso2"]) ?>.png"> 
+										<?php echo $row["nombre"] ?>
+									</h2>
+								</a>
 							</div>						
 					<?php } $mysqli->next_result(); ?>
 				</u1>
 			</div>
 		</div>
 	</div>
-	<!-- #main -->
-		
+	
 	<?php require_once("footer.php");?>

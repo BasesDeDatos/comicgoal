@@ -108,7 +108,7 @@
 			<script type="text/javascript">
 				(function($) {
 					$('.image-rotator').rotator({
-						'delay': 4000
+						'delay': 3000
 					});
 				})(jQuery);
 			</script>
@@ -117,7 +117,7 @@
 					<ul class="home-widgets">
 						<div class="sp-widget-align-left">
 							<li id="sportspress-event-blocks-2" class="widget-container widget_sp_event_blocks">
-								<h3 class="widget-title">Proximos partidos</h3>
+								<h3 class="widget-title">Próximos partidos</h3>
 								<div class="sp-template sp-template-event-blocks">
 									<div class="sp-table-wrapper">
 										<table class="sp-event-blocks sp-data-table sp-paginated-table" data-sp-rows="10">
@@ -127,54 +127,38 @@
 												</tr>
 											</thead>
 											<tbody>
-												<tr class="sp-row sp-post alternate">
-													<td>
-														<img src="assets/foxes-113x128.png" class="team-logo logo-odd wp-post-image" alt="foxes" height="128" width="113"> <img src="assets/eagles-105x128.png"
-														class="team-logo logo-even wp-post-image" alt="eagles" height="128" width="105">
-														<time class="sp-event-date" datetime="2015-11-20 16:30:00">November 20, 2015</time>
-														<h5 class="sp-event-time">4:30 pm</h5>
-														<h4 class="sp-event-title">
-																	<a href="http://demo.themeboy.com/footballclub/event/571/">Fitzroy vs Essendon</a>
-															</h4>
-
-													</td>
-												</tr>
-												<tr class="sp-row sp-post">
-													<td>
-														<img src="assets/bulls-98x128.png" class="team-logo logo-odd wp-post-image" alt="bulls" height="128" width="98"> <img src="assets/eagles-105x128.png"
-														class="team-logo logo-even wp-post-image" alt="eagles" height="128" width="105">
-														<time class="sp-event-date" datetime="2015-11-24 11:30:00">November 24, 2015</time>
-														<h5 class="sp-event-time">11:30 am</h5>
-														<h4 class="sp-event-title">
-																	<a href="http://demo.themeboy.com/footballclub/event/551/">Brighton vs Essendon</a>
-															</h4>
-
-													</td>
-												</tr>
-												<tr class="sp-row sp-post alternate">
-													<td>
-														<img src="assets/budgies-113x128.png" class="team-logo logo-odd wp-post-image" alt="budgies" height="128" width="113"> <img src="assets/eagles-105x128.png"
-														class="team-logo logo-even wp-post-image" alt="eagles" height="128" width="105">
-														<time class="sp-event-date" datetime="2015-11-29 14:00:00">November 29, 2015</time>
-														<h5 class="sp-event-time">2:00 pm</h5>
-														<h4 class="sp-event-title">
-																	<a href="http://demo.themeboy.com/footballclub/event/558/">Bundoora vs Essendon</a>
-															</h4>
-
-													</td>
-												</tr>
-												<tr class="sp-row sp-post">
-													<td>
-														<img src="assets/eagles-105x128.png" class="team-logo logo-odd wp-post-image" alt="eagles" height="128" width="105"> <img src="assets/sharks-128x106.png"
-														class="team-logo logo-even wp-post-image" alt="sharks" height="106" width="128">
-														<time class="sp-event-date" datetime="2015-12-01 12:30:00">December 1, 2015</time>
-														<h5 class="sp-event-time">12:30 pm</h5>
-														<h4 class="sp-event-title">
-																	<a href="http://demo.themeboy.com/footballclub/event/564/">Essendon vs Southbank</a>
-															</h4>
-
-													</td>
-												</tr>
+												<?php $query = 'call get_partidos_proximos(null, 7)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
+													$result = $mysqli->query($query);
+													$num = 1;
+													while ($row = $result->fetch_assoc()) { ?> 
+														<tr class="sp-row 
+															sp-post 
+															<?php if ($num%2 == 0) echo "alternate" ?>
+															wow slideInLeft" data-wow-duration="2s" data-wow-delay="<?php echo $num*2?>">
+															<td>
+																<a href=team.php?equipo=<?php echo $row["ID_equipo_local"]?>>
+																<img src="img/country-flags-hi/<?php echo strtolower($row["iso_local"])?>.png" 
+																	class="team-logo logo-odd wp-post-image" 
+																	alt="foxes" height="128" width="113"> 
+																</a>
+																<a href=team.php?equipo=<?php echo $row["ID_equipo_visita"]?>>
+																<img src="img/country-flags-hi/<?php echo strtolower($row["iso_visita"])?>.png" 
+																	class="team-logo logo-even wp-post-image" 
+																	alt="eagles" height="128" width="105">
+																</a>
+																<time class="sp-event-date" datetime="<?php echo date("d-m-Y", strtotime($row["fecha"]))." ".$row["hora"] ?>">
+																	<?php echo $row["fecha"] ?>
+																	<strong><?php echo $row["hora"] ?></strong>
+																</time>
+																
+																<h5 class="sp-event-time"><?php echo $row["estadio"] ?></h5>														</h4>
+																<h4 class="sp-event-title">
+																	<a href="match.php?partido=<?php echo $row["ID_partido"] ?>" ><?php echo $row["equipo_local"]." vs ".$row["equipo_visita"] ?></a>
+																</h4>
+															</td>
+														</tr> <?php 
+													$num++;
+													} $mysqli->next_result(); ?>
 											</tbody>
 										</table>
 									</div>
@@ -185,7 +169,7 @@
 					<ul class="home-widgets">
 						<div class="sp-widget-align-right">
 							<li id="sportspress-event-blocks-3" class="widget-container widget_sp_event_blocks">
-								<h3 class="widget-title">Ultimos resultados</h3>
+								<h3 class="widget-title">Últimos resultados</h3>
 								<div class="sp-template sp-template-event-blocks">
 									<div class="sp-table-wrapper">
 										<table class="sp-event-blocks sp-data-table sp-paginated-table" data-sp-rows="10">
@@ -195,54 +179,36 @@
 												</tr>
 											</thead>
 											<tbody>
-												<tr class="sp-row sp-post alternate">
-													<td>
-														<img src="assets/eagles-105x128.png" class="team-logo logo-odd wp-post-image" alt="eagles" height="128" width="105"> <img src="assets/budgies-113x128.png"
-														class="team-logo logo-even wp-post-image" alt="budgies" height="128" width="113">
-														<time class="sp-event-date" datetime="2013-01-20 14:00:00">January 20, 2013</time>
-														<h5 class="sp-event-results">4 - 2</h5>
-														<h4 class="sp-event-title">
-																	<a href="http://demo.themeboy.com/footballclub/event/426/">Essendon vs Bundoora</a>
-															</h4>
-
-													</td>
-												</tr>
-												<tr class="sp-row sp-post">
-													<td>
-														<img src="assets/budgies-113x128.png" class="team-logo logo-odd wp-post-image" alt="budgies" height="128" width="113"> <img src="assets/eagles-105x128.png"
-														class="team-logo logo-even wp-post-image" alt="eagles" height="128" width="105">
-														<time class="sp-event-date" datetime="2013-01-21 14:00:00">January 21, 2013</time>
-														<h5 class="sp-event-results">2 - 2</h5>
-														<h4 class="sp-event-title">
-																	<a href="http://demo.themeboy.com/footballclub/event/472/">Bundoora vs Essendon</a>
-															</h4>
-
-													</td>
-												</tr>
-												<tr class="sp-row sp-post alternate">
-													<td>
-														<img src="assets/eagles-105x128.png" class="team-logo logo-odd wp-post-image" alt="eagles" height="128" width="105"> <img src="assets/rams-128x128.png"
-														class="team-logo logo-even wp-post-image" alt="rams" height="128" width="128">
-														<time class="sp-event-date" datetime="2013-01-22 14:00:00">January 22, 2013</time>
-														<h5 class="sp-event-results">4 - 2</h5>
-														<h4 class="sp-event-title">
-																	<a href="http://demo.themeboy.com/footballclub/event/463/">Essendon vs Richmond</a>
-															</h4>
-
-													</td>
-												</tr>
-												<tr class="sp-row sp-post">
-													<td>
-														<img src="assets/sharks-128x106.png" class="team-logo logo-odd wp-post-image" alt="sharks" height="106" width="128"> <img src="assets/eagles-105x128.png"
-														class="team-logo logo-even wp-post-image" alt="eagles" height="128" width="105">
-														<time class="sp-event-date" datetime="2013-02-16 12:30:00">February 16, 2013</time>
-														<h5 class="sp-event-results">2 - 3</h5>
-														<h4 class="sp-event-title">
-																	<a href="http://demo.themeboy.com/footballclub/event/462/">Southbank vs Essendon</a>
-															</h4>
-
-													</td>
-												</tr>
+												<?php $query = 'call get_partidos_jugados(null, 7)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
+													$result = $mysqli->query($query);
+													$num = 1;
+													while ($row = $result->fetch_assoc()) { ?>
+														<tr class="sp-row
+																sp-post 
+																<?php if ($num%2 == 0) echo "alternate" ?>
+																 wow slideInRight" data-wow-offset="10"  data-wow-delay="<?php echo $num*2?>">
+															<td>
+																<a href=team.php?equipo=<?php echo $row["ID_equipo_local"]?>>
+																<img src="img/country-flags-hi/<?php echo strtolower($row["iso_local"])?>.png" 
+																	class="team-logo logo-odd wp-post-image" 
+																	alt="<?php echo $row["iso_local"]?>" height="128" width="113"> 
+																</a>
+																<a href=team.php?equipo=<?php echo $row["ID_equipo_visita"]?>>
+																<img src="img/country-flags-hi/<?php echo strtolower($row["iso_visita"])?>.png" 
+																	class="team-logo logo-even wp-post-image" 
+																	alt="<?php echo $row["iso_visita"]?>" height="128" width="105">
+																</a>
+																<time class="sp-event-date" datetime="<?php echo $row["fecha"]." ".$row["hora"] ?>"><?php echo $row["fecha"] ?></time>
+																<h5 class="sp-event-results"><?php echo $row["goles_local"] . " - " . $row["goles_visita"] ?></h5>
+																<p class="sp-event-title"><?php echo $row["estadio"] ?></p>														</h4>
+																<h4 class="sp-event-title">
+																	<a href="match.php?partido=<?php echo $row["ID_partido"] ?>"><?php echo $row["equipo_local"]." vs ".$row["equipo_visita"] ?></a>
+																</h4>
+															</td>
+														</tr> <?php 
+													$num++;
+													} $mysqli->next_result(); 
+												?>
 											</tbody>
 										</table>
 									</div>

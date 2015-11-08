@@ -53,16 +53,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 	<!-- #wrapper -->
 	<footer class="clearfix">
-		<div class="center">©<?php echo date("Y") ?> Comic Goal</div>
-		<!--div class="right">Designed by <a href="http://themeboy.com/" target="_blank">ThemeBoy</a></div>
-		<ul id="social">
+		<div class="right">©<?php echo date("Y") ?> Comic Goal</div>
+		<div class="left"><a href="login.php">Herramientas de Administrador</a></div>
+		<!--ul id="social">
 			<li class="facebook"><a href="http://facebook.com/themeboy" title="Facebook" target="_blank">Facebook</a></li>
 			<li class="twitter"><a href="http://twitter.com/themeboy" title="Twitter" target="_blank">Twitter</a></li>
-			<li class="pinterest"><a href="http://pinterest.com/themeboy" title="Pinterest" target="_blank">Pinterest</a></li>
-			<li class="linkedin"><a href="http://linkedin.com/company/themeboy" title="LinkedIn" target="_blank">LinkedIn</a></li>
 			<li class="gplus"><a href="http://gplus.to/themeboy" title="Google+" target="_blank">Google+</a></li>
 			<li class="youtube"><a href="http://youtube.com/themeboyteam" title="YouTube" target="_blank">YouTube</a></li>
-			<li class="vimeo"><a href="http://vimeo.com/themeboy" title="Vimeo" target="_blank">Vimeo</a></li>
 		</ul-->
 	</footer>
 	
@@ -351,6 +348,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		})
 	</script>
 	
+	<script src="js/wow.js"></script>
+	  <script>
+	  new WOW().init();
+	  </script>
 
 
 	<div id="fancybox-tmp"></div>
