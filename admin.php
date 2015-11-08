@@ -188,12 +188,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
 						while ($row = $result->fetch_assoc()) { ?> 
-							<option value="<?php echo $row["ID_partido"] ?>"><?php echo $row["resumen "] ?></option>
+							<option value="<?php echo $row["ID_partido"] ?>"><?php echo $row["resumen"] ?></option>
 					<?php } $mysqli->next_result(); ?>
 				</select>
 				
 				<label class="col-md-6" for="eventopartido">Evento</label>
-				<select class="col-md-6" name="eventopartido" id="eventopartido">
+				<select class="col-md-6" name="ID_evento" id="eventopartido">
 					<option value="" selected>Elija un evento</option>
 					<?php $query = 'call get_evento(null)';
 						$result = $mysqli->query($query);
@@ -204,7 +204,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</select>
 				
 				<label class="col-md-6" for="estadiopartido">Estadio</label>
-				<select class="col-md-6" name="estadiopartido" id="estadiopartido">
+				<select class="col-md-6" name="ID_estadio" id="estadiopartido">
 					<option value="" selected>Elija un estadio</option>
 					<?php $query = 'call get_estadio(null)';
 						$result = $mysqli->query($query);
@@ -215,7 +215,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</select>
 				
 				<label class="col-md-6" for="localpartido">Equipo local</label>
-				<select class="col-md-6" name="localpartido" id="localpartido">
+				<select class="col-md-6" name="ID_equipo_local" id="localpartido">
 					<option value="" selected>Elija un equipo</option>
 					<?php $query = 'call get_equipo(null)';
 						$result = $mysqli->query($query);
@@ -226,7 +226,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</select>
 				
 				<label class="col-md-6" for="visitapartido">Equipo visita</label>
-				<select class="col-md-6" name="visitapartido" id="visitapartido">
+				<select class="col-md-6" name="ID_equipo_visita" id="visitapartido">
 					<option value="" selected>Elija un equipo</option>
 					<?php $query = 'call get_equipo(null)';
 						$result = $mysqli->query($query);
@@ -237,10 +237,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</select>
 				
 				<label class="col-md-6" for="fechapartido">Fecha: </label>
-				<div class="col-md-6"><input type="date" name="fechapartido" id="fechapartido" placeholder="fecha" /></div>
+				<div class="col-md-6"><input type="date" name="fecha" id="fechapartido" placeholder="fecha" /></div>
 				
 				<label class="col-md-6" for="horapartido">Hora: </label>
-				<div class="col-md-6"><input type="time" name="horapartido" id="horapartido" placeholder="hora" /></div>
+				<div class="col-md-6"><input type="time" name="hora" id="horapartido" placeholder="hora" /></div>
 				
 				<div class = "col-md-12">
 					<input type="submit" name="submit" class="submit action-button" value="Aplicar" onclick="registrar_partido()"/>
@@ -328,7 +328,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col-md-6"><input type="text" name="primer_apellido" id="primer_apellido" placeholder="Primer apellido" /></div>
 				<div class="col-md-6"><input type="text" name="segundo_apellido" id="segundo_apellido" placeholder="Segundo apellido" /></div>
 				
-				<label class="col-md-3" for="númerointegrante">Número</label>
+				<label class="col-md-3" for="numerointegrante">Número</label>
 				<select class="col-md-3" name="numerointegrante" id="numerointegrante">
 					<option value="" selected>Elija un número</option>
 					<?php for($i = 1; $i < 31; $i++){ ?>
@@ -874,6 +874,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			$("select[name='"+nameSelect+"'] option:selected").remove();
 		});
 		
+		$("#editarpartido").change(function(){
+			var data = "mode=callProcedure&procedure=get_partido&param1="+$(this).val();
+			$.ajax({  
+			    type: "POST",
+			    data: data,
+			    url: "funcionesMySQL.php",
+			    dataType: "json",
+			    success: function(data){
+					 $.each(data.data[0], function (i, fb) {
+						$(".current [name='"+i+"']").val(fb);
+					});
+				},
+				error: function (data){
+					alert("Ha ocurrido un error obtener la información de este partido.");
+					console.dir(data)
+				}
+			});
+		})
 		function registrar_partido(){
 			var evento = $("#eventopartido").val();
 			var estadio = $("#estadiopartido").val();

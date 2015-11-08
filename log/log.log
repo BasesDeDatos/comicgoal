@@ -1100,3 +1100,188 @@ select registrar_estadisticaXpartido(8,
 										  				4, 
 										  				27)
 --------------------------------------------------------------
+08/Nov/15  01:45:23
+callProcedure	get_partido	function ( ) {
+"use strict";
+
+
+		// Convert the function arguments to an array.
+		var args = Array.prototype.slice.call( arguments, 0 ),
+			set, link, update, animate;
+
+		// Test if there are arguments, and if not, call the 'get' method.
+		if ( !args.length ) {
+
+			// Determine whether to use the native val method.
+			if ( this.hasClass(Classes[0]) ) {
+				return this[0].vGet();
+			}
+
+			return $val.apply( this );
+		}
+
+		// Extract modifiers for value method.
+		if ( typeof args[1] === 'object' ) {
+			set = args[1]['set'];
+			link = args[1]['link'];
+			update = args[1]['update'];
+			animate = args[1]['animate'];
+
+		// Support the 'true' option.
+		} else if ( args[1] === true ) {
+			set = true;
+		}
+
+		// Loop all individual items, and handle setting appropriately.
+		return this.each(function(){
+
+			if ( $(this).hasClass(Classes[0]) ) {
+				this.vSet( asArray(args[0]), set, link, update, animate );
+			} else {
+				$val.apply( $(this), args );
+			}
+		});
+	}
+call get_partido('function ( ) {
+"use strict";
+
+
+		// Convert the function arguments to an array.
+		var args = Array.prototype.slice.call( arguments, 0 ),
+			set, link, update, animate;
+
+		// Test if there are arguments, and if not, call the 'get' method.
+		if ( !args.length ) {
+
+			// Determine whether to use the native val method.
+			if ( this.hasClass(Classes[0]) ) {
+				return this[0].vGet();
+			}
+
+			return $val.apply( this );
+		}
+
+		// Extract modifiers for value method.
+		if ( typeof args[1] === 'object' ) {
+			set = args[1]['set'];
+			link = args[1]['link'];
+			update = args[1]['update'];
+			animate = args[1]['animate'];
+
+		// Support the 'true' option.
+		} else if ( args[1] === true ) {
+			set = true;
+		}
+
+		// Loop all individual items, and handle setting appropriately.
+		return this.each(function(){
+
+			if ( $(this).hasClass(Classes[0]) ) {
+				this.vSet( asArray(args[0]), set, link, update, animate );
+			} else {
+				$val.apply( $(this), args );
+			}
+		});
+	}')
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'get' method.
+		if ( !args.length ) {
+
+			// Determine whether to use the native ' at line 1
+--------------------------------------------------------------
+08/Nov/15  01:50:23
+callProcedure	get_partido	6
+call get_partido('6')
+--------------------------------------------------------------
+08/Nov/15  01:51:47
+callProcedure	get_partido	1
+call get_partido('1')
+--------------------------------------------------------------
+08/Nov/15  01:52:54
+callProcedure	get_partido	2
+call get_partido('2')
+--------------------------------------------------------------
+08/Nov/15  01:54:48
+callProcedure	get_partido	5
+call get_partido('5')
+--------------------------------------------------------------
+08/Nov/15  01:57:40
+callProcedure	get_partido	5
+call get_partido('5')
+--------------------------------------------------------------
+08/Nov/15  02:02:44
+callProcedure	get_partido	5
+call get_partido('5')
+--------------------------------------------------------------
+08/Nov/15  02:04:43
+callProcedure	get_partido	6
+call get_partido('6')
+--------------------------------------------------------------
+08/Nov/15  02:04:47
+callProcedure	get_partido	1
+call get_partido('1')
+--------------------------------------------------------------
+08/Nov/15  02:04:51
+callProcedure	get_partido	7
+call get_partido('7')
+--------------------------------------------------------------
+08/Nov/15  02:04:57
+callProcedure	get_partido	1
+call get_partido('1')
+--------------------------------------------------------------
+08/Nov/15  02:05:00
+callProcedure	get_partido	2
+call get_partido('2')
+--------------------------------------------------------------
+08/Nov/15  02:05:21
+callProcedure	get_partido	7
+call get_partido('7')
+--------------------------------------------------------------
+08/Nov/15  02:06:17
+registrar_estadisticaXpartido	8	7	4	15
+select registrar_estadisticaXpartido(8, 
+										  				7, 
+										  				4, 
+										  				15)
+--------------------------------------------------------------
+08/Nov/15  02:07:50
+callProcedure	get_partido	6
+call get_partido('6')
+--------------------------------------------------------------
+08/Nov/15  02:08:32
+registrar_partido	3	14	15	10	2014-03-20	
+select registrar_partido(STR_TO_DATE('2014-03-20', '%Y-%m-%d'), 
+										   STR_TO_DATE('', '%h:%i'), 
+										   15, 
+										   10, 
+										   14, 
+										   3)
+--------------------------------------------------------------
+08/Nov/15  02:09:22
+callProcedure	get_partido	
+call get_partido('')
+--------------------------------------------------------------
+08/Nov/15  02:09:38
+registrar_partido	2	20	24	26	2014-03-20	
+select registrar_partido(STR_TO_DATE('2014-03-20', '%Y-%m-%d'), 
+										   STR_TO_DATE('', '%h:%i'), 
+										   24, 
+										   26, 
+										   20, 
+										   2)
+--------------------------------------------------------------
+08/Nov/15  02:11:32
+registrar_partido	2	20	25	26	2014-09-20	8:00:00
+select registrar_partido(STR_TO_DATE('2014-09-20', '%Y-%m-%d'), 
+										   STR_TO_DATE('8:00:00', '%h:%i'), 
+										   25, 
+										   26, 
+										   20, 
+										   2)
+--------------------------------------------------------------
+08/Nov/15  02:12:08
+registrar_estadisticaXpartido	11	10	4	45
+select registrar_estadisticaXpartido(11, 
+										  				10, 
+										  				4, 
+										  				45)
+--------------------------------------------------------------

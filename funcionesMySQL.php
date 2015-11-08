@@ -308,6 +308,27 @@
 		echo json_encode($response, JSON_FORCE_OBJECT);
 	}
 	
+	if (!empty($_POST) && $_POST["mode"] == "callProcedure"){
+		$mysqli->next_result();
+		$query = "call {$_POST['procedure']}('{$_POST['param1']}')";
+ 		fwrite($fp, $query . PHP_EOL);
+		$result = $mysqli->query($query);
+		
+		if (!$result) {
+			$error = $mysqli->error;
+	        fwrite($fp, "Error: " . $error . PHP_EOL);
+	        $response["success"] = false;
+	        $response["error"] = $error;
+	    } else {
+	    	while ($row = $result->fetch_assoc()) {
+				$response["data"][] = $row; 
+			}
+	    }
+					
+		header('Content-type: application/json; charset=utf-8');
+		echo json_encode($response, JSON_FORCE_OBJECT);
+	}
+	
 	fwrite($fp, "--------------------------------------------------------------");
 	fclose($fp);
 	
