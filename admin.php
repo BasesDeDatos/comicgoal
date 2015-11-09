@@ -5,13 +5,9 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 	<?php require_once("header.php");
-		/*$arrayQuery = array(); 
-		$_POST["mode"] = "get_catalogos"; 
-		include ("funcionesOracle.php");
-		if ($arrayQuery ["ID_ROL"][0] == 1 ){
-			header('Location: index.php');
-		}*/
+	// Set session variables
 	?>
+
 	
 	<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 
@@ -49,7 +45,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</select>
 				<div class="col-md-3"><input class="col-md-6" type="text" name="confederacion_input" placeholder="Nuevo" /></div>
 				<div class="col-md-1">
-					<button name= "confederacion_button" class= "eliminar" >X</button>
+					<button name= "confederacion_button" class= "eliminar" >&#x274c;</button>
 				</div>
 				
 				<!--label class="col-md-4" for="pais">Pais</label>
@@ -64,7 +60,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</select>
 				<div class="col-md-3"><input class="col-md-6" type="text" name="pais_input" placeholder="Nuevo" /></div>
 				<div class="col-md-1">
-					<button name= "pais_button" class= "eliminar" >X</button>
+					<button name= "pais_button" class= "eliminar" >&#x274c;</button>
 				</div-->
 				
 				<label class="col-md-4" for="continente">Continente</label>
@@ -79,7 +75,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</select>
 				<div class="col-md-3"><input class="col-md-6" type="text" name="continente_input" placeholder="Nuevo" /></div>
 				<div class="col-md-1">
-					<button name= "continente_button" class= "eliminar" >X</button>
+					<button name= "continente_button" class= "eliminar" >&#x274c;</button>
 				</div>
 				
 				<label class="col-md-4" for="premio">Premio</label>
@@ -94,7 +90,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</select>
 				<div class="col-md-3"><input class="col-md-6" type="text" name="premio_input" placeholder="Nuevo" /></div>
 				<div class="col-md-1">
-					<button name= "premio_button" class= "eliminar" >X</button>
+					<button name= "premio_button" class= "eliminar" >&#x274c;</button>
 				</div>
 				
 				<label class="col-md-4" for="estadio">Estadio</label>
@@ -109,7 +105,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</select>
 				<div class="col-md-3"><input class="col-md-6" type="text" name="estadio_input" placeholder="Nuevo" /></div>
 				<div class="col-md-1">
-					<button name= "estadio_button" class= "eliminar" >X</button>
+					<button name= "estadio_button" class= "eliminar" >&#x274c;</button>
 				</div>
 				
 				
@@ -125,7 +121,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</select>
 				<div class="col-md-3"><input class="col-md-6" type="text" name="evento_input" placeholder="Nuevo" /></div>
 				<div class="col-md-1">
-					<button name= "evento_button" class= "eliminar" >X</button>
+					<button name= "evento_button" class= "eliminar" >&#x274c;</button>
 				</div>
 				
 				
@@ -141,7 +137,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</select>
 				<div class="col-md-3"><input class="col-md-6" type="text" name="grupo_input" placeholder="Nuevo" /></div>
 				<div class="col-md-1">
-					<button name= "grupo_button" class= "eliminar" >X</button>
+					<button name= "grupo_button" class= "eliminar" >&#x274c;</button>
 				</div>
 				
 				
@@ -157,7 +153,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</select>
 				<div class="col-md-3"><input class="col-md-6" type="text" name="posicion_input" placeholder="Nuevo" /></div>
 				<div class="col-md-1">
-					<button name= "posicion_button" class= "eliminar" >X</button>
+					<button name= "posicion_button" class= "eliminar" >&#x274c;</button>
 				</div>
 				
 				
@@ -173,7 +169,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</select>
 				<div class="col-md-3"><input class="col-md-6" type="text" name="tipo_estadistica_input" placeholder="Nuevo" /></div>
 				<div class="col-md-1">
-					<button name= "tipo_estadistica_button" class= "eliminar" >X</button>
+					<button name= "tipo_estadistica_button" class= "eliminar" >&#x274c;</button>
 				</div>
 				
 			</fieldset>
@@ -181,9 +177,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<fieldset>
 				<h2 class="fs-title">Partidos</h2>
 				
-				<label class="col-md-6" for="editarpartido">Partido</label>
-				<select class="col-md-6" name="editarpartido" id="editarpartido">
-					<option value="" selected>Elija un partido</option>
+				<label class="col-md-5" for="partido">Partido</label>
+				<select class="col-md-6" name="partido" id="partido">
+					<option value="" selected>Agregar un partido</option>
 					<?php $query = 'call get_partido(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -191,10 +187,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<option value="<?php echo $row["ID_partido"] ?>"><?php echo $row["resumen"] ?></option>
 					<?php } $mysqli->next_result(); ?>
 				</select>
+				<div class="col-md-1">
+					<button name= "partido_button" class= "eliminar" >&#x274c;</button>
+				</div>
 				
-				<label class="col-md-6" for="eventopartido">Evento</label>
+				<label class="col-md-5" for="eventopartido">Evento</label>
 				<select class="col-md-6" name="ID_evento" id="eventopartido">
-					<option value="" selected>Elija un evento</option>
+					<option value="" selected>Agregar un evento</option>
 					<?php $query = 'call get_evento(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -203,9 +202,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<?php } $mysqli->next_result(); ?>
 				</select>
 				
-				<label class="col-md-6" for="estadiopartido">Estadio</label>
+				<label class="col-md-5" for="estadiopartido">Estadio</label>
 				<select class="col-md-6" name="ID_estadio" id="estadiopartido">
-					<option value="" selected>Elija un estadio</option>
+					<option value="" selected>Agregar un estadio</option>
 					<?php $query = 'call get_estadio(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -214,9 +213,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<?php } $mysqli->next_result(); ?>
 				</select>
 				
-				<label class="col-md-6" for="localpartido">Equipo local</label>
+				<label class="col-md-5" for="localpartido">Equipo local</label>
 				<select class="col-md-6" name="ID_equipo_local" id="localpartido">
-					<option value="" selected>Elija un equipo</option>
+					<option value="" selected>Agregar un equipo</option>
 					<?php $query = 'call get_equipo(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -225,9 +224,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<?php } $mysqli->next_result(); ?>
 				</select>
 				
-				<label class="col-md-6" for="visitapartido">Equipo visita</label>
+				<label class="col-md-5" for="visitapartido">Equipo visita</label>
 				<select class="col-md-6" name="ID_equipo_visita" id="visitapartido">
-					<option value="" selected>Elija un equipo</option>
+					<option value="" selected>Agregar un equipo</option>
 					<?php $query = 'call get_equipo(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -236,10 +235,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<?php } $mysqli->next_result(); ?>
 				</select>
 				
-				<label class="col-md-6" for="fechapartido">Fecha: </label>
+				<label class="col-md-5" for="fechapartido">Fecha: </label>
 				<div class="col-md-6"><input type="date" name="fecha" id="fechapartido" placeholder="fecha" /></div>
 				
-				<label class="col-md-6" for="horapartido">Hora: </label>
+				<label class="col-md-5" for="horapartido">Hora: </label>
 				<div class="col-md-6"><input type="time" name="hora" id="horapartido" placeholder="hora" /></div>
 				
 				<div class = "col-md-12">
@@ -251,9 +250,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<fieldset>
 				<h2 class="fs-title">Equipos</h2>
 				
-				<label class="col-md-6" for="editarequipo">Equipo</label>
-				<select class="col-md-6" name="editarequipo" id="editarequipo">
-					<option value="" selected>Elija un equipo</option>
+				<label class="col-md-4" for="equipo">Equipo</label>
+				<select class="col-md-6" name="equipo" id="equipo">
+					<option value="" selected>Agregar un equipo</option>
 					<?php $query = 'call get_equipo(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -261,6 +260,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<option value="<?php echo $row["ID_equipo"] ?>"><?php echo $row["nombre"]?></option>
 					<?php } $mysqli->next_result(); ?>
 				</select>
+				<div class="col-md-2">
+					<button name= "equipo_button" class= "eliminar" >&#x274c;</button>
+				</div>
 				
 				<div class="col-md-12" style="margin-bottom: 15px;">
 					<input type="file" name="archivo" id="input-foto-equipo" accept="image/*"/>
@@ -268,8 +270,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				
 				<label class="col-md-6" for="confederacionequipo">Confederación</label>
-				<select class="col-md-6" name="confederacionequipo" id="confederacionequipo">
-					<option value="" selected>Elija una confederación</option>
+				<select class="col-md-6" name="ID_Confederacion" id="confederacionequipo">
+					<option value="" selected>Agregar una confederación</option>
 					<?php $query = 'call get_confederacion(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -279,8 +281,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</select>
 				
 				<label class="col-md-6" for="continenteequipo">Continente</label>
-				<select class="col-md-6" name="continenteequipo" id="continenteequipo">
-					<option value="" selected>Elija un continente</option>
+				<select class="col-md-6" name="ID_continente" id="continenteequipo">
+					<option value="" selected>Agregar un continente</option>
 					<?php $query = 'call get_continente(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -290,8 +292,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</select>
 				
 				<label class="col-md-6" for="paisequipo">País</label>
-				<select class="col-md-6" name="paisequipo" id="paisequipo">
-					<option value="" selected>Elija un país</option>
+				<select class="col-md-6" name="ID_pais" id="paisequipo">
+					<option value="" selected>Agregar un país</option>
 					<?php $query = 'call get_pais(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -309,16 +311,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<fieldset>
 				<h2 class="fs-title">Integrantes</h2>
 				
-				<label class="col-md-6" for="editarintegrante">Integrante</label>
-				<select class="col-md-6" name="editarintegrante" id="editarintegrante">
-					<option value="" selected>Elija un integrante</option>
+				<label class="col-md-4" for="integrante">Integrante</label>
+				<select class="col-md-6" name="integrante" id="integrante">
+					<option value="" selected>Agregar un integrante</option>
 					<?php $query = 'call get_integrante(null, null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
 						while ($row = $result->fetch_assoc()) { ?> 
-							<option value="<?php echo $row["ID_integrante"] ?>"><?php echo $row["nombre"]?></option>
+							<option value="<?php echo $row["ID_integrante"] ?>"><?php echo $row["nombre"]." ".$row["primer_apellido"]." ".$row["segundo_apellido"]?></option>
 					<?php } $mysqli->next_result(); ?>
 				</select>
+				<div class="col-md-2">
+					<button name= "integrante_button" class= "eliminar" >&#x274c;</button>
+				</div>
 				
 				<div class="col-md-12" style="margin-bottom: 15px;">
 					<input type="file" name="archivo" id="input-foto-integrante" accept="image/*"/>
@@ -329,8 +334,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col-md-6"><input type="text" name="segundo_apellido" id="segundo_apellido" placeholder="Segundo apellido" /></div>
 				
 				<label class="col-md-3" for="numerointegrante">Número</label>
-				<select class="col-md-3" name="numerointegrante" id="numerointegrante">
-					<option value="" selected>Elija un número</option>
+				<select class="col-md-3" name="num_camiseta" id="numerointegrante">
+					<option value="" selected>Agregar un número</option>
 					<?php for($i = 1; $i < 31; $i++){ ?>
 						<option value="<?php echo $i ?>">
 							<?php echo $i ?>
@@ -342,8 +347,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col-md-6"><input type="date" name="fecha_nac" id="fecha_nac" placeholder="fecha" /></div>
 				
 				<label class="col-md-6" for="nacionalidadintegrante">Nacionalidad</label>
-				<select class="col-md-6" name="nacionalidadintegrante" id="nacionalidadintegrante">
-					<option value="" selected>Elija un país</option>
+				<select class="col-md-6" name="ID_nacionalidad" id="nacionalidadintegrante">
+					<option value="" selected>Agregar un país</option>
 					<?php $query = 'call get_pais(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -353,8 +358,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</select>
 				
 				<label class="col-md-6" for="equipointegrante">Equipo</label>
-				<select class="col-md-6" name="equipointegrante" id="equipointegrante">
-					<option value="" selected>Elija un equipo</option>
+				<select class="col-md-6" name="ID_equipo" id="equipointegrante">
+					<option value="" selected>Agregar un equipo</option>
 					<?php $query = 'call get_equipo(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -364,8 +369,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</select>
 				
 				<label class="col-md-6" for="posicionintegrante">Posición</label>
-				<select class="col-md-6" name="posicionintegrante" id="posicionintegrante">
-					<option value="" selected>Elija una posicion</option>
+				<select class="col-md-6" name="ID_posicion" id="posicionintegrante">
+					<option value="" selected>Agregar una posicion</option>
 					<?php $query = 'call get_posicion(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -385,7 +390,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-6" for="equiposXevento">Evento</label>
 				<select class="col-md-6" name="equiposXevento" id="equiposXevento">
-					<option value="" selected>Elija un evento</option>
+					<option value="" selected>Agregar un evento</option>
 					<?php $query = 'call get_evento(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -399,7 +404,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						$result = $mysqli->query($query);
 						while ($row = $result->fetch_assoc()) { ?> 
 							<div class="col-md-1">
-								<input type="checkbox" name = equipos[] id="<?php echo $row["nombre"] ?>" />
+								<input type="checkbox" value='<?php echo $row["ID_equipo"] ?>' name="equipos[]" id="<?php echo $row["nombre"] ?>" />
 							</div>						
 							<div class="col-md-5">
 								<label for="<?php echo $row["nombre"] ?>">
@@ -418,7 +423,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<fieldset>
 				<h2 class="fs-title">Alineación</h2>
 				
-				<label class="col-md-6" for="integrantesXpartido">Elija un partido</label>
+				<label class="col-md-6" for="integrantesXpartido">Agregar un partido</label>
 				<select class="col-md-6" name="integrantesXpartido" id="integrantesXpartido">
 					<option value="" selected>Agregar nuevo</option>
 					<?php $query = 'call get_partido(null)';
@@ -432,24 +437,42 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<label class="col-md-6">Visitante</label>
 				
 				<div class="col-md-6 scroll-container">
-					<?php $query = 'call get_integrante(null, null)';
+					
+					<?php $query = "call get_partido(null)";
+						$result = $mysqli->query($query);
+						$row = $result->fetch_assoc();
+						$equipo_local = $row["ID_equipo_local"];
+						$equipo_visita = $row["ID_equipo_visita"];
+						$mysqli->next_result();
+						$query = "call get_integrante(null, {$equipo_local})";
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
 						while ($row = $result->fetch_assoc()) { ?> 
-							<div class="col-md-12">
-								<input type="checkbox" name = "integrantes_local[]" value="<?php echo $row["ID_integrante"] ?>" /><label><?php echo $row["nombre"]." ".$row["primer_apellido"]." ".$row["segundo_apellido"] ?></label>
-							</div>						
+							<input id="loc_<?php echo $row["ID_integrante"] ?>" 
+								type="checkbox" 
+								name = "integrantes_local[]" 
+								value="<?php echo $row["ID_integrante"] ?>" />
+							<label for="loc_<?php echo $row["ID_integrante"] ?>">
+								<?php echo "({$row['num_camiseta']}) ".$row["nombre"]." ".$row["primer_apellido"]." ".$row["segundo_apellido"] ?>
+							</label>
+													
 					<?php } $mysqli->next_result(); ?>
+					
 				</div>
 				
 				<div class="col-md-6 scroll-container">
-					<?php $query = 'call get_integrante(null, null)';
+					<?php $query = "call get_integrante(null, {$equipo_visita})";
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
-						while ($row = $result->fetch_assoc()) { ?> 
-							<div class="col-md-12">
-								<input type="checkbox" name = "integrantes_visita[]" value="<?php echo $row["ID_integrante"] ?>" /><label><?php echo $row["nombre"]." ".$row["primer_apellido"]." ".$row["segundo_apellido"] ?></label>
-							</div>
+						while ($row = $result->fetch_assoc()) { ?>
+							
+							<input id="vis_<?php echo $row["ID_integrante"] ?>" 
+								type="checkbox" 
+								name = "integrantes_visita[]" 
+								value="<?php echo $row["ID_integrante"] ?>" />
+							<label for="vis_<?php echo $row["ID_integrante"] ?>">
+								<?php echo "({$row['num_camiseta']}) ".$row["nombre"]." ".$row["primer_apellido"]." ".$row["segundo_apellido"] ?>
+							</label>
 					<?php } $mysqli->next_result(); ?>
 				</div>
 				
@@ -464,7 +487,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-6" for="partidoestadistica">Partido</label>
 				<select class="col-md-6" name="partidoestadistica" id="partidoestadistica">
-					<option value="" selected>Elija un partido</option>
+					<option value="" selected>Agregar un partido</option>
 					<?php $query = 'call get_partido(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -475,7 +498,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-6" for="integranteestadistica">Integrante</label>
 				<select class="col-md-6" name="integranteestadistica" id="integranteestadistica">
-					<option value="" selected>Elija un jugador</option>
+					<option value="" selected>Agregar un jugador</option>
 					<?php $query = 'call get_integrante(null, null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -486,7 +509,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-4" for="estadisticanueva">Estadísticas</label>
 				<select class="col-md-4" name="estadisticanueva" id="estadisticanueva">
-					<option value="" selected>Elija una estadística</option>
+					<option value="" selected>Agregar una estadística</option>
 					<?php $query = 'call get_tipo_estadistica(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -497,7 +520,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-2" for="minuto">Minuto</label>
 				<select class="col-md-2" name="minuto" id="minuto"
-					<option value="" selected>Elija un minuto</option>
+					<option value="" selected>Agregar un minuto</option>
 					<?php for($i = 1; $i < 121; $i++){ ?>
 						<option value="<?php echo $i ?>">
 							<?php echo $i ?>
@@ -516,7 +539,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-6" for="usuario">Usuarios</label>
 				<select class="col-md-6" name="usuario" id="usuario">
-					<option value="" selected>Elija un usuario</option>
+					<option value="" selected>Agregar un usuario</option>
 					<?php $query = 'call get_usuario(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -543,7 +566,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-6" for="premioXequipo">Equipo</label>
 				<select class="col-md-6" name="premioXequipo" id="premioXequipo">
-					<option value="" selected>Elija un equipo</option>
+					<option value="" selected>Agregar un equipo</option>
 					<?php $query = 'call get_equipo(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -556,7 +579,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<div class="col-md-6">
 					<select class="col-md-6" name="premionuevo" id="premionuevo">
-						<option value="" selected>Elija un premio</option>
+						<option value="" selected>Agregar un premio</option>
 						<?php $query = 'call get_premio(null)';
 							$result = $mysqli->query($query);
 							// Imprimir los resultados en HTML
@@ -565,7 +588,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<?php } $mysqli->next_result(); ?>
 					</select>
 					
-					<div class="col-md-6"><input type="text" name="cantidadpremio" id="cantidadpremio" placeholder="Cantidad" /></div>
+					<div class="col-md-6"><input type="number" name="cantidadpremio" id="cantidadpremio" placeholder="Cantidad" /></div>
+					<input type="hidden" id="ID_premioXequipo" value="">
 				</div>
 				
 				<div class = "col-md-12">
@@ -865,23 +889,158 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				dataType: "json",
 				url: "funcionesMySQL.php",
 				success: function(data){
-						alert("Se borró con éxito en el catálogo "+nameSelect.toUpperCase()+".");
+						alert("Se borró con éxito el "+nameSelect.toUpperCase()+".");
+						$("select[name='"+nameSelect+"'] option:selected").remove();
+						$("select[name='"+nameSelect+"']").val("");
 				},
 				error: function (data){
-					alert("Ha ocurrido un error al borrar en el catálogo "+nameSelect.toUpperCase()+".");
+					alert("Ha ocurrido un error al borrar el "+nameSelect.toUpperCase()+".");
 				}
 			});
-			$("select[name='"+nameSelect+"'] option:selected").remove();
 		});
 		
-		$("#editarpartido").change(function(){
-			var data = "mode=callProcedure&procedure=get_partido&param1="+$(this).val();
+		$("#partido").change(function(){
+			var ID = $(this).val();
+			if (ID != ""){
+				var data = "mode=callProcedure&procedure=get_partido&param1="+ ID;
+				$.ajax({  
+				    type: "POST",
+				    data: data,
+				    url: "funcionesMySQL.php",
+				    dataType: "json",
+				    success: function(data){
+				    	console.dir(data);
+						$.each(data.data[0], function (i, fb) {
+							$(".current [name='"+i+"']").val(fb);
+						});
+					},
+					error: function (data){
+						alert("Ha ocurrido un error obtener la información de este partido.");
+						console.dir(data)
+					}
+				});
+			} else {
+				$(".current input, .current select").val("");
+			}
+		});
+		
+		$("#equipo").change(function(){
+			var ID = $(this).val();
+			if (ID != ""){
+				var data = "mode=callProcedure&procedure=get_equipo&param1="+ID;
+				$.ajax({  
+				    type: "POST",
+				    data: data,
+				    url: "funcionesMySQL.php",
+				    dataType: "json",
+				    success: function(data){
+				    	console.dir(data)
+						 $.each(data.data[0], function (i, fb) {
+							$(".current [name='"+i+"']").val(fb);
+						});
+					},
+					error: function (data){
+						alert("Ha ocurrido un error obtener la información de este partido.");
+						console.dir(data)
+					}
+				});
+			} else {
+					$(".current input, .current select").val("");
+			}
+		});
+		
+		$("#integrante").change(function(){
+			var ID = $(this).val();
+			if (ID != ""){
+				var data = "mode=callProcedure&procedure=get_integrante&param1="+ID+"&param2=null";
+				$.ajax({  
+				    type: "POST",
+				    data: data,
+				    url: "funcionesMySQL.php",
+				    dataType: "json",
+				    success: function(data){
+				    	console.dir(data)
+						 $.each(data.data[0], function (i, fb) {
+							$(".current [name='"+i+"']").val(fb);
+						});
+					},
+					error: function (data){
+						alert("Ha ocurrido un error obtener la información de este partido.");
+						console.dir(data)
+					}
+				});
+			} else {
+					$(".current input, .current select").val("");
+			}
+		});
+		
+		$("#equiposXevento").change(function(){
+			var ID = $(this).val();
+			if (ID != ""){
+				var data = "mode=callProcedure&procedure=get_equipoXevento&param1="+ID;
+				$.ajax({  
+				    type: "POST",
+				    data: data,
+				    url: "funcionesMySQL.php",
+				    dataType: "json",
+				    success: function(data){
+				    	console.dir(data)
+				    	
+				    	$(".current [type='checkbox'").attr("checked", false); // se desmarcan los checkbox
+						 $.each(data.data, function (i, fb) {
+							$(".current [value='"+fb["ID_equipo"]+"']").attr("checked", "checked"); // se marcan los que retorna la consulta
+						});
+					},
+					error: function (data){
+						alert("Ha ocurrido un error obtener la información de este partido.");
+						console.dir(data)
+					}
+				});
+			} else {
+					$(".current input, .current select").val("");
+			}
+		});
+		
+		$("#premioXequipo, #premionuevo").change(function(){
+			var IDequipo = $("#premioXequipo").val() ;
+			var IDpremio = $("#premionuevo").val();
+			if (IDpremio != "" && IDequipo != ""){
+				var data = "mode=callProcedure&procedure=get_premioXequipo&param1="+IDpremio+"&param2="+IDequipo;
+				$.ajax({  
+				    type: "POST",
+				    data: data,
+				    url: "funcionesMySQL.php",
+				    dataType: "json",
+				    success: function(data){
+				    	console.dir(data)
+				    	if (data.hasOwnProperty("data")){ 
+				    		var cantidad = data.data[0]["cantidad"];
+				    		$("#ID_premioXequipo").val( data.data[0]["ID_premioXequipo"] );
+				    	} else{
+				    		var cantidad = 0;
+				    		$("#ID_premioXequipo").val("");
+				    	}
+						$("#cantidadpremio").val(cantidad);
+					},
+					error: function (data){
+						alert("Ha ocurrido un error obtener la información de este partido.");
+						console.dir(data)
+					}
+				});
+			} else if(IDpremio == "" && IDequipo == "") {
+				$(".current input, .current select").val("");
+			}
+		});
+		
+		$("#integranteXpartido").change(function(){
+			var data = "mode=callProcedure&procedure=get_partido&param1="+$(this).val()+"&param2=null";
 			$.ajax({  
 			    type: "POST",
 			    data: data,
 			    url: "funcionesMySQL.php",
 			    dataType: "json",
 			    success: function(data){
+			    	console.dir(data)
 					 $.each(data.data[0], function (i, fb) {
 						$(".current [name='"+i+"']").val(fb);
 					});
@@ -891,7 +1050,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					console.dir(data)
 				}
 			});
-		})
+		});
+		
 		function registrar_partido(){
 			var evento = $("#eventopartido").val();
 			var estadio = $("#estadiopartido").val();
@@ -899,19 +1059,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			var equipo_visita = $("#visitapartido").val();
 			var fecha = $("#fechapartido").val();
 			var hora = $("#horapartido").val();
-
-			var data = "mode=registrar_partido&evento="+evento+"&estadio="+estadio+"&equipo_local="+equipo_local+"&equipo_visita="+equipo_visita+"&fecha="+fecha+"&hora="+hora;
+			var ID = $("#partido").val();
+			
+			var tipo = "insertó";
+			var mode = "registrar";
+			
+			if (ID != ""){ //editar
+				mode = "editar";
+				tipo = "editó";
+			}
+			
+			var data = "mode="+mode+"_partido&evento="+evento+
+				"&estadio="+estadio+"&equipo_local="+equipo_local+
+				"&equipo_visita="+equipo_visita+"&fecha="+fecha+
+				"&hora="+hora+"&ID_partido="+ID;
+				
 			$.ajax({  
-				    type: "POST",
-				    data: data,
-				    url: "funcionesMySQL.php",
-				    dataType: "json",
-				    success: function(data){
-						alert("Se insertó con éxito el partido");
-					},
-					error: function (data){
-						alert("Ha ocurrido un error al insertar el partido");
-					}
+			    type: "POST",
+			    data: data,
+			    url: "funcionesMySQL.php",
+			    dataType: "json",
+			    success: function(data){
+					alert("Se "+tipo+" con éxito el partido");
+				},
+				error: function (data){
+					alert("Ha ocurrido un error");
+				}
 			});
 		};
 		
@@ -921,17 +1094,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			var continente = $("#continenteequipo").val();
 			var pais = $("#paisequipo").val();
 
-			var data = "mode=registrar_equipo&escudo="+escudo+"&confederacion="+confederacion+"&continente="+continente+"&pais="+pais;
+			var ID = $("#equipo").val();
+			var tipo = "insertó";
+			var mode = "registrar";
+			
+			if (ID != ""){ //editar
+				mode = "editar";
+				tipo = "editó";
+			}
+			
+			var data = "mode="+mode+"_equipo&escudo="+escudo+
+				"&confederacion="+confederacion+"&continente="+continente+
+				"&pais="+pais+"&ID_equipo="+ID;
 			$.ajax({  
 				    type: "POST",
 				    data: data,
 				    url: "funcionesMySQL.php",
 				    dataType: "json",
 				    success: function(data){
-						alert("Se insertó con éxito el equipo");
+						alert("Se "+tipo+" con éxito el equipo");
 					},
 					error: function (data){
-						alert("Ha ocurrido un error al insertar el equipo");
+						alert("Ha ocurrido un error");
 					}
 			});
 		};
@@ -946,21 +1130,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			var nacionalidad = $("#nacionalidadintegrante").val();
 			var posicion = $("#posicionintegrante").val();
 			var equipo = $("#equipointegrante").val();
+			var ID = $("#integrante").val();
 			
-			var data = "mode=registrar_integrante&nombre="+nombre+"&primer_apellido="+primer_apellido+
+			var tipo = "insertó";
+			var mode = "registrar";
+			
+			if (ID != ""){ //editar
+				mode = "editar";
+				tipo = "editó";
+			}
+			
+			var data = "mode="+mode+"_integrante&nombre="+nombre+"&primer_apellido="+primer_apellido+
 					   "&segundo_apellido="+segundo_apellido+"&numero="+numero+"&foto="+foto+"&fecha_nac="+fecha_nac+
-					   "&nacionalidad="+nacionalidad+"&posicion="+posicion+"&equipo="+equipo;
-					  
+					   "&nacionalidad="+nacionalidad+"&posicion="+posicion+"&equipo="+equipo+"&ID_integrante="+ID;;
+
 			$.ajax({  
 				    type: "POST",
 				    data: data,
 				    url: "funcionesMySQL.php",
 				    dataType: "json",
 				    success: function(data){
-						alert("Se insertó con éxito el integrante");
+						alert("Se "+tipo+" con éxito el integrante");
+						console.log(data);
 					},
 					error: function (data){
-						alert("Ha ocurrido un error al insertar el integrante");
+						alert("Ha ocurrido un error");
+						console.log(data);
 					}
 			});
 			
@@ -968,7 +1163,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		
 		function registrar_equipoXevento(){
 			var evento = $("#equiposXevento").val();
-			var equipos = $("input[name='equipos[]']").val();
+			var equipos = $("input[name='equipos[]']").serialize();
 			
 			var data = "mode=registrar_equipoXevento&evento="+evento+"&equipos="+equipos;
 					  
@@ -1037,24 +1232,41 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		};
 		
 		function registrar_premioXequipo(){
+			var cantidad = $("#cantidadpremio").val();
 			var equipo = $("#premioXequipo").val();
 			var premio = $("#premionuevo").val();
-			var cantidad = $("#cantidadpremio").val();
-			
-			var data = "mode=registrar_premioXequipo&equipo="+equipo+"&premio="+premio+"&cantidad="+cantidad;
-					  
-			$.ajax({  
-			    type: "POST",
-			    data: data,
-			    url: "funcionesMySQL.php",
-			    dataType: "json",
-			    success: function(data){
-					alert("Se insertó con éxito el premio");
-				},
-				error: function (data){
-					alert("Ha ocurrido un error al insertar el premio");
-				}
-			});
+			var ID = $("#ID_premioXequipo").val()
+			if (cantidad != "" && cantidad != 0 && ID == ""){
+				var data = "mode=registrar_premioXequipo&equipo="+equipo+"&premio="+premio+"&cantidad="+cantidad;
+						  
+				$.ajax({  
+				    type: "POST",
+				    data: data,
+				    url: "funcionesMySQL.php",
+				    dataType: "json",
+				    success: function(data){
+						alert("Se insertó con éxito el premio");
+					},
+					error: function (data){
+						alert("Ha ocurrido un error al insertar el premio");
+					}
+				});
+			} else if(ID != ""){ // EDITAR
+				var data = "mode=editar_premioXequipo&ID_premioXequipo="+ID+"&cantidad="+cantidad;
+						  
+				$.ajax({  
+				    type: "POST",
+				    data: data,
+				    url: "funcionesMySQL.php",
+				    dataType: "json",
+				    success: function(data){
+						alert("Se editó con éxito la cantidad");
+					},
+					error: function (data){
+						alert("Ha ocurrido un error al editar la cantidad");
+					}
+				});
+			}
 			
 		};
 		
@@ -1062,24 +1274,40 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			var partido = $("#integrantesXpartido").val();
 			var integrantes_local = $("input[name='integrantes_local[]']").serialize();
 			var integrantes_visita = $("input[name='integrantes_visita[]']").serialize();
+			var ID = $("partido").val();
 			
 			console.dir(integrantes_local);
-			
-			var data = "mode=registrar_integranteXpartido&partido="+partido+"&integrantes_local="+integrantes_local+"&integrantes_visita="+integrantes_visita;
-					  
-			$.ajax({  
-			    type: "POST",
-			    data: data,
-			    url: "funcionesMySQL.php",
-			    dataType: "json",
-			    success: function(data){
-					alert("Se insertó con éxito los integrantes");
-				},
-				error: function (data){
-					alert("Ha ocurrido un error al insertar los integrantes.");
-				}
-			});
-			
+			if (ID == ""){
+				var data = "mode=registrar_integranteXpartido&partido="+partido+"&integrantes_local="+integrantes_local+"&integrantes_visita="+integrantes_visita;
+						  
+				$.ajax({  
+				    type: "POST",
+				    data: data,
+				    url: "funcionesMySQL.php",
+				    dataType: "json",
+				    success: function(data){
+						alert("Se insertó con éxito los integrantes");
+					},
+					error: function (data){
+						alert("Ha ocurrido un error al insertar los integrantes.");
+					}
+				});
+			} else if(ID != ""){ // EDITAR
+				var data = "mode=editar_integranteXpartido&ID_integranteXpartido="+ID+"&ID_partido="+partido+"&integrantes_local="+integrantes_local+"&integrantes_visita="+integrantes_visita;
+
+				$.ajax({  
+				    type: "POST",
+				    data: data,
+				    url: "funcionesMySQL.php",
+				    dataType: "json",
+				    success: function(data){
+						alert("Se editaron con éxito los integrantes del partido");
+					},
+					error: function (data){
+						alert("Ha ocurrido un error al editar los integrantes del partido");
+					}
+				});
+			}
 		};
 		
 	</script>

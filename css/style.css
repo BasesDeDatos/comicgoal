@@ -2676,6 +2676,7 @@ canvas#bar {
 input[type='checkbox'] {
     height: 17px !important;
     margin-bottom: 0 !important;
+    width: 30px !important;
 }
 
 /*buttons*/

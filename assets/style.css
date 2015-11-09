@@ -407,6 +407,7 @@ h5 {
 	border-right: 1px solid #1a1a1a;
 	border-left: 1px solid #666;
 	z-index: 98;
+	height: 35px;
 }
 #menu li a {
 	display: block;
@@ -2430,7 +2431,7 @@ ul.tb_matches-sidebar .kickoff a,
 a,
 .highlighted,
 h2.entry-title {
-	color: #d4000f;
+	color: #009900;
 }
 
 a:hover {
@@ -2449,7 +2450,7 @@ a:hover {
 
 #header #maintitle h2,
 #header #maintitle h2 a {
-	color: #d4000f;
+	color: #009900;
 }
 
 .image-rotator {
@@ -2535,14 +2536,14 @@ input[type="submit"]:hover,
 }
 
 #respond h3 {
-	color: #d4000f;
+	color: #009900;
 }
 
 .image-rotator .image_thumb ul li.active {
 	background: #15842E;
-	background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, #d4000f), color-stop(1, #980000));
-	background-image: -moz-linear-gradient( center top, #d4000f 0%, #980000 100%);
-	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#d4000f', endColorstr='#980000');
+	background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, #009900), color-stop(1, #980000));
+	background-image: -moz-linear-gradient( center top, #009900 0%, #980000 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#009900', endColorstr='#980000');
 	cursor: default;
 	border-color: #700000;
 }
@@ -2562,9 +2563,9 @@ input[type="submit"]:hover,
 #content .navigation .nav-previous a:hover,
 #content .navigation .nav-next a:hover {
 	background: #15842E;
-	background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, #d4000f), color-stop(1, #ac0000));
-	background-image: -moz-linear-gradient( center top, #d4000f 0%, #ac0000 100%);
-	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#d4000f', endColorstr='#ac0000');
+	background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, #009900), color-stop(1, #ac0000));
+	background-image: -moz-linear-gradient( center top, #009900 0%, #ac0000 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#009900', endColorstr='#ac0000');
 }
 
 #main table tbody tr,

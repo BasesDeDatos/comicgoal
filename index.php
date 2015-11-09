@@ -53,7 +53,7 @@
 							<a href="http://demo.themeboy.com/footballclub/2014/03/22/lineup-announced/"><img src="assets/blog-5-1-640x360.jpg" class="attachment-featured-image wp-post-image" alt="blog-5-1" title="Lineup Announced" height="360" width="640"></a>
 							<div style="display: block;" class="desc">
 								<div style="opacity: 0; margin-bottom: -48px;" class="block">
-									<h3 class="ellipsis"><a href="http://demo.themeboy.com/footballclub/2014/03/22/lineup-announced/">Alineacion anunciada</a></h3>
+									<h3 class="ellipsis"><a href="http://demo.themeboy.com/footballclub/2014/03/22/lineup-announced/">Alineación anunciada</a></h3>
 									<time><a href="http://demo.themeboy.com/footballclub/2014/03/22/lineup-announced/">Marzo 22, 2014</a></time>
 								</div>
 							</div>
@@ -139,12 +139,12 @@
 																<a href=team.php?equipo=<?php echo $row["ID_equipo_local"]?>>
 																<img src="img/country-flags-hi/<?php echo strtolower($row["iso_local"])?>.png" 
 																	class="team-logo logo-odd wp-post-image" 
-																	alt="foxes" height="128" width="113"> 
+																	alt="<?php echo $row["iso_local"] ?>" height="128" width="113"> 
 																</a>
 																<a href=team.php?equipo=<?php echo $row["ID_equipo_visita"]?>>
 																<img src="img/country-flags-hi/<?php echo strtolower($row["iso_visita"])?>.png" 
 																	class="team-logo logo-even wp-post-image" 
-																	alt="eagles" height="128" width="105">
+																	alt="<?php echo $row["iso_visita"] ?>" height="128" width="105">
 																</a>
 																<time class="sp-event-date" datetime="<?php echo date("d-m-Y", strtotime($row["fecha"]))." ".$row["hora"] ?>">
 																	<?php echo $row["fecha"] ?>

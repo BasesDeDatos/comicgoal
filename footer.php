@@ -54,7 +54,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- #wrapper -->
 	<footer class="clearfix">
 		<div class="right">©<?php echo date("Y") ?> Comic Goal</div>
-		<div class="left"><a href="login.php">Herramientas de Administrador</a></div>
+		<div class="left"><a href="admin.php">Herramientas de Administrador</a></div>
 		<!--ul id="social">
 			<li class="facebook"><a href="http://facebook.com/themeboy" title="Facebook" target="_blank">Facebook</a></li>
 			<li class="twitter"><a href="http://twitter.com/themeboy" title="Twitter" target="_blank">Twitter</a></li>

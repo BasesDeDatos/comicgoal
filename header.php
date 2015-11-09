@@ -1,9 +1,9 @@
-<!--
-Author: W3layouts, Isaac Campos, Roger Villalobos,  Jeffrey Alvarado
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+<?php
+// Start the session
+//session_start();
+//$user_id = $_SESSION("active_user_id");
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -557,11 +557,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 
 <body class="home page page-id-2 page-template page-template-template-home page-template-template-home-php custom-background">
-	<?php /*session_start();
-		if  ($_SESSION["active_user_id"] == "" || $_SESSION["active_user_id"] == -1) {
-			header('Location: login.php');
-		}*/
-	?>
 	<div class="sp-header"></div>
 	<div class=" fb_reset" id="fb-root">
 		<div style="position: absolute; top: -10000px; height: 0px; width: 0px;">

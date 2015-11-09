@@ -11,7 +11,7 @@
 		<div id="container">
 			<div id="content" role="main">
 				<ul class="col-md-12 scroll-container">
-					<?php $query = 'call get_equipo(null)';   ////EJEMPLO DE COMO HACER UNA CONSULTA
+					<?php $query = 'call get_equipo(null)';
 						$result = $mysqli->query($query);
 						while ($row = $result->fetch_assoc()) { ?> 
 							<div class="col-md-4">

@@ -5,7 +5,7 @@
 	//	include ("funcionesOracle.php");
 	
 	
-	if(key_exists("equipo", $_GET)){
+	if (key_exists("equipo", $_GET)){
 	
 		$ID_equipo = $_GET["equipo"];
 		
@@ -43,7 +43,7 @@
 			<?php $mysqli->next_result(); ?>
 			
 			
-			<?php $query = "call get_integrante(null, {$ID_equipo})";   ////EJEMPLO DE COMO HACER UNA CONSULTA
+			<?php $query = "call get_integrante(null, {$ID_equipo})";   
 				$result = $mysqli->query($query);
 				// Imprimir los resultados en HTML
 				while ($row = $result->fetch_assoc()) { 
@@ -84,7 +84,7 @@
 				<hr/>
 			<?php }	?>
 			
-			<?php $query = "call get_premioXequipo({$ID_equipo})";   ////EJEMPLO DE COMO HACER UNA CONSULTA
+			<?php $query = "call get_premioXequipo(null, {$ID_equipo})";   
 				$result = $mysqli->query($query);
 				if($result->num_rows != 0) {?>
 					<div class = "col-md-8">
