@@ -9,7 +9,7 @@
 	fwrite($fp, DATE("d/M/y  H:i:s") . PHP_EOL);
 
 	
-	fwrite($fp, implode("\t", $_POST) . PHP_EOL);
+	fwrite($fp, print_r($_POST, true) . PHP_EOL);
 
 	// foreach($_POST as $key => $value){ // SE CONVIERTEN LOS CARACTERES ESPECIALES EN ENTIDADES HTML
 	// 	$_POST[$key] = htmlentities($value, ENT_QUOTES, "UTF-8");
@@ -17,11 +17,10 @@
 	
 	if (!empty($_POST) && $_POST["mode"] == "login"){
 		session_start();
-		
 		$mysqli->next_result();
- 		$query = "select get_usuario('{$Email}', '{$Clave}')";
+		$clave = md5($_POST["clave"]);
+ 		$query = "call get_usuario('{$_POST['email']}', '{$clave}')";
  		fwrite($fp, $query . PHP_EOL);
- 		
 		$result = $mysqli->query($query);
 		
 		if (!$result) {
@@ -142,6 +141,7 @@
 										   {$_POST['equipo_visita']}, 
 										   {$_POST['estadio']}, 
 										   {$_POST['evento']},
+										   {$_POST['finalizado']},
 										   {$_POST['ID_partido']})";
  		fwrite($fp, $query . PHP_EOL);
 		
@@ -282,24 +282,32 @@
 	}
 	
 	if (!empty($_POST) && $_POST["mode"] == "registrar_equipoXevento"){
-	
-		for ($i = 0; $i < count($_POST['equipos']); $i++){
-			$mysqli->next_result();
-			$query = "select registrar_equipoXevento({$_POST['equipos'][$i]}, 
-											   		{$_POST['evento']}),
-											   		{$_POST['grupo']})";
-			fwrite($fp, $query . PHP_EOL);
-			$result = $mysqli->query($query);
-		
-			if (!$result) {
-				$error = $mysqli->error;
-		        fwrite($fp, "Error: " . $error . PHP_EOL);
-		        $response["success"] = false;
-		        $response["error"] = $error;
-		    } else {
-		    	$response["success"] = true;
-		    }
-		    
+		$query = "CALL limpiar_equipoXevento({$_POST['evento']})";
+		fwrite($fp, $query . PHP_EOL);
+		$result = $mysqli->query($query);
+		if (!$result) {
+			$error = $mysqli->error;
+	        fwrite($fp, "Error: " . $error . PHP_EOL);
+	        $response["success"] = false;
+	        $response["error"] = $error;
+		} else {
+			for ($i = 0; $i < count($_POST['equipos']); $i++){
+				$mysqli->next_result();
+				$query = "select registrar_equipoXevento({$_POST['equipos'][$i]}, 
+												   		{$_POST['evento']},
+												   		null)";
+				fwrite($fp, $query . PHP_EOL);
+				$result = $mysqli->query($query);
+			
+				if (!$result) {
+					$error = $mysqli->error;
+			        fwrite($fp, "Error: " . $error . PHP_EOL);
+			        $response["success"] = false;
+			        $response["error"] = $error;
+			    } else {
+			    	$response["success"] = true;
+			    }
+			}
 			header('Content-type: application/json; charset=utf-8');
 			echo json_encode($response, JSON_FORCE_OBJECT);
 		}
@@ -307,7 +315,12 @@
 	
 	if (!empty($_POST) && $_POST["mode"] == "registrar_integranteXpartido"){
 		
-		$integrantes = array_merge ($_POST['integrantes_local'], $_POST['integrantes_visita']);
+		//$integrantes = array_merge ($_POST["integrantes_local"], $_POST["integrantes_visita"]);
+		$integrantes = $_POST["integrantes"];
+		fwrite($fp, "cantidad: ".count($integrantes). PHP_EOL);
+		$resultados = print_r($integrantes, true);
+		
+		fwrite($fp, $resultados . PHP_EOL);
 		
 		if (!empty($integrantes)){
 			for ($i = 0; $i < count($integrantes); $i++){

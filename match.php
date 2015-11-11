@@ -1,8 +1,5 @@
 	<?php require_once("header.php"); 
-	//	$arrayQuery = array(); 
-	//	$_POST["mode"] = "get_home"; 
-	//	$user_id = $_SESSION["active_user_id"];
-	//	include ("funcionesOracle.php");
+		$user_id = $_SESSION["active_user_id"];
 	?>
 		
 		<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
@@ -137,7 +134,9 @@
 												while ($row = $result->fetch_assoc()) { ?>
 													<div class="col-md-12">
 														<label>
-															<?php echo $row["nombre"]." ".$row["primer_apellido"]." ".$row["segundo_apellido"] ?>
+															<a href="player.php?integrante=<?php echo $row["ID_integrante"] ?>">
+																<?php echo $row["nombre"]." ".$row["primer_apellido"]." ".$row["segundo_apellido"] ?>
+															</a>
 														</label>
 													</div>
 											<?php }
@@ -153,7 +152,9 @@
 												while ($row = $result->fetch_assoc()) { ?> 
 													<div class="col-md-12">
 														<label>
-															<?php echo $row["nombre"]." ".$row["primer_apellido"]." ".$row["segundo_apellido"] ?>
+															<a href="player.php?integrante=<?php echo $row["ID_integrante"] ?>">
+																<?php echo $row["nombre"]." ".$row["primer_apellido"]." ".$row["segundo_apellido"] ?>
+															</a>
 														</label>
 													</div>
 											<?php }

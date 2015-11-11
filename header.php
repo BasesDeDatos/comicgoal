@@ -1,9 +1,4 @@
-<?php
-// Start the session
-//session_start();
-//$user_id = $_SESSION("active_user_id");
-?>
-
+<?php @session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -557,6 +552,8 @@
 </head>
 
 <body class="home page page-id-2 page-template page-template-template-home page-template-template-home-php custom-background">
+	
+	
 	<div class="sp-header"></div>
 	<div class=" fb_reset" id="fb-root">
 		<div style="position: absolute; top: -10000px; height: 0px; width: 0px;">

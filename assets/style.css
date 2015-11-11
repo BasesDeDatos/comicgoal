@@ -943,6 +943,11 @@ body.page-template-page-home-php .content-left, body.page-template-page-home-php
 .home-bottom {
 	clear: both;
 }
+
+.tabla{
+    padding: 30px !important;
+}
+
 #content section h3,
 #content .sp-table-caption {
 	color: #fff;
@@ -2166,6 +2171,7 @@ a.readmore {
 	height: auto;
 	max-width: 2em;
 	max-height: 2em;
+	margin-top: 4px;
 }
 
 /* Countdown */

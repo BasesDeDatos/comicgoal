@@ -1,15 +1,9 @@
-<!--
-Author: Isaac Campos, Roger Villalobos,  Jeffrey Alvarado
-Template name: admin
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-	<?php require_once("header.php");
-	// Set session variables
-	?>
-
-	
-	<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<?php require_once("header.php");
+	if(!isset($_SESSION["active_user_id"])) { ?>
+		<script>window.location="login.php";</script>
+	<?php 	}
+?>
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 
 	<div class="row">
 		<div class="col-md-12 register-form">
@@ -35,7 +29,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-4" for="confederacion">Confederación</label>
 				<select class="col-md-4" name="confederacion" id="confederacion">
-					<option value="" selected>Agregar nuevo</option>
+					<option value="" selected>Elegir nuevo</option>
 					<?php $query = 'call get_confederacion(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -48,24 +42,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<button name= "confederacion_button" class= "eliminar" >&#x274c;</button>
 				</div>
 				
-				<!--label class="col-md-4" for="pais">Pais</label>
-				<select class="col-md-4" name="pais" id="pais">
-					<option value="">Agregar nuevo</option>
-					<?php $query = 'call get_pais(null)';
-						$result = $mysqli->query($query);
-						// Imprimir los resultados en HTML
-						while ($row = $result->fetch_assoc()) { ?> 
-							<option value="<?php echo $row["ID_pais"] ?>"><?php echo $row["nombre"]?></option>
-					<?php } $mysqli->next_result(); ?>
-				</select>
-				<div class="col-md-3"><input class="col-md-6" type="text" name="pais_input" placeholder="Nuevo" /></div>
-				<div class="col-md-1">
-					<button name= "pais_button" class= "eliminar" >&#x274c;</button>
-				</div-->
-				
 				<label class="col-md-4" for="continente">Continente</label>
 				<select class="col-md-4" name="continente" id="continente">
-					<option value="">Agregar nuevo</option>
+					<option value="">Elegir nuevo</option>
 					<?php $query = 'call get_continente(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -80,7 +59,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-4" for="premio">Premio</label>
 				<select class="col-md-4" name="premio" id="premio">
-					<option value="" selected>Agregar nuevo</option>
+					<option value="" selected>Elegir nuevo</option>
 					<?php $query = 'call get_premio(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -95,7 +74,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-4" for="estadio">Estadio</label>
 				<select class="col-md-4" name="estadio" id="estadio">
-					<option value="" selected>Agregar nuevo</option>
+					<option value="" selected>Elegir nuevo</option>
 					<?php $query = 'call get_estadio(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -111,7 +90,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-4" for="evento">Evento</label>
 				<select class="col-md-4" name="evento" id="evento">
-					<option value="" selected>Agregar nuevo</option>
+					<option value="" selected>Elegir nuevo</option>
 					<?php $query = 'call get_evento(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -127,7 +106,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-4" for="grupo">Grupo</label>
 				<select class="col-md-4" name="grupo" id="grupo">
-					<option value="" selected>Agregar nuevo</option>
+					<option value="" selected>Elegir nuevo</option>
 					<?php $query = 'call get_grupo(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -143,7 +122,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-4" for="posicion">Posición</label>
 				<select class="col-md-4" name="posicion" id="posicion">
-					<option value="" selected>Agregar nuevo</option>
+					<option value="" selected>Elegir nuevo</option>
 					<?php $query = 'call get_posicion(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -159,7 +138,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-4" for="tipo_estadistica">Estadística</label>
 				<select class="col-md-4" name="tipo_estadistica" id="tipo_estadistica">
-					<option value="" selected>Agregar nuevo</option>
+					<option value="" selected>Elegir nuevo</option>
 					<?php $query = 'call get_tipo_estadistica(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -176,15 +155,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			
 			<fieldset>
 				<h2 class="fs-title">Partidos</h2>
-				
 				<label class="col-md-5" for="partido">Partido</label>
 				<select class="col-md-6" name="partido" id="partido">
-					<option value="" selected>Agregar un partido</option>
+					<option value="" selected>Elegir un partido</option>
 					<?php $query = 'call get_partido(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
 						while ($row = $result->fetch_assoc()) { ?> 
-							<option value="<?php echo $row["ID_partido"] ?>"><?php echo $row["resumen"] ?></option>
+							<option value="<?php echo $row["ID_partido"] ?>"><?php echo $row["fecha"]." / ".$row["resumen"] ?></option>
 					<?php } $mysqli->next_result(); ?>
 				</select>
 				<div class="col-md-1">
@@ -193,7 +171,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-5" for="eventopartido">Evento</label>
 				<select class="col-md-6" name="ID_evento" id="eventopartido">
-					<option value="" selected>Agregar un evento</option>
+					<option value="" selected>Elegir un evento</option>
 					<?php $query = 'call get_evento(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -204,7 +182,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-5" for="estadiopartido">Estadio</label>
 				<select class="col-md-6" name="ID_estadio" id="estadiopartido">
-					<option value="" selected>Agregar un estadio</option>
+					<option value="" selected>Elegir un estadio</option>
 					<?php $query = 'call get_estadio(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -215,8 +193,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-5" for="localpartido">Equipo local</label>
 				<select class="col-md-6" name="ID_equipo_local" id="localpartido">
-					<option value="" selected>Agregar un equipo</option>
-					<?php $query = 'call get_equipo(null)';
+					<option value="" selected>Elegir un equipo</option>
+					<?php $query = 'call get_equipoXevento(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
 						while ($row = $result->fetch_assoc()) { ?> 
@@ -226,8 +204,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-5" for="visitapartido">Equipo visita</label>
 				<select class="col-md-6" name="ID_equipo_visita" id="visitapartido">
-					<option value="" selected>Agregar un equipo</option>
-					<?php $query = 'call get_equipo(null)';
+					<option value="" selected>Elegir un equipo</option>
+					<?php $query = 'call get_equipoXevento(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
 						while ($row = $result->fetch_assoc()) { ?> 
@@ -241,6 +219,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<label class="col-md-5" for="horapartido">Hora: </label>
 				<div class="col-md-6"><input type="time" name="hora" id="horapartido" placeholder="hora" /></div>
 				
+				<label class="col-md-5">Finalizado</label>
+				
+				<div class = "radio-btns col-md-6">
+					<input type="radio" name="finalizado" id="si" value="1">
+					<label for="si">Sí</label>
+					<input type="radio" name="finalizado" id="no" value="0" checked>
+					<label for="no">No</label>
+				</div>
+				
 				<div class = "col-md-12">
 					<input type="submit" name="submit" class="submit action-button" value="Aplicar" onclick="registrar_partido()"/>
 				</div>
@@ -252,7 +239,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-4" for="equipo">Equipo</label>
 				<select class="col-md-6" name="equipo" id="equipo">
-					<option value="" selected>Agregar un equipo</option>
+					<option value="" selected>Elegir un equipo</option>
 					<?php $query = 'call get_equipo(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -271,7 +258,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-6" for="confederacionequipo">Confederación</label>
 				<select class="col-md-6" name="ID_Confederacion" id="confederacionequipo">
-					<option value="" selected>Agregar una confederación</option>
+					<option value="" selected>Elegir una confederación</option>
 					<?php $query = 'call get_confederacion(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -282,7 +269,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-6" for="continenteequipo">Continente</label>
 				<select class="col-md-6" name="ID_continente" id="continenteequipo">
-					<option value="" selected>Agregar un continente</option>
+					<option value="" selected>Elegir un continente</option>
 					<?php $query = 'call get_continente(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -293,7 +280,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-6" for="paisequipo">País</label>
 				<select class="col-md-6" name="ID_pais" id="paisequipo">
-					<option value="" selected>Agregar un país</option>
+					<option value="" selected>Elegir un país</option>
 					<?php $query = 'call get_pais(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -313,7 +300,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-4" for="integrante">Integrante</label>
 				<select class="col-md-6" name="integrante" id="integrante">
-					<option value="" selected>Agregar un integrante</option>
+					<option value="" selected>Elegir un integrante</option>
 					<?php $query = 'call get_integrante(null, null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -335,7 +322,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-3" for="numerointegrante">Número</label>
 				<select class="col-md-3" name="num_camiseta" id="numerointegrante">
-					<option value="" selected>Agregar un número</option>
+					<option value="" selected>Elegir un número</option>
 					<?php for($i = 1; $i < 31; $i++){ ?>
 						<option value="<?php echo $i ?>">
 							<?php echo $i ?>
@@ -348,7 +335,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-6" for="nacionalidadintegrante">Nacionalidad</label>
 				<select class="col-md-6" name="ID_nacionalidad" id="nacionalidadintegrante">
-					<option value="" selected>Agregar un país</option>
+					<option value="" selected>Elegir un país</option>
 					<?php $query = 'call get_pais(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -359,7 +346,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-6" for="equipointegrante">Equipo</label>
 				<select class="col-md-6" name="ID_equipo" id="equipointegrante">
-					<option value="" selected>Agregar un equipo</option>
+					<option value="" selected>Elegir un equipo</option>
 					<?php $query = 'call get_equipo(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -370,7 +357,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-6" for="posicionintegrante">Posición</label>
 				<select class="col-md-6" name="ID_posicion" id="posicionintegrante">
-					<option value="" selected>Agregar una posicion</option>
+					<option value="" selected>Elegir una posicion</option>
 					<?php $query = 'call get_posicion(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -390,7 +377,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-6" for="equiposXevento">Evento</label>
 				<select class="col-md-6" name="equiposXevento" id="equiposXevento">
-					<option value="" selected>Agregar un evento</option>
+					<option value="" selected>Elegir un evento</option>
 					<?php $query = 'call get_evento(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -423,18 +410,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<fieldset>
 				<h2 class="fs-title">Alineación</h2>
 				
-				<label class="col-md-6" for="integrantesXpartido">Agregar un partido</label>
+				<label class="col-md-6" for="integrantesXpartido">Partido</label>
 				<select class="col-md-6" name="integrantesXpartido" id="integrantesXpartido">
-					<option value="" selected>Agregar nuevo</option>
+					<option value="" selected>Elegir un partido</option>
 					<?php $query = 'call get_partido(null)';
 						$result = $mysqli->query($query);
 						while ($row = $result->fetch_assoc()) { ?> 
-							<option value="<?php echo $row["ID_partido"] ?>"><?php echo $row["resumen"]?></option>
+							<option value="<?php echo $row["ID_partido"] ?>"><?php echo $row["fecha"]." / ".$row["resumen"]?></option>
 					<?php } $mysqli->next_result(); ?>
 				</select>
 				
-				<label class="col-md-6">Local</label>
-				<label class="col-md-6">Visitante</label>
+				<h3 class="col-md-6">Local</h3>
+				<h3 class="col-md-6">Visitante</h3>
 				
 				<div class="col-md-6 scroll-container">
 					
@@ -444,13 +431,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						$equipo_local = $row["ID_equipo_local"];
 						$equipo_visita = $row["ID_equipo_visita"];
 						$mysqli->next_result();
-						$query = "call get_integrante(null, {$equipo_local})";
+						//$query = "call get_integrante(null, {$equipo_local})";
+						$query = "call get_integrante(null, null)";
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
 						while ($row = $result->fetch_assoc()) { ?> 
 							<input id="loc_<?php echo $row["ID_integrante"] ?>" 
 								type="checkbox" 
-								name = "integrantes_local[]" 
+								name = "integrantes[]" 
 								value="<?php echo $row["ID_integrante"] ?>" />
 							<label for="loc_<?php echo $row["ID_integrante"] ?>">
 								<?php echo "({$row['num_camiseta']}) ".$row["nombre"]." ".$row["primer_apellido"]." ".$row["segundo_apellido"] ?>
@@ -461,14 +449,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				
 				<div class="col-md-6 scroll-container">
-					<?php $query = "call get_integrante(null, {$equipo_visita})";
+					<?php //$query = "call get_integrante(null, {$equipo_visita})";
+						$query = "call get_integrante(null, null)";
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
 						while ($row = $result->fetch_assoc()) { ?>
 							
 							<input id="vis_<?php echo $row["ID_integrante"] ?>" 
 								type="checkbox" 
-								name = "integrantes_visita[]" 
+								name = "integrantes[]" 
 								value="<?php echo $row["ID_integrante"] ?>" />
 							<label for="vis_<?php echo $row["ID_integrante"] ?>">
 								<?php echo "({$row['num_camiseta']}) ".$row["nombre"]." ".$row["primer_apellido"]." ".$row["segundo_apellido"] ?>
@@ -487,18 +476,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-6" for="partidoestadistica">Partido</label>
 				<select class="col-md-6" name="partidoestadistica" id="partidoestadistica">
-					<option value="" selected>Agregar un partido</option>
+					<option value="" selected>Elegir un partido</option>
 					<?php $query = 'call get_partido(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
 						while ($row = $result->fetch_assoc()) { ?> 
-							<option value="<?php echo $row["ID_partido"] ?>"><?php echo $row["resumen"]?></option>
+							<option value="<?php echo $row["ID_partido"] ?>"><?php echo $row["fecha"]." / ".$row["resumen"] ?></option>
 					<?php } $mysqli->next_result(); ?>
 				</select>
 				
 				<label class="col-md-6" for="integranteestadistica">Integrante</label>
 				<select class="col-md-6" name="integranteestadistica" id="integranteestadistica">
-					<option value="" selected>Agregar un jugador</option>
+					<option value="" selected>Elegir un jugador</option>
 					<?php $query = 'call get_integrante(null, null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -509,7 +498,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-4" for="estadisticanueva">Estadísticas</label>
 				<select class="col-md-4" name="estadisticanueva" id="estadisticanueva">
-					<option value="" selected>Agregar una estadística</option>
+					<option value="" selected>Elegir una estadística</option>
 					<?php $query = 'call get_tipo_estadistica(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -520,7 +509,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-2" for="minuto">Minuto</label>
 				<select class="col-md-2" name="minuto" id="minuto"
-					<option value="" selected>Agregar un minuto</option>
+					<option value="" selected>Elegir un minuto</option>
 					<?php for($i = 1; $i < 121; $i++){ ?>
 						<option value="<?php echo $i ?>">
 							<?php echo $i ?>
@@ -536,17 +525,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			
 			<fieldset>
 				<h2 class="fs-title">Usuarios</h2>
-				
-				<label class="col-md-6" for="usuario">Usuarios</label>
-				<select class="col-md-6" name="usuario" id="usuario">
-					<option value="" selected>Agregar un usuario</option>
-					<?php $query = 'call get_usuario(null)';
-						$result = $mysqli->query($query);
-						// Imprimir los resultados en HTML
-						while ($row = $result->fetch_assoc()) { ?> 
-							<option value="<?php echo $row["ID_usuario"] ?>"><?php echo $row["email"]?></option>
-					<?php } $mysqli->next_result(); ?>
-				</select>
 				
 				<div class="col-md-6"><input type="text" name="email" id="email" placeholder="E-Mail" /></div>
 				
@@ -566,7 +544,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<label class="col-md-6" for="premioXequipo">Equipo</label>
 				<select class="col-md-6" name="premioXequipo" id="premioXequipo">
-					<option value="" selected>Agregar un equipo</option>
+					<option value="" selected>Elegir un equipo</option>
 					<?php $query = 'call get_equipo(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
@@ -579,7 +557,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				<div class="col-md-6">
 					<select class="col-md-6" name="premionuevo" id="premionuevo">
-						<option value="" selected>Agregar un premio</option>
+						<option value="" selected>Elegir un premio</option>
 						<?php $query = 'call get_premio(null)';
 							$result = $mysqli->query($query);
 							// Imprimir los resultados en HTML
@@ -803,34 +781,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			var rutaImagenCargada = nombreImagen;
 			$("#fotointegrante").val(rutaImagenCargada);
 		});
-		
-		$("#Pais0").change(function(){
-			$("#Ciudad0").val("");
-			$("#Ciudad0 option:not(:first)").hide();
-			$("#Estado0").val("");
-			$("#Estado0 option:not(:first)").hide();
-			$("#Estado0 ."+$(this).val()).show();
-		});
-		
-		$("#Pais").change(function(){
-			$("#Ciudad").val("");
-			$("#Estado").val("");
-			$("#Ciudad option:not(:first)").hide();
-			$("#Estado option:not(:first)").hide();
-			$("#Estado ."+$(this).val()).show();
-		});
-		
-		$("#Estado0").change(function(){
-			$("#Ciudad0").val("");
-			$("#Ciudad0 option:not(:first)").hide();
-			$("#Ciudad0 ."+$(this).val()).show();
-		});
-		
-		$("#Estado").change(function(){
-			$("#Ciudad").val("");
-			$("#Ciudad option:not(:first)").hide();
-			$("#Ciudad ."+$(this).val()).show();
-		});
 
 		$(".catalogos select").change(function(){
 			var input = $("input[name='"+$(this).attr("name")+"_input']");
@@ -920,7 +870,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					}
 				});
 			} else {
-				$(".current input, .current select").val("");
+				$(".current input, .current select").not("[type='submit']").val("");
+			}
+		});
+		
+		$("#eventopartido").change(function(){
+			var ID = $(this).val();
+			if (ID != ""){
+				var data = "mode=callProcedure&procedure=get_equipoXevento&param1="+ ID;
+				$("#localpartido option, #visitapartido option").hide();
+				$.ajax({  
+				    type: "POST",
+				    data: data,
+				    url: "funcionesMySQL.php",
+				    dataType: "json",
+				    success: function(data){
+				    	console.dir(data);
+						$.each(data.data[0], function (i, fb) {
+							console.dir(data);
+							$(".current [name='"+fb["ID_equipo"]+"']").show();
+						});
+					},
+					error: function (data){
+						alert("Ha ocurrido un error obtener la información de los equipos de este evento.");
+						console.dir(data)
+					}
+				});
+			} else {
+				$(".current input, .current select").not("[type='submit']").val("");
 			}
 		});
 		
@@ -945,7 +922,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					}
 				});
 			} else {
-					$(".current input, .current select").val("");
+					$(".current input, .current select").not("[type='submit']").val("");
 			}
 		});
 		
@@ -970,7 +947,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					}
 				});
 			} else {
-					$(".current input, .current select").val("");
+					$(".current input, .current select").not("[type='submit']").val("");
 			}
 		});
 		
@@ -997,7 +974,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					}
 				});
 			} else {
-					$(".current input, .current select").val("");
+					$(".current input, .current select").not("[type='submit']").val("");
 			}
 		});
 		
@@ -1028,7 +1005,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					}
 				});
 			} else if(IDpremio == "" && IDequipo == "") {
-				$(".current input, .current select").val("");
+				$(".current input, .current select").not("[type='submit']").val("");
 			}
 		});
 		
@@ -1059,6 +1036,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			var equipo_visita = $("#visitapartido").val();
 			var fecha = $("#fechapartido").val();
 			var hora = $("#horapartido").val();
+			var finalizado = $("[name='finalizado']:checked").val();
 			var ID = $("#partido").val();
 			
 			var tipo = "insertó";
@@ -1072,7 +1050,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			var data = "mode="+mode+"_partido&evento="+evento+
 				"&estadio="+estadio+"&equipo_local="+equipo_local+
 				"&equipo_visita="+equipo_visita+"&fecha="+fecha+
-				"&hora="+hora+"&ID_partido="+ID;
+				"&hora="+hora+"&finalizado="+1+"&ID_partido="+ID;
 				
 			$.ajax({  
 			    type: "POST",
@@ -1163,10 +1141,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		
 		function registrar_equipoXevento(){
 			var evento = $("#equiposXevento").val();
-			var equipos = $("input[name='equipos[]']").serialize();
 			
-			var data = "mode=registrar_equipoXevento&evento="+evento+"&equipos="+equipos;
-					  
+			var equipos = $("input[name='equipos[]']:checked").map(function(){
+		    	return $(this).val();
+		    }).get();
+		    
+			var data = {
+				mode: "registrar_equipoXevento",
+				evento: evento,
+				equipos: equipos,
+			}
+			
 			$.ajax({  
 				    type: "POST",
 				    data: data,
@@ -1260,54 +1245,45 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				    url: "funcionesMySQL.php",
 				    dataType: "json",
 				    success: function(data){
+				    	console.log(data);
 						alert("Se editó con éxito la cantidad");
 					},
 					error: function (data){
+						console.log(data);
 						alert("Ha ocurrido un error al editar la cantidad");
 					}
 				});
 			}
-			
 		};
 		
 		function registrar_integranteXpartido(){
 			var partido = $("#integrantesXpartido").val();
-			var integrantes_local = $("input[name='integrantes_local[]']").serialize();
-			var integrantes_visita = $("input[name='integrantes_visita[]']").serialize();
-			var ID = $("partido").val();
-			
-			console.dir(integrantes_local);
-			if (ID == ""){
-				var data = "mode=registrar_integranteXpartido&partido="+partido+"&integrantes_local="+integrantes_local+"&integrantes_visita="+integrantes_visita;
-						  
-				$.ajax({  
-				    type: "POST",
-				    data: data,
-				    url: "funcionesMySQL.php",
-				    dataType: "json",
-				    success: function(data){
-						alert("Se insertó con éxito los integrantes");
-					},
-					error: function (data){
-						alert("Ha ocurrido un error al insertar los integrantes.");
-					}
-				});
-			} else if(ID != ""){ // EDITAR
-				var data = "mode=editar_integranteXpartido&ID_integranteXpartido="+ID+"&ID_partido="+partido+"&integrantes_local="+integrantes_local+"&integrantes_visita="+integrantes_visita;
+			var integrantes = $("input[name='integrantes[]']:checked").map(function(){
+		    	return $(this).val();
+		    }).get();
 
-				$.ajax({  
-				    type: "POST",
-				    data: data,
-				    url: "funcionesMySQL.php",
-				    dataType: "json",
-				    success: function(data){
-						alert("Se editaron con éxito los integrantes del partido");
-					},
-					error: function (data){
-						alert("Ha ocurrido un error al editar los integrantes del partido");
-					}
-				});
+			
+			console.log(integrantes);
+
+			var data = {
+				mode: "registrar_integranteXpartido",
+				partido: partido,
+				integrantes: integrantes,
 			}
+			$.ajax({  
+			    type: "POST",
+			    data: data,
+			    url: "funcionesMySQL.php",
+			    dataType: "json",
+			    success: function(data){
+			    	console.log(data);
+					alert("Se insertó con éxito los integrantes");
+				},
+				error: function (data){
+					console.log(data);
+					alert("Ha ocurrido un error al insertar los integrantes.");
+				}
+			});
 		};
 		
 	</script>

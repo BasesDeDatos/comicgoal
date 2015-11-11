@@ -652,13 +652,13 @@ background: url('../images/into.png') no-repeat 0px 0px;
   font-size: 1.6em;
   color: #373737;
   text-align: center;
-  font-family: 'Abel-Regular';
+  font-family: inherit;
 }
 
 .login-form form input[type="text"], .login-form form input[type="password"] {
 
   margin: 0 0 30px 0;
-  width: 100%;
+  width: auto;
   padding: 12px 15px 12px 50px;
   font-size: 1.2em;
   outline: none;
@@ -685,7 +685,7 @@ background: url('../images/into.png') no-repeat 0px 0px;
 	border: 1px solid #C2C2C2;
 }
 .login-form form input[type="password"]:hover,.login-form form input[type="text"]:hover {
-  border: 1px solid #ec6e3c;
+  border: 1px solid #006600;
 }
 
 .login-form input[type="submit"], .submit {
@@ -2625,6 +2625,8 @@ canvas#bar {
   width: 80%;
   height: 300px;
   overflow-y: scroll;
+  font-family: inherit;
+  font-weight: lighter;
 }
 /*form styles*/
 #msform {

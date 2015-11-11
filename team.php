@@ -1,8 +1,5 @@
 	<?php require_once("header.php"); 
-	//	$arrayQuery = array(); 
-	//	$_POST["mode"] = "get_home"; 
-	//	$user_id = $_SESSION["active_user_id"];
-	//	include ("funcionesOracle.php");
+		$user_id = $_SESSION["active_user_id"];
 	
 	
 	if (key_exists("equipo", $_GET)){
@@ -50,9 +47,9 @@
 					$posicion = $row["posicion"];
 					$team[$posicion][] = array(
 						"ID_integrante" => $row["ID_integrante"],
-						"nombre" => $row["nombre"]." ".$row["primer_apellido"]." ".$row["segundo_apellido"],
+						"nombre" => $row["nombre"]." ".$row["primer_apellido"]." ".$row["segundo_apellido"]
 					);
-				} $mysqli->next_result(); 
+				} $mysqli->next_result();
 			?>
 			
 			<div class = "col-md-8">
@@ -60,21 +57,32 @@
 					Jugadores
 				</h3>
 			</div>
-				
-			<div class = "acordion col-md-8">
-				<?php 
-					if(!empty($team)){
-						foreach($team as $posicion => $integrantes){ ?>
-							<h1 class ="texto"><?php echo $posicion."s" ?></h1>
-							<?php 
-							foreach($integrantes as $integrante){ ?>
-								<a href="player.php?integrante=<?php echo $integrante["ID_integrante"] ?>"><?php echo $integrante["nombre"] ?></a>
-							<?php }
+			
+			<div class="col-md-8">	
+				<div class = "acordion col-md-12">
+					<?php 
+						if(!empty($team)){
+							foreach($team as $posicion => $integrantes){ ?>
+								<h1 class ="texto"><?php echo $posicion."s" ?></h1>
+								<ul>
+									<?php 
+									foreach($integrantes as $integrante){ ?>
+										<div class="col-md-12">
+											<li>
+												<a href="player.php?integrante=<?php echo $integrante["ID_integrante"] ?>">
+													<?php echo $integrante["nombre"] ?>
+												</a>
+											</li>
+										</div>
+									<?php } ?>
+								</ul> 
+								<?php
+							}
 						}
-					}
-					else{ ?>
-						<label class="col-md-12">Este equipo no tiene jugadores todavía</label>
-					<?php } ?>
+						else{ ?>
+							<label class="col-md-12">Este equipo no tiene jugadores todavía</label>
+						<?php } ?>
+				</div>
 			</div>
 		
 			<?php } else{	?>

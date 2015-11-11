@@ -1564,7 +1564,7 @@ var position = $.ui.position;
 var accordion = $.widget( "ui.accordion", {
 	version: "1.11.4",
 	options: {
-		active: 0,
+		//active: 0,
 		animate: {},
 		collapsible: false,
 		event: "click",

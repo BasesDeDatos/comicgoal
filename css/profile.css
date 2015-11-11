@@ -33,6 +33,7 @@ div label {
     display: block;
     text-align: center;
     font-size: 15px;
+    font-weight: lighter;
 }
 
 .clear {

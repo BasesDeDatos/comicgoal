@@ -1,9 +1,4 @@
-	<?php require_once("header.php"); 
-	//	$arrayQuery = array(); 
-	//	$_POST["mode"] = "get_home"; 
-	//	$user_id = $_SESSION["active_user_id"];
-	//	include ("funcionesOracle.php");
-	?>
+	<?php require_once("header.php"); ?>
 	
 	<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 	
