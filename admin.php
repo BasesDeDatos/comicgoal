@@ -194,7 +194,7 @@
 				<label class="col-md-5" for="localpartido">Equipo local</label>
 				<select class="col-md-6" name="ID_equipo_local" id="localpartido">
 					<option value="" selected>Elegir un equipo</option>
-					<?php $query = 'call get_equipoXevento(null)';
+					<?php $query = 'call get_equipo(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
 						while ($row = $result->fetch_assoc()) { ?> 
@@ -205,7 +205,7 @@
 				<label class="col-md-5" for="visitapartido">Equipo visita</label>
 				<select class="col-md-6" name="ID_equipo_visita" id="visitapartido">
 					<option value="" selected>Elegir un equipo</option>
-					<?php $query = 'call get_equipoXevento(null)';
+					<?php $query = 'call get_equipo(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
 						while ($row = $result->fetch_assoc()) { ?> 
@@ -410,8 +410,8 @@
 			<fieldset>
 				<h2 class="fs-title">Alineación</h2>
 				
-				<label class="col-md-6" for="integrantesXpartido">Partido</label>
-				<select class="col-md-6" name="integrantesXpartido" id="integrantesXpartido">
+				<label class="col-md-6" for="integranteXpartido">Partido</label>
+				<select class="col-md-6" name="integranteXpartido" id="integranteXpartido">
 					<option value="" selected>Elegir un partido</option>
 					<?php $query = 'call get_partido(null)';
 						$result = $mysqli->query($query);
@@ -423,8 +423,7 @@
 				<h3 class="col-md-6">Local</h3>
 				<h3 class="col-md-6">Visitante</h3>
 				
-				<div class="col-md-6 scroll-container">
-					
+				<div class="col-md-6 scroll-container" id="equipos_local">
 					<?php $query = "call get_partido(null)";
 						$result = $mysqli->query($query);
 						$row = $result->fetch_assoc();
@@ -448,7 +447,7 @@
 					
 				</div>
 				
-				<div class="col-md-6 scroll-container">
+				<div class="col-md-6 scroll-container" id="equipos_visita">
 					<?php //$query = "call get_integrante(null, {$equipo_visita})";
 						$query = "call get_integrante(null, null)";
 						$result = $mysqli->query($query);
@@ -657,6 +656,7 @@
 			var previous_fs = $(this).parent().prev();
 			moverIzquierda(current_fs, previous_fs);
 		});
+		
 		function moverIzquierda(current_fs, previous_fs){
 			if(animating) return false;
 			animating = true;
@@ -886,9 +886,9 @@
 				    dataType: "json",
 				    success: function(data){
 				    	console.dir(data);
-						$.each(data.data[0], function (i, fb) {
-							console.dir(data);
-							$(".current [name='"+fb["ID_equipo"]+"']").show();
+						$.each(data.data, function (i, fb) {
+							console.dir(fb["ID_equipo"]);
+							$(".current [value='"+fb["ID_equipo"]+"']").show();
 						});
 					},
 					error: function (data){
@@ -962,10 +962,112 @@
 				    dataType: "json",
 				    success: function(data){
 				    	console.dir(data)
-				    	
 				    	$(".current [type='checkbox'").attr("checked", false); // se desmarcan los checkbox
 						 $.each(data.data, function (i, fb) {
 							$(".current [value='"+fb["ID_equipo"]+"']").attr("checked", "checked"); // se marcan los que retorna la consulta
+						});
+					},
+					error: function (data){
+						console.dir(data);
+						alert("Ha ocurrido un error obtener la información de este evento.");
+					}
+				});
+			} else {
+				$(".current input").attr("checked", false);
+			}
+		});
+		
+		$("#integranteXpartido").change(function(){
+			var ID = $(this).val();
+			if (ID != ""){
+				var data = "mode=callProcedure&procedure=get_partido&param1="+ID;
+				$.ajax({  
+				    type: "POST",
+				    data: data,
+				    url: "funcionesMySQL.php",
+				    dataType: "json",
+				    success: function(data){
+				    	console.dir("data: \n")
+				    	console.dir(data)
+				    	var ID_equipo_local = data.data[0]["ID_equipo_local"];
+						var ID_equipo_visita = data.data[0]["ID_equipo_visita"];
+						
+				    	console.dir(ID_equipo_local+" "+ID_equipo_visita);
+				    																		//partido 	//equipo
+						var dataLocal = "mode=callProcedure&procedure=get_integranteXequipo&param1="+ID_equipo_local;
+						
+						$("#equipos_local, #equipos_visita").empty();
+						
+				    	$.ajax({  
+						    type: "POST", data: dataLocal,
+						    url: "funcionesMySQL.php",
+						    dataType: "json",
+						    success: function(data){
+						    	console.dir("Datos local");
+						    	console.dir(data);
+						    	
+								$.each(data.data, function (i, fb) {
+									var ID_integrante = fb["ID_equipo"];
+									var nombre = fb["nombre"];
+									var primer_apellido = fb["primer_apellido"];
+									var segundo_apellido = fb["primer_apellido"];
+									var num_camiseta = fb["num_camiseta"];
+									$(".current #equipos_local").append(
+							    		'<input id="loc_'+ID_integrante+'" type="checkbox" name="integrantes[]" value="'+ID_integrante+'">' +
+										'<label for="loc_'+ID_integrante+'">('+num_camiseta+') '+nombre+' '+primer_apellido+' '+segundo_apellido+'</label>'
+									);
+								});
+							},
+							error: function (data){
+								console.dir(data);
+								alert("Ha ocurrido un error obtener la información del uno de los equipos");
+							}
+						});
+				    	
+				    	var dataVisita = "mode=callProcedure&procedure=get_integranteXequipo&param1="+ID_equipo_visita;
+				    	$.ajax({  
+						    type: "POST", data: dataVisita,
+						    url: "funcionesMySQL.php",
+						    dataType: "json",
+						    success: function(data){
+						    	console.dir("Datos visita");
+						    	console.dir(data);
+						    	$.each(data.data, function (i, fb) {
+									var ID_integrante = fb["ID_integrante"];
+									var nombre = fb["nombre"];
+									var primer_apellido = fb["primer_apellido"];
+									var segundo_apellido = fb["primer_apellido"];
+									var num_camiseta = fb["num_camiseta"];
+									$(".current #equipos_visita").append(
+							    		'<input id="vic_'+ID_integrante+'" type="checkbox" name="integrantes[]" value="'+ID_integrante+'">' +
+										'<label for="vic_'+ID_integrante+'">('+num_camiseta+') '+nombre+' '+primer_apellido+' '+segundo_apellido+'</label>'
+									);
+								});
+							},
+							error: function (data){
+								console.dir(data);
+								alert("Ha ocurrido un error obtener la información del uno de los equipos");
+							}
+						});
+						
+						var dataIntegrantes = "mode=callProcedure&procedure=get_integranteXpartido&param1="+ID+"&param2=null";
+						$.ajax({  
+						    type: "POST",
+						    data: dataIntegrantes,
+						    url: "funcionesMySQL.php",
+						    dataType: "json",
+						    success: function(data){
+						    	console.dir("Integrantes por partido")
+						    	console.dir(data)
+						    	$(".current [type='checkbox'").attr("checked", false); // se desmarcan los checkbox
+								 $.each(data.data, function (i, fb) {
+									$(".current [value='"+fb["ID_integrante"]+"']").attr("checked", "checked"); // se marcan los que retorna la consulta
+								});
+							},
+							error: function (data){
+								console.dir(data);
+								alert("Ha ocurrido un error obtener la información de este partido.");
+							}
 						});
 					},
 					error: function (data){
@@ -974,7 +1076,7 @@
 					}
 				});
 			} else {
-					$(".current input, .current select").not("[type='submit']").val("");
+				$(".current input").attr("checked", false);
 			}
 		});
 		
@@ -1007,26 +1109,6 @@
 			} else if(IDpremio == "" && IDequipo == "") {
 				$(".current input, .current select").not("[type='submit']").val("");
 			}
-		});
-		
-		$("#integranteXpartido").change(function(){
-			var data = "mode=callProcedure&procedure=get_partido&param1="+$(this).val()+"&param2=null";
-			$.ajax({  
-			    type: "POST",
-			    data: data,
-			    url: "funcionesMySQL.php",
-			    dataType: "json",
-			    success: function(data){
-			    	console.dir(data)
-					 $.each(data.data[0], function (i, fb) {
-						$(".current [name='"+i+"']").val(fb);
-					});
-				},
-				error: function (data){
-					alert("Ha ocurrido un error obtener la información de este partido.");
-					console.dir(data)
-				}
-			});
 		});
 		
 		function registrar_partido(){
@@ -1257,7 +1339,7 @@
 		};
 		
 		function registrar_integranteXpartido(){
-			var partido = $("#integrantesXpartido").val();
+			var partido = $("#integranteXpartido").val();
 			var integrantes = $("input[name='integrantes[]']:checked").map(function(){
 		    	return $(this).val();
 		    }).get();

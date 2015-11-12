@@ -160,7 +160,6 @@
 		echo json_encode($response, JSON_FORCE_OBJECT);
 	}
 
-	
 	if (!empty($_POST) && $_POST["mode"] == "registrar_equipo"){
 		$mysqli->next_result();
 		$escudo = $_POST['escudo'];
@@ -314,34 +313,46 @@
 	}
 	
 	if (!empty($_POST) && $_POST["mode"] == "registrar_integranteXpartido"){
-		
-		//$integrantes = array_merge ($_POST["integrantes_local"], $_POST["integrantes_visita"]);
 		$integrantes = $_POST["integrantes"];
 		fwrite($fp, "cantidad: ".count($integrantes). PHP_EOL);
 		$resultados = print_r($integrantes, true);
 		
 		fwrite($fp, $resultados . PHP_EOL);
 		
-		if (!empty($integrantes)){
-			for ($i = 0; $i < count($integrantes); $i++){
-				$mysqli->next_result();
-				$query = "select registrar_integranteXpartido({$integrantes[$i]}, 
-												   			  {$_POST['partido']})";
-				fwrite($fp, $query . PHP_EOL);
-				$result = $mysqli->query($query);
-			
-				if (!$result) {
-					$error = $mysqli->error;
-			        fwrite($fp, "Error: " . $error . PHP_EOL);
-			        $response["success"] = false;
-			        $response["error"] = $error;
-			    } else {
-			    	$response["success"] = true;
-			    }
-			    
+		$mysqli->next_result();
+		$query = "call limpiar_integranteXpartido({$_POST['partido']})";
+		fwrite($fp, $query . PHP_EOL);
+		$result = $mysqli->query($query);
+	
+		if (!$result) {
+			$error = $mysqli->error;
+	        fwrite($fp, "Error: " . $error . PHP_EOL);
+	        $response["success"] = false;
+	        $response["error"] = $error;
+	    } else {
+	    	
+			if (!empty($integrantes)){
+				for ($i = 0; $i < count($integrantes); $i++){
+					$mysqli->next_result();
+					$query = "select registrar_integranteXpartido({$integrantes[$i]}, 
+													   			  {$_POST['partido']})";
+					fwrite($fp, $query . PHP_EOL);
+					$result = $mysqli->query($query);
+				
+					if (!$result) {
+						$error = $mysqli->error;
+				        fwrite($fp, "Error: " . $error . PHP_EOL);
+				        $response["success"] = false;
+				        $response["error"] = $error;
+				    } else {
+				    	$response["success"] = true;
+				    }
+				}
+				
 				header('Content-type: application/json; charset=utf-8');
 				echo json_encode($response, JSON_FORCE_OBJECT);
 			}
+		
 		}
 	}
 	

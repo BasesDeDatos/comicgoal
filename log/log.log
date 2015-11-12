@@ -5069,3 +5069,3801 @@ Array
 
 call borrar_continente(7)
 --------------------------------------------------------------
+11/Nov/15  11:31:54
+Array
+(
+    [email] => caco26i
+    [clave] => 123456
+    [mode] => login
+)
+
+call get_usuario('caco26i', 'e10adc3949ba59abbe56e057f20f883e')
+ID:2
+--------------------------------------------------------------
+11/Nov/15  11:32:16
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 8
+)
+
+call get_partido(8)
+--------------------------------------------------------------
+11/Nov/15  11:32:19
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  11:32:24
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 6
+)
+
+call get_partido(6)
+--------------------------------------------------------------
+11/Nov/15  11:32:45
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  11:32:51
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  11:32:55
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 9
+)
+
+call get_partido(9)
+--------------------------------------------------------------
+11/Nov/15  11:33:00
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  11:33:09
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipo
+    [param1] => 15
+)
+
+call get_equipo(15)
+--------------------------------------------------------------
+11/Nov/15  11:33:24
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_premioXequipo
+    [param1] => 1
+    [param2] => 1
+)
+
+call get_premioXequipo(1, 1)
+--------------------------------------------------------------
+11/Nov/15  11:33:47
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipo
+    [param1] => 27
+)
+
+call get_equipo(27)
+--------------------------------------------------------------
+11/Nov/15  11:33:49
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipo
+    [param1] => 4
+)
+
+call get_equipo(4)
+--------------------------------------------------------------
+11/Nov/15  11:33:54
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integrante
+    [param1] => 16
+    [param2] => null
+)
+
+call get_integrante(16, null)
+--------------------------------------------------------------
+11/Nov/15  11:33:59
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integrante
+    [param1] => 8
+    [param2] => null
+)
+
+call get_integrante(8, null)
+--------------------------------------------------------------
+11/Nov/15  11:34:10
+Array
+(
+    [mode] => editar_integrante
+    [nombre] => Isaac
+    [primer_apellido] => Campos
+    [segundo_apellido] => Mesén
+    [numero] => 10
+    [foto] => 
+    [fecha_nac] => 1996-11-07
+    [nacionalidad] => 53
+    [posicion] => 3
+    [equipo] => 2
+    [ID_integrante] => 8
+)
+
+call  editar_integrante(STR_TO_DATE('1996-11-07', '%Y-%m-%d'), 
+										   	  'player_default.jpg', 
+										      2, 
+										      53,
+										      3,
+										      'Isaac',
+										      10,
+										      'Campos',
+										      'Mesén',
+										      8)
+--------------------------------------------------------------
+11/Nov/15  11:34:28
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integrante
+    [param1] => 8
+    [param2] => null
+)
+
+call get_integrante(8, null)
+--------------------------------------------------------------
+11/Nov/15  11:35:34
+Array
+(
+    [mode] => editar_integrante
+    [nombre] => Isaac
+    [primer_apellido] => Campos
+    [segundo_apellido] => Mesén
+    [numero] => 10
+    [foto] => LEGO_ALGO_QUE_APORTAR.jpg
+    [fecha_nac] => 1996-11-07
+    [nacionalidad] => 53
+    [posicion] => 3
+    [equipo] => 2
+    [ID_integrante] => 8
+)
+
+call  editar_integrante(STR_TO_DATE('1996-11-07', '%Y-%m-%d'), 
+										   	  'LEGO_ALGO_QUE_APORTAR.jpg', 
+										      2, 
+										      53,
+										      3,
+										      'Isaac',
+										      10,
+										      'Campos',
+										      'Mesén',
+										      8)
+--------------------------------------------------------------
+11/Nov/15  19:18:46
+Array
+(
+    [email] => jeffrey_a12
+    [clave] => 123456
+    [mode] => login
+)
+
+call get_usuario('jeffrey_a12', 'e10adc3949ba59abbe56e057f20f883e')
+ID:1
+--------------------------------------------------------------
+11/Nov/15  19:19:10
+Array
+(
+    [email] => jeffrey_a12
+    [clave] => 123456
+    [mode] => login
+)
+
+
+11/Nov/15  19:19:11
+Array
+(
+    [email] => jeffrey_a12
+    [clave] => 123456
+    [mode] => login
+)
+
+
+11/Nov/15  19:19:11
+Array
+(
+    [email] => jeffrey_a12
+    [clave] => 123456
+    [mode] => login
+)
+
+call get_usuario('jeffrey_a12', 'e10adc3949ba59abbe56e057f20f883e')
+ID:1
+--------------------------------------------------------------call get_usuario('jeffrey_a12', 'e10adc3949ba59abbe56e057f20f883e')
+ID:1
+--------------------------------------------------------------call get_usuario('jeffrey_a12', 'e10adc3949ba59abbe56e057f20f883e')
+ID:1
+--------------------------------------------------------------
+11/Nov/15  19:37:40
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  19:38:31
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  19:39:34
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 8
+)
+
+call get_partido(8)
+--------------------------------------------------------------
+11/Nov/15  19:40:36
+Array
+(
+    [email] => jeffrey_a12
+    [clave] => 123456
+    [mode] => login
+)
+
+call get_usuario('jeffrey_a12', 'e10adc3949ba59abbe56e057f20f883e')
+ID:1
+--------------------------------------------------------------
+11/Nov/15  19:40:51
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  19:42:22
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipo
+    [param1] => 15
+)
+
+call get_equipo(15)
+--------------------------------------------------------------
+11/Nov/15  19:42:29
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integrante
+    [param1] => 2
+    [param2] => null
+)
+
+call get_integrante(2, null)
+--------------------------------------------------------------
+11/Nov/15  19:42:34
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  19:42:37
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  19:44:05
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  19:44:18
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  19:44:31
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  19:44:44
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  19:47:44
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  21:09:12
+Array
+(
+    [email] => jeffrey_a12
+    [clave] => 123456
+    [mode] => login
+)
+
+call get_usuario('jeffrey_a12', 'e10adc3949ba59abbe56e057f20f883e')
+ID:1
+--------------------------------------------------------------
+11/Nov/15  21:09:13
+Array
+(
+    [email] => jeffrey_a12
+    [clave] => 123456
+    [mode] => login
+)
+
+call get_usuario('jeffrey_a12', 'e10adc3949ba59abbe56e057f20f883e')
+ID:1
+--------------------------------------------------------------
+11/Nov/15  21:09:43
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  21:20:11
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  21:20:34
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  21:21:04
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  21:23:32
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  21:24:27
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  21:26:31
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  21:29:37
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  21:33:47
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  21:33:51
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  21:35:14
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  21:36:12
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  21:36:20
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  21:36:25
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  21:37:24
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  21:37:34
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  21:38:19
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  21:38:26
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  21:39:21
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  21:39:36
+Array
+(
+    [mode] => registrar_equipoXevento
+    [evento] => 3
+    [equipos] => Array
+        (
+            [0] => 15
+            [1] => 23
+            [2] => 1
+            [3] => 2
+            [4] => 4
+            [5] => 20
+            [6] => 3
+            [7] => 25
+        )
+
+)
+
+CALL limpiar_equipoXevento(3)
+select registrar_equipoXevento(15, 
+												   		3,
+												   		null)
+select registrar_equipoXevento(23, 
+												   		3,
+												   		null)
+select registrar_equipoXevento(1, 
+												   		3,
+												   		null)
+select registrar_equipoXevento(2, 
+												   		3,
+												   		null)
+select registrar_equipoXevento(4, 
+												   		3,
+												   		null)
+select registrar_equipoXevento(20, 
+												   		3,
+												   		null)
+select registrar_equipoXevento(3, 
+												   		3,
+												   		null)
+select registrar_equipoXevento(25, 
+												   		3,
+												   		null)
+--------------------------------------------------------------
+11/Nov/15  21:39:41
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  21:39:49
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  21:40:43
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  21:40:46
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  21:50:00
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  21:50:03
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  21:57:09
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 8
+)
+
+call get_equipoXevento(8)
+--------------------------------------------------------------
+11/Nov/15  21:57:09
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 8
+    [param2] => null
+)
+
+call get_partido(8, null)
+Error: Incorrect number of arguments for PROCEDURE c9.get_partido; expected 1, got 2
+--------------------------------------------------------------
+11/Nov/15  21:59:02
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 8
+    [param2] => null
+)
+
+call get_equipoXevento(8, null)
+Error: Incorrect number of arguments for PROCEDURE c9.get_equipoXevento; expected 1, got 2
+--------------------------------------------------------------
+11/Nov/15  21:59:02
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 8
+    [param2] => null
+)
+
+call get_partido(8, null)
+Error: Incorrect number of arguments for PROCEDURE c9.get_partido; expected 1, got 2
+--------------------------------------------------------------
+11/Nov/15  21:59:29
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 10
+    [param2] => null
+)
+
+call get_equipoXevento(10, null)
+Error: Incorrect number of arguments for PROCEDURE c9.get_equipoXevento; expected 1, got 2
+--------------------------------------------------------------
+11/Nov/15  21:59:29
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 10
+    [param2] => null
+)
+
+call get_partido(10, null)
+Error: Incorrect number of arguments for PROCEDURE c9.get_partido; expected 1, got 2
+--------------------------------------------------------------
+11/Nov/15  22:00:35
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXpartido
+    [param1] => 2
+)
+
+call get_integranteXpartido(2)
+Error: Incorrect number of arguments for PROCEDURE c9.get_integranteXpartido; expected 2, got 1
+--------------------------------------------------------------
+11/Nov/15  22:01:32
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 8
+    [param2] => null
+)
+
+call get_equipoXevento(8, null)
+Error: Incorrect number of arguments for PROCEDURE c9.get_equipoXevento; expected 1, got 2
+--------------------------------------------------------------
+11/Nov/15  22:01:32
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 8
+    [param2] => null
+)
+
+call get_partido(8, null)
+Error: Incorrect number of arguments for PROCEDURE c9.get_partido; expected 1, got 2
+--------------------------------------------------------------
+11/Nov/15  22:06:52
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXpartido
+    [param1] => 8
+    [param2] => null
+)
+
+call get_integranteXpartido(8, null)
+--------------------------------------------------------------
+11/Nov/15  22:10:01
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  22:10:07
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  22:10:25
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  22:10:44
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  22:10:49
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  22:11:30
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  22:12:36
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  22:13:04
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  22:13:07
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  22:13:17
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  22:14:10
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  22:14:17
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  22:14:18
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  22:14:22
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  22:15:15
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXpartido
+    [param1] => 9
+    [param2] => null
+)
+
+call get_integranteXpartido(9, null)
+--------------------------------------------------------------
+11/Nov/15  22:15:24
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXpartido
+    [param1] => 2
+    [param2] => null
+)
+
+call get_integranteXpartido(2, null)
+--------------------------------------------------------------
+11/Nov/15  22:15:39
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXpartido
+    [param1] => 1
+    [param2] => null
+)
+
+call get_integranteXpartido(1, null)
+--------------------------------------------------------------
+11/Nov/15  22:22:59
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 8
+)
+
+call get_partido(8)
+--------------------------------------------------------------
+11/Nov/15  22:25:48
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 9
+)
+
+call get_partido(9)
+--------------------------------------------------------------
+11/Nov/15  22:26:24
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  22:35:30
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 3
+)
+
+call get_equipoXevento(3)
+--------------------------------------------------------------
+11/Nov/15  22:35:38
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 9
+)
+
+call get_partido(9)
+--------------------------------------------------------------
+11/Nov/15  22:35:39
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 9
+)
+
+call get_partido(9)
+--------------------------------------------------------------
+11/Nov/15  22:35:45
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 7
+)
+
+call get_partido(7)
+--------------------------------------------------------------
+11/Nov/15  22:35:45
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 7
+)
+
+call get_partido(7)
+--------------------------------------------------------------
+11/Nov/15  22:38:03
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 6
+)
+
+call get_partido(6)
+--------------------------------------------------------------
+11/Nov/15  22:38:03
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  22:38:03
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 10
+)
+
+call get_integranteXequipo(10)
+--------------------------------------------------------------
+11/Nov/15  22:38:05
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  22:38:05
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  22:38:05
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  22:38:08
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  22:38:08
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  22:38:08
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  22:38:10
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 8
+)
+
+call get_partido(8)
+--------------------------------------------------------------
+11/Nov/15  22:38:10
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  22:38:10
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  22:38:27
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 9
+)
+
+call get_partido(9)
+--------------------------------------------------------------
+11/Nov/15  22:38:27
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  22:38:28
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 23
+)
+
+call get_integranteXequipo(23)
+--------------------------------------------------------------
+11/Nov/15  22:38:30
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  22:38:30
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  22:38:30
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  22:38:31
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  22:38:31
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  22:38:31
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  22:38:32
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 5
+)
+
+call get_partido(5)
+--------------------------------------------------------------
+11/Nov/15  22:38:32
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  22:38:33
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  22:38:36
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 6
+)
+
+call get_partido(6)
+--------------------------------------------------------------
+11/Nov/15  22:38:36
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  22:38:36
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 10
+)
+
+call get_integranteXequipo(10)
+--------------------------------------------------------------
+11/Nov/15  22:38:37
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 7
+)
+
+call get_partido(7)
+--------------------------------------------------------------
+11/Nov/15  22:38:37
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 3
+)
+
+call get_integranteXequipo(3)
+--------------------------------------------------------------
+11/Nov/15  22:38:37
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 4
+)
+
+call get_integranteXequipo(4)
+--------------------------------------------------------------
+11/Nov/15  22:38:39
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 6
+)
+
+call get_partido(6)
+--------------------------------------------------------------
+11/Nov/15  22:38:39
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  22:38:39
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 10
+)
+
+call get_integranteXequipo(10)
+--------------------------------------------------------------
+11/Nov/15  22:38:39
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 5
+)
+
+call get_partido(5)
+--------------------------------------------------------------
+11/Nov/15  22:38:39
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  22:38:39
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  22:38:39
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  22:38:39
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  22:38:39
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  22:38:39
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  22:38:40
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  22:38:40
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  22:39:27
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 8
+)
+
+call get_partido(8)
+--------------------------------------------------------------
+11/Nov/15  22:39:27
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  22:39:28
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  22:43:07
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 9
+)
+
+call get_partido(9)
+--------------------------------------------------------------
+11/Nov/15  22:43:07
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  22:43:07
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 23
+)
+
+call get_integranteXequipo(23)
+--------------------------------------------------------------
+11/Nov/15  22:43:09
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 8
+)
+
+call get_partido(8)
+--------------------------------------------------------------
+11/Nov/15  22:43:09
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  22:43:09
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  22:43:15
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 6
+)
+
+call get_partido(6)
+--------------------------------------------------------------
+11/Nov/15  22:43:16
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  22:43:16
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 10
+)
+
+call get_integranteXequipo(10)
+--------------------------------------------------------------
+11/Nov/15  22:43:28
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 7
+)
+
+call get_partido(7)
+--------------------------------------------------------------
+11/Nov/15  22:43:28
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 3
+)
+
+call get_integranteXequipo(3)
+--------------------------------------------------------------
+11/Nov/15  22:43:28
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 4
+)
+
+call get_integranteXequipo(4)
+--------------------------------------------------------------
+11/Nov/15  22:43:30
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  22:43:30
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  22:43:30
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  22:43:32
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  22:43:32
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  22:43:32
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  22:46:15
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 8
+)
+
+call get_partido(8)
+--------------------------------------------------------------
+11/Nov/15  22:46:16
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  22:46:16
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  22:46:17
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  22:46:17
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  22:46:18
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  22:46:21
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 9
+)
+
+call get_partido(9)
+--------------------------------------------------------------
+11/Nov/15  22:46:21
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  22:46:21
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 23
+)
+
+call get_integranteXequipo(23)
+--------------------------------------------------------------
+11/Nov/15  22:46:24
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 8
+)
+
+call get_partido(8)
+--------------------------------------------------------------
+11/Nov/15  22:46:24
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  22:46:24
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  22:48:37
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 7
+)
+
+call get_partido(7)
+--------------------------------------------------------------
+11/Nov/15  22:48:37
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 3
+)
+
+call get_integranteXequipo(3)
+--------------------------------------------------------------
+11/Nov/15  22:48:37
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 4
+)
+
+call get_integranteXequipo(4)
+--------------------------------------------------------------
+11/Nov/15  22:48:39
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 8
+)
+
+call get_partido(8)
+--------------------------------------------------------------
+11/Nov/15  22:48:40
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  22:48:40
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  22:48:46
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 10
+)
+
+call get_partido(10)
+--------------------------------------------------------------
+11/Nov/15  22:48:47
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 25
+)
+
+call get_integranteXequipo(25)
+--------------------------------------------------------------
+11/Nov/15  22:48:47
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 26
+)
+
+call get_integranteXequipo(26)
+--------------------------------------------------------------
+11/Nov/15  22:57:23
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 8
+)
+
+call get_partido(8)
+--------------------------------------------------------------
+11/Nov/15  22:57:24
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  22:57:24
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  22:57:26
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  22:57:27
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  22:57:27
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  22:57:29
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  22:57:29
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  22:57:29
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:02:02
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 8
+)
+
+call get_partido(8)
+--------------------------------------------------------------
+11/Nov/15  23:02:02
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  23:02:02
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:02:09
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  23:02:09
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:02:09
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:03:03
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 8
+)
+
+call get_partido(8)
+--------------------------------------------------------------
+11/Nov/15  23:03:03
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  23:03:04
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:03:12
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 8
+)
+
+call get_partido(8)
+--------------------------------------------------------------
+11/Nov/15  23:03:12
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  23:03:12
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:03:15
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 9
+)
+
+call get_partido(9)
+--------------------------------------------------------------
+11/Nov/15  23:03:16
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  23:03:16
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 23
+)
+
+call get_integranteXequipo(23)
+--------------------------------------------------------------
+11/Nov/15  23:03:16
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  23:03:16
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 9
+)
+
+call get_partido(9)
+--------------------------------------------------------------
+11/Nov/15  23:03:16
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:03:17
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:03:17
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  23:03:18
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 23
+)
+
+call get_integranteXequipo(23)
+--------------------------------------------------------------
+11/Nov/15  23:03:18
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  23:03:18
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:03:18
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:03:20
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  23:03:20
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:03:20
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:03:21
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  23:03:21
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:03:21
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:03:24
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  23:03:24
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:03:24
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:03:25
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 5
+)
+
+call get_partido(5)
+--------------------------------------------------------------
+11/Nov/15  23:03:25
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  23:03:26
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:03:27
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 5
+)
+
+call get_partido(5)
+--------------------------------------------------------------
+11/Nov/15  23:03:27
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  23:03:28
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:03:28
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 7
+)
+
+call get_partido(7)
+--------------------------------------------------------------
+11/Nov/15  23:03:28
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 3
+)
+
+call get_integranteXequipo(3)
+--------------------------------------------------------------
+11/Nov/15  23:03:28
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 4
+)
+
+call get_integranteXequipo(4)
+--------------------------------------------------------------
+11/Nov/15  23:03:28
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 10
+)
+
+call get_partido(10)
+--------------------------------------------------------------
+11/Nov/15  23:03:29
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 25
+)
+
+call get_integranteXequipo(25)
+--------------------------------------------------------------
+11/Nov/15  23:03:29
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 26
+)
+
+call get_integranteXequipo(26)
+--------------------------------------------------------------
+11/Nov/15  23:03:30
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 8
+)
+
+call get_partido(8)
+--------------------------------------------------------------
+11/Nov/15  23:03:30
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  23:03:30
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:03:30
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 6
+)
+
+call get_partido(6)
+--------------------------------------------------------------
+11/Nov/15  23:03:30
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  23:03:30
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 10
+)
+
+call get_integranteXequipo(10)
+--------------------------------------------------------------
+11/Nov/15  23:03:31
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 6
+)
+
+call get_partido(6)
+--------------------------------------------------------------
+11/Nov/15  23:03:31
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  23:03:31
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 10
+)
+
+call get_integranteXequipo(10)
+--------------------------------------------------------------
+11/Nov/15  23:03:33
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  23:03:33
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:03:33
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:03:34
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 5
+)
+
+call get_partido(5)
+--------------------------------------------------------------
+11/Nov/15  23:03:34
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  23:03:34
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:03:36
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 10
+)
+
+call get_partido(10)
+--------------------------------------------------------------
+11/Nov/15  23:03:36
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 25
+)
+
+call get_integranteXequipo(25)
+--------------------------------------------------------------
+11/Nov/15  23:03:36
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 26
+)
+
+call get_integranteXequipo(26)
+--------------------------------------------------------------
+11/Nov/15  23:03:39
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 8
+)
+
+call get_partido(8)
+--------------------------------------------------------------
+11/Nov/15  23:03:40
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  23:03:40
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:03:42
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  23:03:42
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:03:42
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:03:44
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  23:03:44
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:03:44
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:03:47
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 5
+)
+
+call get_partido(5)
+--------------------------------------------------------------
+11/Nov/15  23:03:47
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  23:03:47
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:03:51
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 6
+)
+
+call get_partido(6)
+--------------------------------------------------------------
+11/Nov/15  23:03:51
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  23:03:51
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 10
+)
+
+call get_integranteXequipo(10)
+--------------------------------------------------------------
+11/Nov/15  23:03:53
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 5
+)
+
+call get_partido(5)
+--------------------------------------------------------------
+11/Nov/15  23:03:54
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  23:03:54
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:03:57
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 6
+)
+
+call get_partido(6)
+--------------------------------------------------------------
+11/Nov/15  23:03:57
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  23:03:57
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 10
+)
+
+call get_integranteXequipo(10)
+--------------------------------------------------------------
+11/Nov/15  23:03:59
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 5
+)
+
+call get_partido(5)
+--------------------------------------------------------------
+11/Nov/15  23:04:00
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  23:04:00
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:04:01
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  23:04:01
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:04:02
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:04:06
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  23:04:06
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:04:06
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:11:45
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  23:11:45
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:11:46
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:11:47
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 7
+)
+
+call get_partido(7)
+--------------------------------------------------------------
+11/Nov/15  23:11:47
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 3
+)
+
+call get_integranteXequipo(3)
+--------------------------------------------------------------
+11/Nov/15  23:11:47
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 4
+)
+
+call get_integranteXequipo(4)
+--------------------------------------------------------------
+11/Nov/15  23:11:49
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 9
+)
+
+call get_partido(9)
+--------------------------------------------------------------
+11/Nov/15  23:11:50
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  23:11:50
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 23
+)
+
+call get_integranteXequipo(23)
+--------------------------------------------------------------
+11/Nov/15  23:11:52
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  23:11:52
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:11:52
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:23:12
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  23:23:12
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:23:12
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:24:41
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  23:24:41
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:24:41
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:24:41
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXpartido
+    [param1] => 2param2=null
+)
+
+call get_integranteXpartido(2param2=null)
+Error: Incorrect number of arguments for PROCEDURE c9.get_integranteXpartido; expected 2, got 1
+--------------------------------------------------------------
+11/Nov/15  23:25:31
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  23:25:32
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:25:32
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:25:32
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXpartido
+    [param1] => 2
+    [param2] => null
+)
+
+call get_integranteXpartido(2, null)
+--------------------------------------------------------------
+11/Nov/15  23:26:47
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  23:26:47
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:26:48
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:26:48
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXpartido
+    [param1] => 2
+    [param2] => null
+)
+
+call get_integranteXpartido(2, null)
+--------------------------------------------------------------
+11/Nov/15  23:26:51
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 8
+)
+
+call get_partido(8)
+--------------------------------------------------------------
+11/Nov/15  23:26:51
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 15
+)
+
+call get_integranteXequipo(15)
+--------------------------------------------------------------
+11/Nov/15  23:26:51
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:26:51
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXpartido
+    [param1] => 8
+    [param2] => null
+)
+
+call get_integranteXpartido(8, null)
+--------------------------------------------------------------
+11/Nov/15  23:26:57
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  23:26:57
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:26:57
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:26:57
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXpartido
+    [param1] => 1
+    [param2] => null
+)
+
+call get_integranteXpartido(1, null)
+--------------------------------------------------------------
+11/Nov/15  23:27:00
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  23:27:00
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:27:00
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:27:00
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXpartido
+    [param1] => 2
+    [param2] => null
+)
+
+call get_integranteXpartido(2, null)
+--------------------------------------------------------------
+11/Nov/15  23:27:05
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  23:27:05
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:27:05
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:27:06
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXpartido
+    [param1] => 1
+    [param2] => null
+)
+
+call get_integranteXpartido(1, null)
+--------------------------------------------------------------
+11/Nov/15  23:27:09
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  23:27:09
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:27:09
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:27:09
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXpartido
+    [param1] => 2
+    [param2] => null
+)
+
+call get_integranteXpartido(2, null)
+--------------------------------------------------------------
+11/Nov/15  23:27:35
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  23:27:36
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:27:36
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:27:36
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXpartido
+    [param1] => 2
+    [param2] => null
+)
+
+call get_integranteXpartido(2, null)
+--------------------------------------------------------------
+11/Nov/15  23:27:47
+Array
+(
+    [mode] => registrar_integranteXpartido
+    [partido] => 2
+    [integrantes] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 8
+        )
+
+)
+
+cantidad: 3
+Array
+(
+    [0] => 1
+    [1] => 2
+    [2] => 8
+)
+
+call limpiar_integranteXpartido(2)
+select registrar_integranteXpartido(1, 
+													   			  2)
+select registrar_integranteXpartido(2, 
+													   			  2)
+select registrar_integranteXpartido(8, 
+													   			  2)
+--------------------------------------------------------------
+11/Nov/15  23:28:32
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  23:28:32
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:28:32
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:28:32
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXpartido
+    [param1] => 2
+    [param2] => null
+)
+
+call get_integranteXpartido(2, null)
+--------------------------------------------------------------
+11/Nov/15  23:28:49
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 2
+)
+
+call get_equipoXevento(2)
+--------------------------------------------------------------
+11/Nov/15  23:28:53
+Array
+(
+    [mode] => registrar_equipoXevento
+    [evento] => 2
+    [equipos] => Array
+        (
+            [0] => 23
+            [1] => 1
+            [2] => 4
+            [3] => 20
+            [4] => 25
+        )
+
+)
+
+CALL limpiar_equipoXevento(2)
+select registrar_equipoXevento(23, 
+												   		2,
+												   		null)
+select registrar_equipoXevento(1, 
+												   		2,
+												   		null)
+select registrar_equipoXevento(4, 
+												   		2,
+												   		null)
+select registrar_equipoXevento(20, 
+												   		2,
+												   		null)
+select registrar_equipoXevento(25, 
+												   		2,
+												   		null)
+--------------------------------------------------------------
+11/Nov/15  23:31:18
+Array
+(
+    [mode] => registrar_integranteXpartido
+    [partido] => 2
+    [integrantes] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 8
+            [3] => 16
+        )
+
+)
+
+cantidad: 4
+Array
+(
+    [0] => 1
+    [1] => 2
+    [2] => 8
+    [3] => 16
+)
+
+call limpiar_integranteXpartido(2)
+select registrar_integranteXpartido(1, 
+													   			  2)
+select registrar_integranteXpartido(2, 
+													   			  2)
+select registrar_integranteXpartido(8, 
+													   			  2)
+select registrar_integranteXpartido(16, 
+													   			  2)
+--------------------------------------------------------------
+11/Nov/15  23:31:26
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  23:31:27
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:31:27
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:31:27
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXpartido
+    [param1] => 1
+    [param2] => null
+)
+
+call get_integranteXpartido(1, null)
+--------------------------------------------------------------
+11/Nov/15  23:31:29
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  23:31:29
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:31:29
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:31:29
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXpartido
+    [param1] => 2
+    [param2] => null
+)
+
+call get_integranteXpartido(2, null)
+--------------------------------------------------------------
+11/Nov/15  23:31:36
+Array
+(
+    [mode] => registrar_integranteXpartido
+    [partido] => 2
+    [integrantes] => Array
+        (
+            [0] => 1
+            [1] => 2
+        )
+
+)
+
+cantidad: 2
+Array
+(
+    [0] => 1
+    [1] => 2
+)
+
+call limpiar_integranteXpartido(2)
+select registrar_integranteXpartido(1, 
+													   			  2)
+select registrar_integranteXpartido(2, 
+													   			  2)
+--------------------------------------------------------------
+11/Nov/15  23:31:41
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+11/Nov/15  23:31:42
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:31:42
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:31:42
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXpartido
+    [param1] => 1
+    [param2] => null
+)
+
+call get_integranteXpartido(1, null)
+--------------------------------------------------------------
+11/Nov/15  23:31:44
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 2
+)
+
+call get_partido(2)
+--------------------------------------------------------------
+11/Nov/15  23:31:44
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 1
+)
+
+call get_integranteXequipo(1)
+--------------------------------------------------------------
+11/Nov/15  23:31:44
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXequipo
+    [param1] => 2
+)
+
+call get_integranteXequipo(2)
+--------------------------------------------------------------
+11/Nov/15  23:31:44
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_integranteXpartido
+    [param1] => 2
+    [param2] => null
+)
+
+call get_integranteXpartido(2, null)
+--------------------------------------------------------------
