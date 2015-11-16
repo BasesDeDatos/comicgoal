@@ -161,8 +161,11 @@
 					<?php $query = 'call get_partido(null)';
 						$result = $mysqli->query($query);
 						// Imprimir los resultados en HTML
-						while ($row = $result->fetch_assoc()) { ?> 
-							<option value="<?php echo $row["ID_partido"] ?>"><?php echo $row["fecha"]." / ".$row["resumen"] ?></option>
+						while ($row = $result->fetch_assoc()) {
+							$finalizado = $row["finalizado"]? "F" : "P"?> 
+							<option value="<?php echo $row["ID_partido"] ?>">
+								<?php echo $finalizado." ".$row["fecha"]." / ".$row["resumen"]."</strong>" ?>
+							</option>
 					<?php } $mysqli->next_result(); ?>
 				</select>
 				<div class="col-md-1">
@@ -219,13 +222,13 @@
 				<label class="col-md-5" for="horapartido">Hora: </label>
 				<div class="col-md-6"><input type="time" name="hora" id="horapartido" placeholder="hora" /></div>
 				
-				<label class="col-md-5">Finalizado</label>
-				
 				<div class = "radio-btns col-md-6">
 					<input type="radio" name="finalizado" id="si" value="1">
-					<label for="si">Sí</label>
+					<label for="si">Finalizado</label>
+				</div>
+				<div class = "radio-btns col-md-6">
 					<input type="radio" name="finalizado" id="no" value="0" checked>
-					<label for="no">No</label>
+					<label for="no">Pendiente</label>
 				</div>
 				
 				<div class = "col-md-12">
@@ -987,25 +990,17 @@
 				    url: "funcionesMySQL.php",
 				    dataType: "json",
 				    success: function(data){
-				    	console.dir("data: \n")
-				    	console.dir(data)
+				    	console.dir("data partido \n" + data)
 				    	var ID_equipo_local = data.data[0]["ID_equipo_local"];
 						var ID_equipo_visita = data.data[0]["ID_equipo_visita"];
-						
 				    	console.dir(ID_equipo_local+" "+ID_equipo_visita);
-				    																		//partido 	//equipo
 						var dataLocal = "mode=callProcedure&procedure=get_integranteXequipo&param1="+ID_equipo_local;
-						
 						$("#equipos_local, #equipos_visita").empty();
-						
 				    	$.ajax({  
 						    type: "POST", data: dataLocal,
-						    url: "funcionesMySQL.php",
-						    dataType: "json",
+						    url: "funcionesMySQL.php", dataType: "json",
 						    success: function(data){
-						    	console.dir("Datos local");
-						    	console.dir(data);
-						    	
+						    	console.dir("Datos local  \n"+data);
 								$.each(data.data, function (i, fb) {
 									var ID_integrante = fb["ID_equipo"];
 									var nombre = fb["nombre"];
@@ -1017,8 +1012,7 @@
 										'<label for="loc_'+ID_integrante+'">('+num_camiseta+') '+nombre+' '+primer_apellido+' '+segundo_apellido+'</label>'
 									);
 								});
-							},
-							error: function (data){
+							}, error: function (data){
 								console.dir(data);
 								alert("Ha ocurrido un error obtener la información del uno de los equipos");
 							}
@@ -1027,11 +1021,9 @@
 				    	var dataVisita = "mode=callProcedure&procedure=get_integranteXequipo&param1="+ID_equipo_visita;
 				    	$.ajax({  
 						    type: "POST", data: dataVisita,
-						    url: "funcionesMySQL.php",
-						    dataType: "json",
+						    url: "funcionesMySQL.php", dataType: "json",
 						    success: function(data){
-						    	console.dir("Datos visita");
-						    	console.dir(data);
+						    	console.dir("Datos visita  \n"+data);
 						    	$.each(data.data, function (i, fb) {
 									var ID_integrante = fb["ID_integrante"];
 									var nombre = fb["nombre"];
@@ -1043,36 +1035,30 @@
 										'<label for="vic_'+ID_integrante+'">('+num_camiseta+') '+nombre+' '+primer_apellido+' '+segundo_apellido+'</label>'
 									);
 								});
-							},
-							error: function (data){
+							}, error: function (data){
 								console.dir(data);
 								alert("Ha ocurrido un error obtener la información del uno de los equipos");
 							}
 						});
 						
+				    	// SE MARCAN LOS CHECKS DE LOS JUGADORES SELECCIONADOS
 						var dataIntegrantes = "mode=callProcedure&procedure=get_integranteXpartido&param1="+ID+"&param2=null";
 						$.ajax({  
-						    type: "POST",
-						    data: dataIntegrantes,
-						    url: "funcionesMySQL.php",
-						    dataType: "json",
+						    type: "POST", data: dataIntegrantes,
+						    url: "funcionesMySQL.php", dataType: "json",
 						    success: function(data){
-						    	console.dir("Integrantes por partido")
-						    	console.dir(data)
-						    	$(".current [type='checkbox'").attr("checked", false); // se desmarcan los checkbox
+						    	console.dir("Integrantes por partido  \n"+data);
 								 $.each(data.data, function (i, fb) {
 									$(".current [value='"+fb["ID_integrante"]+"']").attr("checked", "checked"); // se marcan los que retorna la consulta
 								});
-							},
-							error: function (data){
+							}, error: function (data){
 								console.dir(data);
 								alert("Ha ocurrido un error obtener la información de este partido.");
 							}
 						});
-					},
-					error: function (data){
-						alert("Ha ocurrido un error obtener la información de este partido.");
+					}, error: function (data){
 						console.dir(data)
+						alert("Ha ocurrido un error obtener la información de este partido.");
 					}
 				});
 			} else {
@@ -1132,7 +1118,7 @@
 			var data = "mode="+mode+"_partido&evento="+evento+
 				"&estadio="+estadio+"&equipo_local="+equipo_local+
 				"&equipo_visita="+equipo_visita+"&fecha="+fecha+
-				"&hora="+hora+"&finalizado="+1+"&ID_partido="+ID;
+				"&hora="+hora+"&finalizado="+finalizado+"&ID_partido="+ID;
 				
 			$.ajax({  
 			    type: "POST",
@@ -1240,10 +1226,10 @@
 				    url: "funcionesMySQL.php",
 				    dataType: "json",
 				    success: function(data){
-						alert("Se insertó con éxito el integrante");
+						alert("Se insertó con éxito los equipos");
 					},
 					error: function (data){
-						alert("Ha ocurrido un error al insertar el integrante");
+						alert("Ha ocurrido un error al insertar los equipo");
 					}
 			});
 		};

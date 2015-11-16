@@ -8867,3 +8867,219 @@ Array
 
 call get_integranteXpartido(2, null)
 --------------------------------------------------------------
+15/Nov/15  21:52:42
+Array
+(
+    [email] => jeffrey_a12
+    [clave] => 123456
+    [mode] => login
+)
+
+call get_usuario('jeffrey_a12', 'e10adc3949ba59abbe56e057f20f883e')
+ID:1
+--------------------------------------------------------------
+15/Nov/15  21:53:13
+Array
+(
+    [mode] => registrar_catalogo
+    [procedure] => registrar_evento
+    [value] => FIFA World Cup Qatar 2022
+)
+
+select registrar_evento('FIFA World Cup Qatar 2022')
+ID:4
+--------------------------------------------------------------
+15/Nov/15  21:53:46
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 4
+)
+
+call get_equipoXevento(4)
+--------------------------------------------------------------
+15/Nov/15  21:54:01
+Array
+(
+    [mode] => registrar_equipoXevento
+    [evento] => 4
+    [equipos] => Array
+        (
+            [0] => 27
+            [1] => 15
+            [2] => 22
+            [3] => 23
+            [4] => 16
+            [5] => 1
+            [6] => 10
+            [7] => 2
+            [8] => 24
+            [9] => 4
+            [10] => 26
+            [11] => 20
+            [12] => 3
+            [13] => 25
+        )
+
+)
+
+CALL limpiar_equipoXevento(4)
+select registrar_equipoXevento(27, 
+												   		4,
+												   		null)
+select registrar_equipoXevento(15, 
+												   		4,
+												   		null)
+select registrar_equipoXevento(22, 
+												   		4,
+												   		null)
+select registrar_equipoXevento(23, 
+												   		4,
+												   		null)
+select registrar_equipoXevento(16, 
+												   		4,
+												   		null)
+select registrar_equipoXevento(1, 
+												   		4,
+												   		null)
+select registrar_equipoXevento(10, 
+												   		4,
+												   		null)
+select registrar_equipoXevento(2, 
+												   		4,
+												   		null)
+select registrar_equipoXevento(24, 
+												   		4,
+												   		null)
+select registrar_equipoXevento(4, 
+												   		4,
+												   		null)
+select registrar_equipoXevento(26, 
+												   		4,
+												   		null)
+select registrar_equipoXevento(20, 
+												   		4,
+												   		null)
+select registrar_equipoXevento(3, 
+												   		4,
+												   		null)
+select registrar_equipoXevento(25, 
+												   		4,
+												   		null)
+--------------------------------------------------------------
+15/Nov/15  21:56:43
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_equipoXevento
+    [param1] => 4
+)
+
+call get_equipoXevento(4)
+--------------------------------------------------------------
+15/Nov/15  21:57:20
+Array
+(
+    [mode] => registrar_partido
+    [evento] => 4
+    [estadio] => 13
+    [equipo_local] => 27
+    [equipo_visita] => 15
+    [fecha] => 2022-12-01
+    [hora] => 01:59
+    [finalizado] => 1
+    [ID_partido] => 
+)
+
+select registrar_partido(STR_TO_DATE('2022-12-01', '%Y-%m-%d'), 
+										   STR_TO_DATE('01:59', '%h:%i'), 
+										   27, 
+										   15, 
+										   13, 
+										   4)
+--------------------------------------------------------------
+15/Nov/15  22:11:57
+Array
+(
+    [email] => caco26i
+    [clave] => 123456
+    [mode] => login
+)
+
+call get_usuario('caco26i', 'e10adc3949ba59abbe56e057f20f883e')
+ID:2
+--------------------------------------------------------------
+15/Nov/15  22:14:24
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 11
+)
+
+call get_partido(11)
+--------------------------------------------------------------
+15/Nov/15  22:14:28
+Array
+(
+    [mode] => editar_partido
+    [evento] => 4
+    [estadio] => 13
+    [equipo_local] => 27
+    [equipo_visita] => 15
+    [fecha] => 2022-12-01
+    [hora] => 01:59:00
+    [finalizado] => 0
+    [ID_partido] => 11
+)
+
+call editar_partido(STR_TO_DATE('2022-12-01', '%Y-%m-%d'), 
+										   STR_TO_DATE('01:59:00', '%h:%i'), 
+										   27, 
+										   15, 
+										   13, 
+										   4,
+										   0,
+										   11)
+--------------------------------------------------------------
+15/Nov/15  22:22:44
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+15/Nov/15  22:27:11
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+15/Nov/15  22:30:49
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------
+15/Nov/15  22:31:30
+Array
+(
+    [mode] => callProcedure
+    [procedure] => get_partido
+    [param1] => 1
+)
+
+call get_partido(1)
+--------------------------------------------------------------

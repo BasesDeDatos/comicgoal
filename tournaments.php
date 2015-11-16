@@ -34,9 +34,11 @@
 																	<th aria-label="GC" colspan="1" rowspan="1" aria-controls="DataTables_Table_0" tabindex="0" class="data-a sorting">GC</th>
 																	<th aria-label="DIF" colspan="1" rowspan="1" aria-controls="DataTables_Table_0" tabindex="0" class="data-gd sorting">DIF</th>
 																	<th aria-label="PTS" colspan="1" rowspan="1" aria-controls="DataTables_Table_0" tabindex="0" class="data-pts sorting">PTS</th>
+																	<th aria-label="GRUPO" colspan="1" rowspan="1" aria-controls="DataTables_Table_0" tabindex="0" class="data-name sorting">GRUPO</th>
 																</tr>
 															</thead>
 															<tbody><?php
+																$pos = 1;
 																foreach($rows as $row){ ?> 
 																	<tr role="row" class="highlighte <?php echo $pos%2 == 0? "odd" : "even" ?> wow fadeInUp" data-wow-duration="2s" data-wow-delay="<?php echo $pos*2?>">
 																		<td class="data-rank sp-highlight wow zoomIn" data-wow-duration="2s" data-wow-delay="<?php echo $pos+1*2?>"><?php echo $pos++ ?></td>
@@ -58,6 +60,7 @@
 																		<td class="data-a sp-highlight"><?php echo $row["gc"] ?></td>
 																		<td class="data-gd sp-highlight"><?php echo $row["diff"] ?></td>
 																		<td class="data-pts sp-highlight"><?php echo $row["pts"] ?></td>
+																		<td class="data-name sp-highlight"><?php echo $row["grupo"] ?></td>
 																	</tr>
 																<?php } ?>
 															</tbody>
