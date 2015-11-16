@@ -979,7 +979,23 @@
 				$(".current input").attr("checked", false);
 			}
 		});
-		
+		$("#partidoestadistica").change(function(){
+			var dataIntegrantes = "mode=callProcedure&procedure=get_integranteXpartido&param1="+$(this).val()+"&param2=null";
+			$.ajax({  
+			    type: "POST", data: dataIntegrantes,
+			    url: "funcionesMySQL.php", dataType: "json",
+			    success: function(data){
+			    	console.dir("Integrantes por partido  \n"+data);
+			    	$("#integranteestadistica").empty();
+					$.each(data.data, function (i, fb) {
+						$("#integranteestadistica").append("<option value = '"+fb["ID_integrante"]+"'>"+fb["nombre"]+" "+fb["primer_apellido"]+" "+fb["segundo_apellido"]+"</option>")
+					});
+				}, error: function (data){
+					console.dir(data);
+					alert("Ha ocurrido un error obtener la información de este partido.");
+				}
+			});
+		});
 		$("#integranteXpartido").change(function(){
 			var ID = $(this).val();
 			if (ID != ""){
@@ -1104,7 +1120,7 @@
 			var equipo_visita = $("#visitapartido").val();
 			var fecha = $("#fechapartido").val();
 			var hora = $("#horapartido").val();
-			var finalizado = $("[name='finalizado']:checked").val();
+			var finalizado = 1;
 			var ID = $("#partido").val();
 			
 			var tipo = "insertó";

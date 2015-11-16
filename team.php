@@ -63,7 +63,7 @@
 					<?php 
 						if(!empty($team)){
 							foreach($team as $posicion => $integrantes){ ?>
-								<h1 class ="texto"><?php echo $posicion."s" ?></h1>
+								<h1 class ="texto"><?php echo $posicion ?></h1>
 								<ul>
 									<?php 
 									foreach($integrantes as $integrante){ ?>

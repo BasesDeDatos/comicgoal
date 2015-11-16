@@ -23,15 +23,15 @@
 												<a href=team.php?equipo=<?php echo $row["ID_equipo_local"]?>>
 												<img src="img/country-flags-hi/<?php echo strtolower($row["iso_local"])?>.png" 
 													class="team-logo logo-odd wp-post-image" 
-													alt="<?php echo $row["iso_local"]?>" height="128" width="113"> 
+													alt="<?php echo $row["iso_local"]?>" height="256" width="226" style="max-width: 125px"> 
 												</a>
 												<a href=team.php?equipo=<?php echo $row["ID_equipo_visita"]?>>
 												<img src="img/country-flags-hi/<?php echo strtolower($row["iso_visita"])?>.png" 
 													class="team-logo logo-even wp-post-image" 
-													alt="<?php echo $row["iso_visita"]?>" height="128" width="105">
+													alt="<?php echo $row["iso_visita"]?>" height="256" width="226" style="max-width: 125px">
 												</a>
 												<time class="sp-event-date" datetime="<?php echo $row["fecha"]." ".$row["hora"] ?>"><?php echo $row["fecha"] ?></time>
-												<h5 class="sp-event-results"><?php echo $row["goles_local"] . " - " . $row["goles_visita"] ?></h5>
+												<h2 class="sp-event-results"><?php echo $row["goles_local"] . " - " . $row["goles_visita"] ?></h2>
 												<p class="sp-event-title"><?php echo $row["estadio"] ?></p>														</h4>
 												<h4 class="sp-event-title">
 													<label><?php echo $row["equipo_local"]." vs ".$row["equipo_visita"] ?></label>
@@ -171,7 +171,7 @@
 													while ($row = $result->fetch_assoc()) { ?> 
 														<div class="col-md-12">
 															<label>
-																<?php echo $row["minuto"]." - ".$row["estadistica"]." - ".$row["integrante"] ?>
+																<?php echo $row["minuto"]." - ".$row["estadistica"]." - "."<a href='player.php?integrante={$row["ID_integrante"]}'>".$row["integrante"]."</a>" ?>
 															</label>
 														</div>
 												<?php }
